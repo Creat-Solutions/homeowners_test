@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="strAdditionalInsured" xml:space="preserve">
+    <value>Asegurado Adicional: </value>
+  </data>
+  <data name="strAnotherCountry" xml:space="preserve">
+    <value>Otro Pa&amp;iacute;s</value>
+  </data>
+  <data name="strBankAddress" xml:space="preserve">
+    <value>N&amp;uacute;mero de Pr&amp;eacute;stamo: </value>
+  </data>
+  <data name="strBankName" xml:space="preserve">
+    <value>Nombre del Banco: </value>
+  </data>
+  <data name="strBuyQuote" xml:space="preserve">
+    <value>Comprar Cotización</value>
+  </data>
+  <data name="strCity" xml:space="preserve">
+    <value>Ciudad: </value>
+  </data>
+  <data name="strCorporation" xml:space="preserve">
+    <value>Persona Moral</value>
+  </data>
+  <data name="strDOB" xml:space="preserve">
+    <value>Fecha de Nacimiento: </value>
+  </data>
+  <data name="strExtNo" xml:space="preserve">
+    <value>No. Exterior: </value>
+  </data>
+  <data name="strFee" xml:space="preserve">
+    <value>Cuota: </value>
+  </data>
+  <data name="strFIEL" xml:space="preserve">
+    <value>FIEL: </value>
+  </data>
+  <data name="strGenerateCalculation" xml:space="preserve">
+    <value>Cálculo</value>
+  </data>
+  <data name="strID" xml:space="preserve">
+    <value>N&amp;uacute;mero de Identificaci&amp;oacute;n: </value>
+  </data>
+  <data name="strIDType" xml:space="preserve">
+    <value>Tipo de Identificaci&amp;oacute;n: </value>
+  </data>
+  <data name="strIncNumber" xml:space="preserve">
+    <value>N&amp;uacute;mero de Escritura: </value>
+  </data>
+  <data name="strIndividual" xml:space="preserve">
+    <value>Persona Física</value>
+  </data>
+  <data name="strIntNo" xml:space="preserve">
+    <value>No Interior: </value>
+  </data>
+  <data name="strLoanNumber" xml:space="preserve">
+    <value>Loan Number: </value>
+  </data>
+  <data name="strMercNumber" xml:space="preserve">
+    <value>Folio Mercantil: </value>
+  </data>
+  <data name="strNationality" xml:space="preserve">
+    <value>Nacionalidad: </value>
+  </data>
+  <data name="strOccupation" xml:space="preserve">
+    <value>Ocupaci&amp;oacute;n: </value>
+  </data>
+  <data name="strPersonType" xml:space="preserve">
+    <value>Tipo de persona: </value>
+  </data>
+  <data name="strPremium" xml:space="preserve">
+    <value>Prima Neta: </value>
+  </data>
+  <data name="strPrintQuote" xml:space="preserve">
+    <value>Imprimir Cotización</value>
+  </data>
+  <data name="strRepresentative" xml:space="preserve">
+    <value>Representante Legal: </value>
+  </data>
+  <data name="strSameAddress" xml:space="preserve">
+    <value>&amp;iquest;El asegurado vive fuera de M&amp;eacute;xico?</value>
+  </data>
+  <data name="strState" xml:space="preserve">
+    <value>Estado: </value>
+  </data>
+  <data name="strStreet" xml:space="preserve">
+    <value>Calle: </value>
+  </data>
+  <data name="strTax" xml:space="preserve">
+    <value>Impuesto: </value>
+  </data>
+  <data name="strTaxID" xml:space="preserve">
+    <value>RFC: </value>
+  </data>
+  <data name="strTotal" xml:space="preserve">
+    <value>Total: </value>
+  </data>
+  <data name="strUSA" xml:space="preserve">
+    <value>E.U.A.</value>
+  </data>
+  <data name="strZip" xml:space="preserve">
+    <value>C&amp;oacute;digo Postal:  </value>
+  </data>
+  <data name="strYes" xml:space="preserve">
+    <value>S&amp;iacute;</value>
+  </data>
+  <data name="strValLength" xml:space="preserve">
+    <value>Sobrepasa L&amp;iacute;mite de Caracteres</value>
+  </data>
+  <data name="strRequired" xml:space="preserve">
+    <value>Requerido</value>
+  </data>
+  <data name="strValFormat" xml:space="preserve">
+    <value>Formato Inv&amp;aacute;lido</value>
+  </data>
+  <data name="strInsuredInformation" xml:space="preserve">
+    <value>Informaci&amp;oacute;n del Asegurado</value>
+  </data>
+  <data name="strCountry" xml:space="preserve">
+    <value>Pa&amp;iacute;s: </value>
+  </data>
+  <data name="strApril" xml:space="preserve">
+    <value>Abril</value>
+  </data>
+  <data name="strAugust" xml:space="preserve">
+    <value>Agosto</value>
+  </data>
+  <data name="strDecember" xml:space="preserve">
+    <value>Diciembre</value>
+  </data>
+  <data name="strFebruary" xml:space="preserve">
+    <value>Febrero</value>
+  </data>
+  <data name="strJanuary" xml:space="preserve">
+    <value>Enero</value>
+  </data>
+  <data name="strJuly" xml:space="preserve">
+    <value>Julio</value>
+  </data>
+  <data name="strJune" xml:space="preserve">
+    <value>Junio</value>
+  </data>
+  <data name="strMarch" xml:space="preserve">
+    <value>Marzo</value>
+  </data>
+  <data name="strMay" xml:space="preserve">
+    <value>Mayo</value>
+  </data>
+  <data name="strNovember" xml:space="preserve">
+    <value>Noviembre</value>
+  </data>
+  <data name="strOctober" xml:space="preserve">
+    <value>Octubre</value>
+  </data>
+  <data name="strSeptember" xml:space="preserve">
+    <value>Septiembre</value>
+  </data>
+  <data name="strValCharacters" xml:space="preserve">
+    <value>Caracteres Inv&amp;aacute;lidos</value>
+  </data>
+  <data name="strDOBHelp" xml:space="preserve">
+    <value>Texto de Ayuda para Fecha de Nacimiento</value>
+  </data>
+  <data name="strFIELHelp" xml:space="preserve">
+    <value>Texto de Ayuda para FIEL</value>
+  </data>
+  <data name="strIDHelp" xml:space="preserve">
+    <value>Texto de Ayuda para Identificaci&amp;oacute;n</value>
+  </data>
+  <data name="strIDTypeHelp" xml:space="preserve">
+    <value>Texto de Ayuda para Tipo de Identificaci&amp;oacute;n</value>
+  </data>
+  <data name="strIncNumberHelp" xml:space="preserve">
+    <value>Texto de Ayuda para N&amp;uacute;mero de Incorporaci&amp;oacute;n</value>
+  </data>
+  <data name="strLegalRepHelp" xml:space="preserve">
+    <value>Texto de Ayuda para Representante Legal</value>
+  </data>
+  <data name="strMercNumberHelp" xml:space="preserve">
+    <value>Texto de Ayuda para Folio Mercantil</value>
+  </data>
+  <data name="strNationalityHelp" xml:space="preserve">
+    <value>Texto de Ayuda para Nacionalidad</value>
+  </data>
+  <data name="strOccupationHelp" xml:space="preserve">
+    <value>Texto de Ayuda para Ocupaci&amp;oacute;n</value>
+  </data>
+  <data name="strArt140" xml:space="preserve">
+    <value>Art&amp;iacute;culo 140</value>
+  </data>
+  <data name="strPolicyInfo" xml:space="preserve">
+    <value>Informaci&amp;oacute;n Adicional para la P&amp;oacute;liza</value>
+  </data>
+  <data name="strCorpDOB" xml:space="preserve">
+    <value>Fecha de Incorporaci&amp;oacute;n: </value>
+  </data>
+  <data name="strCorpOccupation" xml:space="preserve">
+    <value>Giro Mercantil: </value>
+  </data>
+  <data name="strInsuredExtNo" xml:space="preserve">
+    <value>No. Exterior (Propiedad):</value>
+  </data>
+  <data name="strInsuredIntNo" xml:space="preserve">
+    <value>No. Interior (Propiedad):</value>
+  </data>
+  <data name="strInsuredStreet" xml:space="preserve">
+    <value>Calle (Propiedad):</value>
+  </data>
+  <data name="strEmail" xml:space="preserve">
+    <value>Correo electr&amp;oacute;nico: </value>
+  </data>
+  <data name="strPhone" xml:space="preserve">
+    <value>No. de Tel&amp;eacute;fono: </value>
+  </data>
+  <data name="strEmailHelp" xml:space="preserve">
+    <value>Texto de Ayuda para el Correo Electr&amp;oacute;nico</value>
+  </data>
+  <data name="strPhoneHelp" xml:space="preserve">
+    <value>Texto de Ayuda para el Tel&amp;eacute;fono</value>
+  </data>
+  <data name="strValEmail" xml:space="preserve">
+    <value>Correo electr&amp;oacute;nico inv&amp;aacute;lido</value>
+  </data>
+  <data name="strSaveQuote" xml:space="preserve">
+    <value>Guardar Cotización</value>
+  </data>
+  <data name="strNumPayments" xml:space="preserve">
+    <value>N&amp;uacute;mero de Pagos:</value>
+  </data>
+  <data name="strRXPF" xml:space="preserve">
+    <value>Recargo Pago Fraccionado: </value>
+  </data>
+  <data name="strChangeFee" xml:space="preserve">
+    <value>Cambiar Derecho de P&amp;oacute;liza</value>
+  </data>
+  <data name="strInvalidValue" xml:space="preserve">
+    <value>Valor Inv&amp;aacute;lido</value>
+  </data>
+</root>

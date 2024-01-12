@@ -1,0 +1,1529 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="homeowners" Class="HouseInsuranceDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+	<Connection Mode="WebSettings" ConnectionString="Data Source=abcdelseguro.com,13418;Initial Catalog=homeowners;Persist Security Info=True;User ID=homeowner" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="homeownersConnectionString1" Provider="System.Data.SqlClient" />
+	<Table Name="dbo.v1_distanceFromSeaSur" Member="distanceFromSeaSurs">
+		<Type Name="distanceFromSeaSur">
+			<Column Name="company" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+			<Column Name="distanceFromSea" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+			<Column Name="surcharge" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+			<Association Name="distanceFromSea_distanceFromSeaSur" Member="distanceFromSea1" ThisKey="distanceFromSea" OtherKey="distance" Type="distanceFromSea" IsForeignKey="true" />
+		</Type>
+	</Table>
+	<Table Name="dbo.v1_typeOfRisk" Member="typeOfRisks">
+		<Type Name="typeOfRisk">
+			<Column Name="typeOfRisk" Member="type" Storage="_typeOfRisk" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+			<Column Name="description" Type="System.String" DbType="VarChar(16) NOT NULL" CanBeNull="false" />
+			<Association Name="typeOfRisk_typeOfRiskSur" Member="typeOfRiskSurs" ThisKey="type" OtherKey="typeOfRisk" Type="typeOfRiskSur" />
+		</Type>
+	</Table>
+	<Table Name="dbo.v1_typeOfPropertySur" Member="typeOfPropertySurs">
+		<Type Name="typeOfPropertySur">
+			<Column Name="company" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+			<Column Name="typeOfProperty" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+			<Column Name="surcharge" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+			<Association Name="typeOfProperty_typeOfPropertySur" Member="typeOfProperty1" ThisKey="typeOfProperty" OtherKey="type" Type="typeOfProperty" IsForeignKey="true" />
+		</Type>
+	</Table>
+	<Table Name="dbo.v1_useOfPropertySur" Member="useOfPropertySurs">
+		<Type Name="useOfPropertySur">
+			<Column Name="company" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+			<Column Name="useOfProperty" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+			<Column Name="surcharge" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+			<Association Name="useOfProperty_useOfPropertySur" Member="useOfProperty1" ThisKey="useOfProperty" OtherKey="use" Type="useOfProperty" IsForeignKey="true" />
+		</Type>
+	</Table>
+	<Table Name="dbo.v1_roofTypeSur" Member="roofTypeSurs">
+		<Type Name="roofTypeSur">
+			<Column Name="company" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+			<Column Name="roofType" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+			<Column Name="surcharge" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+			<Association Name="roofType_roofTypeSur" Member="roofType1" ThisKey="roofType" OtherKey="type" Type="roofType" IsForeignKey="true" />
+		</Type>
+	</Table>
+	<Table Name="dbo.v1_wallTypeSur" Member="wallTypeSurs">
+		<Type Name="wallTypeSur">
+			<Column Name="company" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+			<Column Name="wallType" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+			<Column Name="surcharge" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+			<Association Name="wallType_wallTypeSur" Member="wallType1" ThisKey="wallType" OtherKey="type" Type="wallType" IsForeignKey="true" />
+		</Type>
+	</Table>
+	<Table Name="dbo.v1_windowProtection" Member="windowProtections">
+		<Type Name="windowProtection">
+			<Column Name="windowProtection" Member="protection" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+			<Column Name="description" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+			<Association Name="windowProtection_windowProtectionSur" Member="windowProtectionSurs" ThisKey="protection" OtherKey="windowProtection" Type="windowProtectionSur" />
+		</Type>
+	</Table>
+	<Table Name="dbo.v1_windowProtectionSur" Member="windowProtectionSurs">
+		<Type Name="windowProtectionSur">
+			<Column Name="company" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+			<Column Name="windowProtection" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+			<Column Name="surcharge" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+			<Association Name="windowProtection_windowProtectionSur" Member="windowProtection1" ThisKey="windowProtection" OtherKey="protection" Type="windowProtection" IsForeignKey="true" />
+		</Type>
+	</Table>
+	<Table Name="dbo.v1_seaInfo" Member="seaInfos">
+		<Type Name="seaInfo">
+			<Column Name="seaInfo" Member="info" Storage="_seaInfo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+			<Column Name="shutters" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="distanceFromSea" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="insuredPersonHouse" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+		</Type>
+	</Table>
+	<Table Name="homeowner.quoteDetail" Member="quoteDetails">
+		<Type Name="quoteDetail">
+			<Column Name="quote" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+			<Column Name="codigoCobertura" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+			<Column Name="descripcionCobertura" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+			<Column Name="monto" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+			<Column Name="tasa" Type="System.Decimal" DbType="Decimal(8,4) NOT NULL" CanBeNull="false" />
+			<Column Name="rec" Type="System.Decimal" DbType="Decimal(8,4)" CanBeNull="true" />
+			<Column Name="des" Type="System.Decimal" DbType="Decimal(8,4)" CanBeNull="true" />
+			<Column Name="tasaFinal" Type="System.Decimal" DbType="Decimal(8,4) NOT NULL" CanBeNull="false" />
+			<Column Name="prima" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+			<Column Name="fac" Type="System.Decimal" DbType="Decimal(8,4)" CanBeNull="true" />
+			<Column Name="porcentaje" Type="System.Decimal" DbType="Decimal(8,4)" CanBeNull="true" />
+			<Column Name="comision" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+			<Association Name="quote_quoteDetail" Member="quote1" ThisKey="quote" OtherKey="id" Type="quote" IsForeignKey="true" />
+		</Type>
+	</Table>
+	<Table Name="dbo.v1_additionalCoverage" Member="additionalCoverages">
+		<Type Name="additionalCoverage">
+			<Column Name="additionalCoverage" Member="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+			<Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+			<Column Name="nameEs" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+			<Column Name="minimum" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+			<Column Name="maximum" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+			<Column Name="percentage" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="help" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+			<Column Name="helpEs" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+			<Column Name="defaultChecked" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+		</Type>
+	</Table>
+	<Table Name="dbo.v1_distanceFromSea" Member="distanceFromSeas">
+		<Type Name="distanceFromSea">
+			<Column Name="distanceFromSea" Member="distance" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+			<Column Name="description" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+			<Column Name="descriptionEs" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+			<Association Name="distanceFromSea_distanceFromSeaSur" Member="distanceFromSeaSurs" ThisKey="distance" OtherKey="distanceFromSea" Type="distanceFromSeaSur" />
+			<Association Name="distanceFromSea_policy" Member="policies" ThisKey="distance" OtherKey="distanceFromSea" Type="policy" />
+			<Association Name="distanceFromSea_quote" Member="quotes" ThisKey="distance" OtherKey="distanceFromSea" Type="quote" />
+		</Type>
+	</Table>
+	<Table Name="homeowner.v1_FHM" Member="FHMs">
+		<Type Name="FHM">
+			<Column Name="FHM" Member="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+			<Column Name="description" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+		</Type>
+	</Table>
+	<Table Name="homeowner.v1_other" Member="others">
+		<Type Name="other">
+			<Column Name="other" Member="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+			<Column Name="description" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+			<Column Name="code" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+		</Type>
+	</Table>
+	<Table Name="homeowner.v1_theftProtection" Member="theftProtections">
+		<Type Name="theftProtection">
+			<Column Name="theftProtection" Member="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+			<Column Name="description" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+		</Type>
+	</Table>
+	<Table Name="homeowner.v1_adjoiningEstates" Member="adjoiningEstates">
+		<Type Name="adjoiningEstate">
+			<Column Name="adjoiningEstates" Member="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+			<Column Name="description" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+		</Type>
+	</Table>
+	<Table Name="dbo.policyTest" Member="policyTests">
+		<Type Name="policyTest">
+			<Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+			<Column Name="policy_no" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+			<Column Name="fecha" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+		</Type>
+	</Table>
+	<Table Name="homeowner.v1_familyAssistance" Member="familyAssistances">
+		<Type Name="familyAssistance">
+			<Column Name="familyAssistance" Member="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+			<Column Name="description" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+			<Column Name="code" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Association Name="familyAssistance_familyAssistanceSur" Member="familyAssistanceSurs" ThisKey="id" OtherKey="familyAssistance" Type="familyAssistanceSur" />
+		</Type>
+	</Table>
+	<Table Name="homeowner.v1_familyAssistanceSur" Member="familyAssistanceSurs">
+		<Type Name="familyAssistanceSur">
+			<Column Name="familyAssistance" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+			<Column Name="company" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+			<Column Name="val1" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="val2" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Association Name="familyAssistance_familyAssistanceSur" Member="familyAssistance1" ThisKey="familyAssistance" OtherKey="id" Type="familyAssistance" IsForeignKey="true" />
+		</Type>
+	</Table>
+	<Table Name="dbo.v1_typeOfRiskSur" Member="typeOfRiskSurs">
+		<Type Name="typeOfRiskSur">
+			<Column Name="company" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+			<Column Name="typeOfRisk" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+			<Column Name="surcharge" Type="System.Decimal" DbType="Decimal(8,4) NOT NULL" CanBeNull="false" />
+			<Column Name="Additional" Type="System.Decimal" DbType="Decimal(8,4) NOT NULL" CanBeNull="false" />
+			<Column Name="Coverage" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="Minimum" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="Maximum" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="Suggested" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Association Name="typeOfRisk_typeOfRiskSur" Member="typeOfRisk1" ThisKey="typeOfRisk" OtherKey="type" Type="typeOfRisk" IsForeignKey="true" />
+		</Type>
+	</Table>
+	<Table Name="dbo.v1_insuredPerson" Member="insuredPersons">
+		<Type Name="insuredPerson" Id="ID1">
+			<Column Name="insuredPerson" Member="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+			<Column Name="street" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+			<Column Name="zipCode" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+			<Column Name="phone" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+			<Column Name="fax" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+			<Column Name="email" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+			<Column Name="firstname" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+			<Column Name="lastName" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+			<Column Name="sex" Type="System.Int32" DbType="Int" CanBeNull="true" />
+			<Column Name="DOB" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+			<Column Name="agent" Type="System.Int32" DbType="Int" CanBeNull="true" />
+			<Column Name="occupation" Type="System.String" DbType="VarChar(36)" CanBeNull="true" />
+			<Column Name="citizenship" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+			<Column Name="city" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+			<Column Name="state" Type="System.Int32" DbType="Int" CanBeNull="true" />
+			<Column Name="legalPerson" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="ccNo" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+			<Column Name="additionalInsured" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+			<Column Name="rfc" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
+			<Column Name="stateText" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+			<Association Name="insuredPerson_insuredPersonHouse" Member="insuredPersonHouses" ThisKey="id" OtherKey="insuredPerson" Type="insuredPersonHouse" />
+			<Association Name="insuredPerson_policy" Member="policies" ThisKey="id" OtherKey="insuredPerson" Type="policy" />
+			<Association Name="insuredPerson_quote" Member="quotes" ThisKey="id" OtherKey="insuredPerson" Type="quote" />
+		</Type>
+	</Table>
+	<Table Name="homeowner.policyDetail" Member="policyDetails">
+		<Type Name="policyDetail">
+			<Column Name="policy" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+			<Column Name="codigoCobertura" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+			<Column Name="descripcionCobertura" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+			<Column Name="monto" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+			<Column Name="tasa" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="rec" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+			<Column Name="des" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+			<Column Name="tasaFinal" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="prima" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+			<Column Name="fac" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+			<Column Name="porcentaje" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+			<Column Name="comision" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+			<Association Name="policy_policyDetail" Member="policy1" ThisKey="policy" OtherKey="id" Type="policy" IsForeignKey="true" />
+		</Type>
+	</Table>
+	<Table Name="homeowner.rxpfSur" Member="rxpfSurs">
+		<Type Name="rxpfSur">
+			<Column Name="company" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+			<Column Name="currency" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+			<Column Name="month" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+			<Column Name="monthly" Type="System.Decimal" DbType="Decimal(12,6) NOT NULL" CanBeNull="false" />
+			<Column Name="quarterly" Type="System.Decimal" DbType="Decimal(12,6) NOT NULL" CanBeNull="false" />
+			<Column Name="biyearly" Type="System.Decimal" DbType="Decimal(12,6) NOT NULL" CanBeNull="false" />
+		</Type>
+	</Table>
+	<Table Name="homeowner.policyFE" Member="policyFEs">
+		<Type Name="policyFE">
+			<Column Name="policy" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+			<Column Name="approvalYear" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="approvalNo" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+			<Column Name="certificate" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+			<Column Name="certificateNo" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+			<Column Name="date" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+			<Column Name="paymentType" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+			<Column Name="series" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+			<Column Name="mapfreInternalNo" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+			<Column Name="originalString" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+			<Column Name="seal" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+			<Column Name="folio" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+			<Column Name="receiptType" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+			<Column Name="fxReceiptType" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+			<Column Name="paymentMedium" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+			<Column Name="issuedIn" Type="System.String" DbType="VarChar(256) NOT NULL" CanBeNull="false" />
+			<Column Name="registry" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+			<Column Name="bankReferencesXML" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+			<Column Name="mapfreEndoso" Type="System.String" DbType="VarChar(16) NOT NULL" CanBeNull="false" />
+			<Column Name="receiptSeries" Type="System.String" DbType="VarChar(16) NOT NULL" CanBeNull="false" />
+			<Column Name="mapfreMEKey" Type="System.String" DbType="VarChar(16) NOT NULL" CanBeNull="false" />
+			<Column Name="mapfreMEAgentName" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+			<Column Name="rawXML" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+			<Association Name="policy_policyFE" Member="policy1" ThisKey="policy" OtherKey="id" Type="policy" IsForeignKey="true" />
+		</Type>
+	</Table>
+	<Table Name="dbo.v1_wallType" Member="wallTypes">
+		<Type Name="wallType">
+			<Column Name="wallType" Member="type" Storage="_wall" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+			<Column Name="description" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+			<Column Name="descriptionEs" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+			<Association Name="wallType_wallTypeSur" Member="wallTypeSurs" ThisKey="type" OtherKey="wallType" Type="wallTypeSur" />
+			<Association Name="wallType_policy" Member="policies" ThisKey="type" OtherKey="wallType" Type="policy" />
+			<Association Name="wallType_quote" Member="quotes" ThisKey="type" OtherKey="wallType" Type="quote" />
+		</Type>
+	</Table>
+	<Table Name="dbo.v1_roofType" Member="roofTypes">
+		<Type Name="roofType">
+			<Column Name="roofType" Member="type" Storage="_roof" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+			<Column Name="description" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+			<Column Name="descriptionEs" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+			<Association Name="roofType_roofTypeSur" Member="roofTypeSurs" ThisKey="type" OtherKey="roofType" Type="roofTypeSur" />
+			<Association Name="roofType_policy" Member="policies" ThisKey="type" OtherKey="roofType" Type="policy" />
+			<Association Name="roofType_quote" Member="quotes" ThisKey="type" OtherKey="roofType" Type="quote" />
+		</Type>
+	</Table>
+	<Table Name="dbo.v1_valueSublimit" Member="valueSublimits">
+		<Type Name="valueSublimit">
+			<Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+			<Column Name="company" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+			<Column Name="nameEs" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+			<Column Name="minimum" Type="System.Decimal" DbType="Decimal(18,4) NOT NULL" CanBeNull="false" />
+			<Column Name="maximum" Type="System.Decimal" DbType="Decimal(18,4) NOT NULL" CanBeNull="false" />
+			<Column Name="percentage" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="help" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+			<Column Name="helpEs" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+			<Column Name="defaultValue" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+		</Type>
+	</Table>
+	<Table Name="homeowner.policyFEPADRE" Member="policyFEPADREs">
+		<Type Name="policyFEPADRE">
+			<Column Name="policy" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+			<Column Name="approvalYear" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="approvalNo" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+			<Column Name="certificate" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+			<Column Name="certificateNo" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+			<Column Name="date" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+			<Column Name="paymentType" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+			<Column Name="series" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+			<Column Name="mapfreInternalNo" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+			<Column Name="originalString" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+			<Column Name="seal" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+			<Column Name="folio" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+			<Column Name="receiptType" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+			<Column Name="fxReceiptType" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+			<Column Name="paymentMedium" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+			<Column Name="issuedIn" Type="System.String" DbType="VarChar(256) NOT NULL" CanBeNull="false" />
+			<Column Name="registry" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+			<Column Name="bankReferencesXML" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+			<Column Name="mapfreEndoso" Type="System.String" DbType="VarChar(16) NOT NULL" CanBeNull="false" />
+			<Column Name="receiptSeries" Type="System.String" DbType="VarChar(16) NOT NULL" CanBeNull="false" />
+			<Column Name="mapfreMEKey" Type="System.String" DbType="VarChar(16) NOT NULL" CanBeNull="false" />
+			<Column Name="mapfreMEAgentName" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+			<Column Name="rawXML" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+			<Association Name="policy_policyFEPADRE" Member="policy1" ThisKey="policy" OtherKey="id" Type="policy" IsForeignKey="true" />
+		</Type>
+	</Table>
+	<Table Name="dbo.v1_typeOfProperty" Member="typeOfProperties">
+		<Type Name="typeOfProperty">
+			<Column Name="typeOfProperty" Member="type" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+			<Column Name="description" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+			<Column Name="descriptionEs" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+			<Column Name="[order]" Member="order" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Association Name="typeOfProperty_typeOfPropertySur" Member="typeOfPropertySurs" ThisKey="type" OtherKey="typeOfProperty" Type="typeOfPropertySur" />
+			<Association Name="typeOfProperty_policy" Member="policies" ThisKey="type" OtherKey="typeOfProperty" Type="policy" />
+			<Association Name="typeOfProperty_quote" Member="quotes" ThisKey="type" OtherKey="typeOfProperty" Type="quote" />
+		</Type>
+	</Table>
+	<Table Name="homeowner.v1_clientTypeSur" Member="clientTypeSurs">
+		<Type Name="clientTypeSur">
+			<Column Name="clientType" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+			<Column Name="company" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+			<Column Name="surcharge" Type="System.Decimal" DbType="Decimal(8,4) NOT NULL" CanBeNull="false" />
+			<Association Name="clientType_clientTypeSur" Member="clientType1" ThisKey="clientType" OtherKey="type" Type="clientType" IsForeignKey="true" />
+		</Type>
+	</Table>
+	<Table Name="homeowner.v1_ClientType" Member="clientTypes">
+		<Type Name="clientType">
+			<Column Name="clientType" Member="type" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+			<Column Name="description" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+			<Column Name="descriptionEs" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+			<Association Name="clientType_clientTypeSur" Member="clientTypeSurs" ThisKey="type" OtherKey="clientType" Type="clientTypeSur" />
+			<Association Name="clientType_policy" Member="policies" ThisKey="type" OtherKey="typeOfClient" Type="policy" />
+			<Association Name="clientType_quote" Member="quotes" ThisKey="type" OtherKey="typeOfClient" Type="quote" />
+		</Type>
+	</Table>
+	<Table Name="dbo.v1_useOfProperty" Member="useOfProperties">
+		<Type Name="useOfProperty">
+			<Column Name="useOfProperty" Member="use" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+			<Column Name="description" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+			<Column Name="descriptionEs" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+			<Column Name="[order]" Member="order" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Association Name="useOfProperty_useOfPropertySur" Member="useOfPropertySurs" ThisKey="use" OtherKey="useOfProperty" Type="useOfPropertySur" />
+			<Association Name="useOfProperty_policy" Member="policies" ThisKey="use" OtherKey="useOfProperty" Type="policy" />
+			<Association Name="useOfProperty_quote" Member="quotes" ThisKey="use" OtherKey="useOfProperty" Type="quote" />
+		</Type>
+	</Table>
+	<Table Name="dbo.v1_InsuredPersonHouse" Member="insuredPersonHouses">
+		<Type Name="insuredPersonHouse" Id="ID2">
+			<Column Name="insuredPersonHouse" Member="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+			<Column Name="insuredPerson" Type="System.Int32" DbType="Int" CanBeNull="true" />
+			<Column Name="street" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+			<Column Name="InteriorNo" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+			<Column Name="bankName" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+			<Column Name="exteriorNo" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+			<Column Name="houseEstate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="loanNumber" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+			<Column Name="bankAddress" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+			<Association Name="insuredPersonHouse_policy" Member="policies" ThisKey="id" OtherKey="insuredPersonHouse" Type="policy" />
+			<Association Name="insuredPersonHouse_quote" Member="quotes" ThisKey="id" OtherKey="insuredPersonHouse" Type="quote" />
+			<Association Name="insuredPerson_insuredPersonHouse" Member="insuredPerson1" ThisKey="insuredPerson" OtherKey="id" Type="insuredPerson" IsForeignKey="true" />
+		</Type>
+	</Table>
+	<Table Name="homeowner.packageService" Member="packageServices">
+		<Type Name="packageService">
+			<Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+			<Column Name="wallType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="roofType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="useOfProperty" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="stories" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="underground" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="adjoiningEstates" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="distanceFromSea" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="shutters" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="guards24" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="centralAlarm" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="localAlarm" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="tvCircuit" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="tvGuard" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="fireAll" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="quake" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="hmp" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="contentsFactor" Type="System.Decimal" DbType="Decimal(6,4) NOT NULL" CanBeNull="false" />
+			<Column Name="outdoorFactor" Type="System.Decimal" DbType="Decimal(6,4) NOT NULL" CanBeNull="false" />
+			<Column Name="debriFactor" Type="System.Decimal" DbType="Decimal(6,4) NOT NULL" CanBeNull="false" />
+			<Column Name="extraFactor" Type="System.Decimal" DbType="Decimal(6,4) NOT NULL" CanBeNull="false" />
+			<Column Name="lossOfRentsFactor" Type="System.Decimal" DbType="Decimal(6,4) NOT NULL" CanBeNull="false" />
+			<Column Name="moneySecurityFactor" Type="System.Decimal" DbType="Decimal(6,4) NOT NULL" CanBeNull="false" />
+			<Column Name="accidentalGlassBreakageFactor" Type="System.Decimal" DbType="Decimal(6,4) NOT NULL" CanBeNull="false" />
+			<Column Name="personalFactor" Type="System.Decimal" DbType="Decimal(6,4) NOT NULL" CanBeNull="false" />
+			<Column Name="domesticWorkersLiability" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="burglaryFactor" Type="System.Decimal" DbType="Decimal(6,4) NOT NULL" CanBeNull="false" />
+			<Column Name="burglaryJewelryFactor" Type="System.Decimal" DbType="Decimal(6,4) NOT NULL" CanBeNull="false" />
+			<Column Name="familyAssistance" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="CSLFactor" Type="System.Decimal" DbType="Decimal(6,4) NOT NULL" CanBeNull="false" />
+			<Column Name="techSupport" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="smokeAlarm" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="fireExtinguisher" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="fireHydrant" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="accidentalGlassContentsFactor" Type="System.Decimal" DbType="Decimal(6,4) NOT NULL" CanBeNull="false" />
+			<Column Name="otherStructuresFactor" Type="System.Decimal" DbType="Decimal(6,4) NOT NULL" CanBeNull="false" />
+			<Column Name="electronicfactor" Type="System.Decimal" DbType="Decimal(6,4) NOT NULL" CanBeNull="false" />
+			<Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+		</Type>
+	</Table>
+	<Table Name="dbo.policy" Member="policies">
+		<Type Name="policy">
+			<Column Name="policy" Member="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+			<Column Name="policyNo" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+			<Column Name="issuedBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="company" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="startDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+			<Column Name="endDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+			<Column Name="days" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="issueDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+			<Column Name="insuredPerson" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="insuredPersonHouse" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="typeOfClient" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="typeOfProperty" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="wallType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="roofType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="useOfProperty" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="stories" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="underground" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="adjoiningEstates" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+			<Column Name="distanceFromSea" Type="System.Int32" DbType="Int" CanBeNull="true" />
+			<Column Name="shutters" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+			<Column Name="guards24" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="centralAlarm" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="localAlarm" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="tvCircuit" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="tvGuard" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="fireAll" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="quake" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="HMP" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="buildingLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="outdoorLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="contentsLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="debriLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="extraLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="lossOfRentsLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="moneySecurityLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="accidentalGlassBreakageLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="electronicEquipmentLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="personalItemsLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="domesticWorkersLiability" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="burglaryLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="burglaryJewelryLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="familyAssistance" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="CSLLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="outdoorDescription" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+			<Column Name="isTest" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="policyNoLocal" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="netPremium" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="taxTotal" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="comissionTotal" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="taxP" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="comissionP" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="fee" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="descuento" Type="System.Decimal" DbType="Decimal(8,4) NOT NULL" CanBeNull="false" />
+			<Column Name="agentName" Type="System.String" DbType="VarChar(254) NOT NULL" CanBeNull="false" />
+			<Column Name="userName" Type="System.String" DbType="VarChar(254) NOT NULL" CanBeNull="false" />
+			<Column Name="agentAddress" Type="System.String" DbType="VarChar(254) NOT NULL" CanBeNull="false" />
+			<Column Name="currency" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="recargo" Type="System.Decimal" DbType="Decimal(8,4) NOT NULL" CanBeNull="false" />
+			<Column Name="exchangeRate" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+			<Column Name="cantidadDePagos" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="recargoPagoFraccionado" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="porcentajeRecargoPagoFraccionado" Type="System.Decimal" DbType="Decimal(8,4) NOT NULL" CanBeNull="false" />
+			<Column Name="techSupport" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="fireExtinguisher" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="fireHydrant" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="smokeAlarm" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="hurricaneProtections" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+			<Column Name="accidentalGlassBreakageContents" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="artLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="artsTransitLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="package" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="minimumWage" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="quoteRenewal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+			<Column Name="quoteRenewalAdjustment" Type="System.Int32" DbType="Int" CanBeNull="true" />
+			<Column Name="policyRenewal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+			<Column Name="ccNo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+			<Column Name="ccType" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+			<Column Name="ccExpirationMonth" Type="System.Int32" DbType="Int" CanBeNull="true" />
+			<Column Name="ccExpirationYear" Type="System.Int32" DbType="Int" CanBeNull="true" />
+			<Column Name="otherStructuresLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="otherStructuresDescription" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+			<Column Name="additionalNotes" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+			<Association Name="policy_policyDetail" Member="policyDetails" ThisKey="id" OtherKey="policy" Type="policyDetail" />
+			<Association Name="policy_policyFE" Member="policyFE" ThisKey="id" OtherKey="policy" Type="policyFE" Cardinality="One" />
+			<Association Name="policy_policyFEPADRE" Member="policyFEPADRE" ThisKey="id" OtherKey="policy" Type="policyFEPADRE" Cardinality="One" />
+			<Association Name="clientType_policy" Member="clientType" ThisKey="typeOfClient" OtherKey="type" Type="clientType" IsForeignKey="true" />
+			<Association Name="distanceFromSea_policy" Member="distanceFromSea1" ThisKey="distanceFromSea" OtherKey="distance" Type="distanceFromSea" IsForeignKey="true" />
+			<Association Name="insuredPerson_policy" Member="insuredPerson1" ThisKey="insuredPerson" OtherKey="id" Type="insuredPerson" IsForeignKey="true" />
+			<Association Name="insuredPersonHouse_policy" Member="insuredPersonHouse1" ThisKey="insuredPersonHouse" OtherKey="id" Type="insuredPersonHouse" IsForeignKey="true" />
+			<Association Name="roofType_policy" Member="roofType1" ThisKey="roofType" OtherKey="type" Type="roofType" IsForeignKey="true" />
+			<Association Name="typeOfProperty_policy" Member="typeOfProperty1" ThisKey="typeOfProperty" OtherKey="type" Type="typeOfProperty" IsForeignKey="true" />
+			<Association Name="useOfProperty_policy" Member="useOfProperty1" ThisKey="useOfProperty" OtherKey="use" Type="useOfProperty" IsForeignKey="true" />
+			<Association Name="wallType_policy" Member="wallType1" ThisKey="wallType" OtherKey="type" Type="wallType" IsForeignKey="true" />
+		</Type>
+	</Table>
+	<Table Name="dbo.quote" Member="quotes">
+		<Type Name="quote">
+			<Column Name="quote" Member="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+			<Column Name="issuedBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="company" Type="System.Int32" DbType="Int" CanBeNull="true" />
+			<Column Name="startDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+			<Column Name="endDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+			<Column Name="issueDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+			<Column Name="insuredPerson" Type="System.Int32" DbType="Int" CanBeNull="true" />
+			<Column Name="insuredPersonHouse" Type="System.Int32" DbType="Int" CanBeNull="true" />
+			<Column Name="typeOfClient" Type="System.Int32" DbType="Int" CanBeNull="true" />
+			<Column Name="typeOfProperty" Type="System.Int32" DbType="Int" CanBeNull="true" />
+			<Column Name="wallType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+			<Column Name="roofType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+			<Column Name="useOfProperty" Type="System.Int32" DbType="Int" CanBeNull="true" />
+			<Column Name="stories" Type="System.Int32" DbType="Int" CanBeNull="true" />
+			<Column Name="underground" Type="System.Int32" DbType="Int" CanBeNull="true" />
+			<Column Name="adjoiningEstates" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+			<Column Name="distanceFromSea" Type="System.Int32" DbType="Int" CanBeNull="true" />
+			<Column Name="shutters" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+			<Column Name="guards24" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+			<Column Name="centralAlarm" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+			<Column Name="localAlarm" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+			<Column Name="tvCircuit" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+			<Column Name="tvGuard" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+			<Column Name="fireAll" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+			<Column Name="quake" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+			<Column Name="HMP" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+			<Column Name="buildingLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="outdoorLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="contentsLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="debriLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="extraLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="lossOfRentsLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="moneySecurityLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="accidentalGlassBreakageLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="electronicEquipmentLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="personalItemsLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="domesticWorkersLiability" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="burglaryLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="burglaryJewelryLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="familyAssistance" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="CSLLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="outdoorDescription" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+			<Column Name="descuento" Type="System.Decimal" DbType="Decimal(8,4) NOT NULL" CanBeNull="false" />
+			<Column Name="limitsEnabled" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="currency" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="recargo" Type="System.Decimal" DbType="Decimal(8,4) NOT NULL" CanBeNull="false" />
+			<Column Name="cantidadDePagos" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="recargoPagoFraccionado" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="porcentajeRecargoPagoFraccionado" Type="System.Decimal" DbType="Decimal(8,4) NOT NULL" CanBeNull="false" />
+			<Column Name="techSupport" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="taxPercentage" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+			<Column Name="burglarySecurity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="smokeAlarm" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="fireExtinguisher" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="fireHydrant" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="hurricaneProtections" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+			<Column Name="accidentalGlassBreakageContents" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="artLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="artsTransitLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="package" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="minimumWage" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="otherStructuresLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="otherStructuresDescription" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+			<Column Name="additionalNotes" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+			<Column Name="fee" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+			<Association Name="quote_quoteDetail" Member="quoteDetails" ThisKey="id" OtherKey="quote" Type="quoteDetail" />
+			<Association Name="clientType_quote" Member="clientType" ThisKey="typeOfClient" OtherKey="type" Type="clientType" IsForeignKey="true" />
+			<Association Name="distanceFromSea_quote" Member="distanceFromSea1" ThisKey="distanceFromSea" OtherKey="distance" Type="distanceFromSea" IsForeignKey="true" />
+			<Association Name="insuredPerson_quote" Member="insuredPerson1" ThisKey="insuredPerson" OtherKey="id" Type="insuredPerson" IsForeignKey="true" />
+			<Association Name="insuredPersonHouse_quote" Member="insuredPersonHouse1" ThisKey="insuredPersonHouse" OtherKey="id" Type="insuredPersonHouse" IsForeignKey="true" />
+			<Association Name="roofType_quote" Member="roofType1" ThisKey="roofType" OtherKey="type" Type="roofType" IsForeignKey="true" />
+			<Association Name="typeOfProperty_quote" Member="typeOfProperty1" ThisKey="typeOfProperty" OtherKey="type" Type="typeOfProperty" IsForeignKey="true" />
+			<Association Name="useOfProperty_quote" Member="useOfProperty1" ThisKey="useOfProperty" OtherKey="use" Type="useOfProperty" IsForeignKey="true" />
+			<Association Name="wallType_quote" Member="wallType1" ThisKey="wallType" OtherKey="type" Type="wallType" IsForeignKey="true" />
+		</Type>
+	</Table>
+	<Function Name="dbo.spUpd_V1_distanceFromSeaSur" Method="spUpd_V1_distanceFromSeaSur">
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<Parameter Name="distanceFromSea" Type="System.Int32" DbType="Int" />
+		<Parameter Name="surcharge" Type="System.Decimal" DbType="Decimal" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="dbo.spList_V1_distanceFromSeaSur" Method="spList_V1_distanceFromSeaSur">
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<ElementType Name="spList_V1_distanceFromSeaSurResult">
+			<Column Name="company" Type="System.Int32" DbType="Int" CanBeNull="true" />
+			<Column Name="description" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+			<Column Name="distanceFromSea" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="surcharge" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+		</ElementType>
+	</Function>
+	<Function Name="dbo.spDel_V1_distanceFromSea" Method="spDel_V1_distanceFromSea">
+		<Parameter Name="distance" Type="System.Int32" DbType="Int" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="dbo.spDel_V1_burglarySecurity" Method="spDel_V1_burglarySecurity">
+		<Parameter Name="burglarySecurity" Type="System.Int32" DbType="Int" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="dbo.spDel_V1_wallType" Method="spDel_V1_wallType">
+		<Parameter Name="wallType" Type="System.Int32" DbType="Int" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="dbo.spDel_V1_windowProtection" Method="spDel_V1_windowProtection">
+		<Parameter Name="windowProtection" Type="System.Int32" DbType="Int" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="dbo.spList_V1_windowProtectionSur" Method="spList_V1_windowProtectionSur">
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<ElementType Name="spList_V1_windowProtectionSurResult">
+			<Column Name="company" Type="System.Int32" DbType="Int" CanBeNull="true" />
+			<Column Name="description" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+			<Column Name="windowProtection" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="surcharge" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+		</ElementType>
+	</Function>
+	<Function Name="dbo.spUpd_V1_windowProtectionSur" Method="spUpd_V1_windowProtectionSur">
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<Parameter Name="windowProtection" Type="System.Int32" DbType="Int" />
+		<Parameter Name="surcharge" Type="System.Decimal" DbType="Decimal" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="dbo.spList_V1_useOfPropertySur" Method="spList_V1_useOfPropertySur">
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<ElementType Name="spList_V1_useOfPropertySurResult">
+			<Column Name="company" Type="System.Int32" DbType="Int" CanBeNull="true" />
+			<Column Name="description" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+			<Column Name="useOfProperty" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="surcharge" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+		</ElementType>
+	</Function>
+	<Function Name="dbo.spDel_V1_useOfProperty" Method="spDel_V1_useOfProperty">
+		<Parameter Name="useOfProperty" Type="System.Int32" DbType="Int" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="dbo.spDel_V1_typeOfRisk" Method="spDel_V1_typeOfRisk">
+		<Parameter Name="typeOfRisk" Type="System.Int32" DbType="Int" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="dbo.spUpd_V1_useOfPropertySur" Method="spUpd_V1_useOfPropertySur">
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<Parameter Name="useOfProperty" Type="System.Int32" DbType="Int" />
+		<Parameter Name="surcharge" Type="System.Decimal" DbType="Decimal" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="dbo.spDel_V1_typeOfProperty" Method="spDel_V1_typeOfProperty">
+		<Parameter Name="typeOfProperty" Type="System.Int32" DbType="Int" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="dbo.spDel_V1_roofType" Method="spDel_V1_roofType">
+		<Parameter Name="roofType" Type="System.Int32" DbType="Int" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="dbo.spList_V1_typeOfPropertySur" Method="spList_V1_typeOfPropertySur">
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<ElementType Name="spList_V1_typeOfPropertySurResult">
+			<Column Name="company" Type="System.Int32" DbType="Int" CanBeNull="true" />
+			<Column Name="description" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+			<Column Name="typeOfProperty" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="surcharge" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+		</ElementType>
+	</Function>
+	<Function Name="dbo.spUpd_V1_typeOfPropertySur" Method="spUpd_V1_typeOfPropertySur">
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<Parameter Name="typeOfProperty" Type="System.Int32" DbType="Int" />
+		<Parameter Name="surcharge" Type="System.Decimal" DbType="Decimal" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="dbo.spList_V1_burglarySecuritySur" Method="spList_V1_burglarySecuritySur">
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<ElementType Name="spList_V1_burglarySecuritySurResult">
+			<Column Name="company" Type="System.Int32" DbType="Int" CanBeNull="true" />
+			<Column Name="code" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="dis" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+			<Column Name="description" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+			<Column Name="burglarySecurity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="surcharge" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+		</ElementType>
+	</Function>
+	<Function Name="dbo.spUpd_V1_burglarySecuritySur" Method="spUpd_V1_burglarySecuritySur">
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<Parameter Name="burglarySecurity" Type="System.Int32" DbType="Int" />
+		<Parameter Name="code" Type="System.Boolean" DbType="Bit" />
+		<Parameter Name="dis" Type="System.Decimal" DbType="Decimal" />
+		<Parameter Name="surcharge" Type="System.Decimal" DbType="Decimal" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="dbo.spList_V1_clientTypeSur" Method="spList_V1_clientTypeSur">
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<ElementType Name="spList_V1_clientTypeSurResult">
+			<Column Name="company" Type="System.Int32" DbType="Int" CanBeNull="true" />
+			<Column Name="description" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+			<Column Name="clientType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="surcharge" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+		</ElementType>
+	</Function>
+	<Function Name="dbo.spUpd_V1_clientTypeSur" Method="spUpd_V1_clientTypeSur">
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<Parameter Name="clientType" Type="System.Int32" DbType="Int" />
+		<Parameter Name="surcharge" Type="System.Decimal" DbType="Decimal" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="dbo.spDel_V1_clientType" Method="spDel_V1_clientType">
+		<Parameter Name="clientType" Type="System.Int32" DbType="Int" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="dbo.spList_V1_FHMSur" Method="spList_V1_FHMSur">
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<ElementType Name="spList_V1_FHMSurResult">
+			<Column Name="company" Type="System.Int32" DbType="Int" CanBeNull="true" />
+			<Column Name="description" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+			<Column Name="FHM" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="cInterior" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+			<Column Name="cBeach" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+			<Column Name="Rem" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+			<Column Name="GE" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+			<Column Name="dedInterior" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+			<Column Name="dedBeach" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+			<Column Name="coAseguro" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+		</ElementType>
+	</Function>
+	<Function Name="dbo.spList_V1_otherSur" Method="spList_V1_otherSur">
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<ElementType Name="spList_V1_otherSurResult">
+			<Column Name="company" Type="System.Int32" DbType="Int" CanBeNull="true" />
+			<Column Name="description" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+			<Column Name="other" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="surcharge" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+		</ElementType>
+	</Function>
+	<Function Name="dbo.spList_V1_theftProtectionSur" Method="spList_V1_theftProtectionSur">
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<ElementType Name="spList_V1_theftProtectionSurResult">
+			<Column Name="company" Type="System.Int32" DbType="Int" CanBeNull="true" />
+			<Column Name="description" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+			<Column Name="theftProtection" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="code" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="DIS" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+		</ElementType>
+	</Function>
+	<Function Name="dbo.spDel_V1_other" Method="spDel_V1_other">
+		<Parameter Name="other" Type="System.Int32" DbType="Int" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="dbo.spDel_V1_FHM" Method="spDel_V1_FHM">
+		<Parameter Name="FHM" Parameter="fHM" Type="System.Int32" DbType="Int" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="dbo.spDel_V1_theftProtection" Method="spDel_V1_theftProtection">
+		<Parameter Name="theftProtection" Type="System.Int32" DbType="Int" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="dbo.spUpd_V1_FHMSur" Method="spUpd_V1_FHMSur">
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<Parameter Name="FHM" Parameter="fHM" Type="System.Int32" DbType="Int" />
+		<Parameter Name="cInterior" Type="System.Decimal" DbType="Decimal" />
+		<Parameter Name="cBeach" Type="System.Decimal" DbType="Decimal" />
+		<Parameter Name="Rem" Parameter="rem" Type="System.Decimal" DbType="Decimal" />
+		<Parameter Name="GE" Parameter="gE" Type="System.Decimal" DbType="Decimal" />
+		<Parameter Name="dedInterior" Type="System.Decimal" DbType="Decimal" />
+		<Parameter Name="dedBeach" Type="System.Decimal" DbType="Decimal" />
+		<Parameter Name="coAseguro" Type="System.Decimal" DbType="Decimal" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="dbo.spUpd_V1_otherSur" Method="spUpd_V1_otherSur">
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<Parameter Name="other" Type="System.Int32" DbType="Int" />
+		<Parameter Name="surcharge" Type="System.Decimal" DbType="Decimal" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="dbo.spUpd_V1_theftProtectionSur" Method="spUpd_V1_theftProtectionSur">
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<Parameter Name="theftProtection" Type="System.Int32" DbType="Int" />
+		<Parameter Name="code" Type="System.Boolean" DbType="Bit" />
+		<Parameter Name="DIS" Parameter="dIS" Type="System.Decimal" DbType="Decimal" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="dbo.spDel_V1_adjoiningEstate" Method="spDel_V1_adjoiningEstate">
+		<Parameter Name="adjoiningEstate" Type="System.Int32" DbType="Int" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="dbo.spList_V1_adjoiningEstatesSur" Method="spList_V1_adjoiningEstatesSur">
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<ElementType Name="spList_V1_adjoiningEstatesSurResult">
+			<Column Name="company" Type="System.Int32" DbType="Int" CanBeNull="true" />
+			<Column Name="description" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+			<Column Name="adjoiningEstates" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="Surcharge" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+		</ElementType>
+	</Function>
+	<Function Name="dbo.spUpd_V1_adjoiningEstatesSur" Method="spUpd_V1_adjoiningEstatesSur">
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<Parameter Name="adjoiningEstate" Type="System.Int32" DbType="Int" />
+		<Parameter Name="surcharge" Type="System.Decimal" DbType="Decimal" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="dbo.spList_V1_TEVSur" Method="spList_V1_TEVSur">
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<ElementType Name="spList_V1_TEVSurResult">
+			<Column Name="company" Type="System.Int32" DbType="Int" CanBeNull="true" />
+			<Column Name="TEV" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="edif" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+			<Column Name="cont" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+			<Column Name="coaseguro" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+			<Column Name="deducible" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+			<Column Name="remocionEscombros" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+			<Column Name="gastoExtra" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+			<Column Name="perRenta" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+		</ElementType>
+	</Function>
+	<Function Name="dbo.spList_V1_zonaRoboSur" Method="spList_V1_zonaRoboSur">
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<ElementType Name="spList_V1_zonaRoboSurResult">
+			<Column Name="company" Type="System.Int32" DbType="Int" CanBeNull="true" />
+			<Column Name="zonaRobo" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+			<Column Name="menaje" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+			<Column Name="joyas" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+			<Column Name="otro" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+		</ElementType>
+	</Function>
+	<Function Name="dbo.spUpd_V1_TEVSur" Method="spUpd_V1_TEVSur">
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<Parameter Name="TEV" Parameter="tEV" Type="System.Int32" DbType="Int" />
+		<Parameter Name="edif" Type="System.Decimal" DbType="Decimal" />
+		<Parameter Name="cont" Type="System.Decimal" DbType="Decimal" />
+		<Parameter Name="coaseguro" Type="System.Decimal" DbType="Decimal" />
+		<Parameter Name="deducible" Type="System.Decimal" DbType="Decimal" />
+		<Parameter Name="remocionEscombros" Type="System.Decimal" DbType="Decimal" />
+		<Parameter Name="gastoExtra" Type="System.Decimal" DbType="Decimal" />
+		<Parameter Name="perRenta" Type="System.Decimal" DbType="Decimal" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="dbo.spUpd_V1_zonaRoboSur" Method="spUpd_V1_zonaRoboSur">
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<Parameter Name="zonaRobo" Type="System.Char" DbType="Char(1)" />
+		<Parameter Name="menaje" Type="System.Decimal" DbType="Decimal" />
+		<Parameter Name="joyas" Type="System.Decimal" DbType="Decimal" />
+		<Parameter Name="otro" Type="System.Decimal" DbType="Decimal" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="dbo.spUpd_V1_roofTypeSur" Method="spUpd_V1_roofTypeSur">
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<Parameter Name="roofType" Type="System.Int32" DbType="Int" />
+		<Parameter Name="TR" Parameter="tR" Type="System.Decimal" DbType="Decimal" />
+		<Parameter Name="FHM" Parameter="fHM" Type="System.Decimal" DbType="Decimal" />
+		<Parameter Name="Robo" Parameter="robo" Type="System.Decimal" DbType="Decimal" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="dbo.spUpd_V1_wallTypeSur" Method="spUpd_V1_wallTypeSur">
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<Parameter Name="wallType" Type="System.Int32" DbType="Int" />
+		<Parameter Name="TR" Parameter="tR" Type="System.Decimal" DbType="Decimal" />
+		<Parameter Name="FHM" Parameter="fHM" Type="System.Decimal" DbType="Decimal" />
+		<Parameter Name="Robo" Parameter="robo" Type="System.Decimal" DbType="Decimal" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="dbo.spUpd_v1_addSecurityInfo" Method="spUpd_v1_addSecurityInfo">
+		<Parameter Name="id" Type="System.Int32" DbType="Int" />
+		<Parameter Name="distanceFromSea" Type="System.Int32" DbType="Int" />
+		<Parameter Name="shutters" Type="System.Boolean" DbType="Bit" />
+		<Parameter Name="guards24" Type="System.Boolean" DbType="Bit" />
+		<Parameter Name="centralAlarm" Type="System.Boolean" DbType="Bit" />
+		<Parameter Name="localAlarm" Type="System.Boolean" DbType="Bit" />
+		<Parameter Name="tvCircuit" Type="System.Boolean" DbType="Bit" />
+		<Parameter Name="tvGuard" Type="System.Boolean" DbType="Bit" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="dbo.spList_V1_roofTypeSur" Method="spList_V1_roofTypeSur">
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<ElementType Name="spList_V1_roofTypeSurResult">
+			<Column Name="company" Type="System.Int32" DbType="Int" CanBeNull="true" />
+			<Column Name="description" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+			<Column Name="roofType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="TR" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+			<Column Name="FHM" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+			<Column Name="Robo" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+		</ElementType>
+	</Function>
+	<Function Name="dbo.spList_V1_wallTypeSur" Method="spList_V1_wallTypeSur">
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<ElementType Name="spList_V1_wallTypeSurResult">
+			<Column Name="company" Type="System.Int32" DbType="Int" CanBeNull="true" />
+			<Column Name="description" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+			<Column Name="wallType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="TR" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+			<Column Name="FHM" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+			<Column Name="Robo" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+		</ElementType>
+	</Function>
+	<Function Name="homeowner.spPolizaTemp" Method="spPolizaTemp">
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="dbo.spGeneratePolicyNo" Method="spGeneratePolicyNo">
+		<Parameter Name="isTest" Type="System.Boolean" DbType="Bit" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="dbo.spIsValidHMPDate" Method="spIsValidHMPDate">
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="dbo.spUpd_V1_familyAssistanceSur" Method="spUpd_V1_familyAssistanceSur">
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<Parameter Name="familyAssistance" Type="System.Int32" DbType="Int" />
+		<Parameter Name="val1" Type="System.Decimal" DbType="Money" />
+		<Parameter Name="val2" Type="System.Decimal" DbType="Money" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="dbo.spList_V1_familyAssistanceSur" Method="spList_V1_familyAssistanceSur">
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<ElementType Name="spList_V1_familyAssistanceSurResult">
+			<Column Name="company" Type="System.Int32" DbType="Int" CanBeNull="true" />
+			<Column Name="description" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+			<Column Name="code" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="familyAssistance" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="val1" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="val2" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+		</ElementType>
+	</Function>
+	<Function Name="dbo.spDel_V1_familyAssistance" Method="spDel_V1_familyAssistance">
+		<Parameter Name="familyAssistance" Type="System.Int32" DbType="Int" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="dbo.spList_ValidHMPDates" Method="spList_ValidHMPDates">
+		<ElementType Name="spList_ValidHMPDatesResult">
+			<Column Name="fecha_ini" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+			<Column Name="fecha_fin" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+		</ElementType>
+	</Function>
+	<Function Name="dbo.spUpd_ValidHMPDates" Method="spUpd_ValidHMPDates">
+		<Parameter Name="fechaIni" Type="System.DateTime" DbType="DateTime" />
+		<Parameter Name="fechaFin" Type="System.DateTime" DbType="DateTime" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="dbo.spList_V1_typeOfRiskSur" Method="spList_V1_typeOfRiskSur">
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<ElementType Name="spList_V1_typeOfRiskSurResult">
+			<Column Name="company" Type="System.Int32" DbType="Int" CanBeNull="true" />
+			<Column Name="description" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+			<Column Name="typeOfRisk" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="surcharge" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+			<Column Name="Additional" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+			<Column Name="Coverage" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="Minimum" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="Maximum" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="Suggested" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+		</ElementType>
+	</Function>
+	<Function Name="dbo.spUpd_V1_typeOfRiskSur" Method="spUpd_V1_typeOfRiskSur">
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<Parameter Name="typeOfRisk" Type="System.Int32" DbType="Int" />
+		<Parameter Name="surcharge" Type="System.Decimal" DbType="Decimal" />
+		<Parameter Name="additional" Type="System.Decimal" DbType="Decimal" />
+		<Parameter Name="coverage" Type="System.Boolean" DbType="Bit" />
+		<Parameter Name="minimum" Type="System.Decimal" DbType="Money" />
+		<Parameter Name="maximum" Type="System.Decimal" DbType="Money" />
+		<Parameter Name="suggested" Type="System.Decimal" DbType="Money" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="homeowner.spList_MapfreStateCode" Method="spList_MapfreStateCode">
+		<Parameter Name="state" Type="System.Int32" DbType="Int" />
+		<ElementType Name="spList_MapfreStateCodeResult">
+			<Column Name="stateCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+		</ElementType>
+	</Function>
+	<Function Name="homeowner.spUpd_SynchronizeMapfreStateCodes" Method="spUpd_SynchronizeMapfreStateCodes">
+		<Parameter Name="information" Type="System.String" DbType="VarChar(MAX)" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="homeowner.spUpd_SynchronizeMapfreCityCodes" Method="spUpd_SynchronizeMapfreCityCodes">
+		<Parameter Name="information" Type="System.String" DbType="VarChar(MAX)" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="homeowner.spList_MapfreCityCode" Method="spList_MapfreCityCode">
+		<Parameter Name="city" Type="System.Int32" DbType="Int" />
+		<ElementType Name="spList_MapfreCityCodeResult">
+			<Column Name="cityCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+		</ElementType>
+	</Function>
+	<Function Name="dbo.spUpd_v1_addPropInfo" Method="spUpd_v1_addPropInfo">
+		<Parameter Name="id" Type="System.Int32" DbType="Int" />
+		<Parameter Name="roofType" Type="System.Int32" DbType="Int" />
+		<Parameter Name="wallType" Type="System.Int32" DbType="Int" />
+		<Parameter Name="typeOfClient" Type="System.Int32" DbType="Int" />
+		<Parameter Name="useOfProperty" Type="System.Int32" DbType="Int" />
+		<Parameter Name="typeOfProperty" Type="System.Int32" DbType="Int" />
+		<Parameter Name="adjoiningEstates" Type="System.Boolean" DbType="Bit" />
+		<Parameter Name="stories" Type="System.Int32" DbType="Int" />
+		<Parameter Name="underground" Type="System.Int32" DbType="Int" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="dbo.spList_V1_policyPerson" Method="spList_V1_policyPerson">
+		<Parameter Name="id" Type="System.Int32" DbType="Int" />
+		<ElementType IdRef="ID1" />
+	</Function>
+	<Function Name="dbo.spList_V1_quotePerson" Method="spList_V1_quotePerson">
+		<Parameter Name="id" Type="System.Int32" DbType="Int" />
+		<ElementType IdRef="ID1" />
+	</Function>
+	<Function Name="dbo.spUpd_V1_policyPerson" Method="spUpd_V1_policyPerson">
+		<Parameter Name="id" Type="System.Int32" DbType="Int" />
+		<Parameter Name="firstName" Type="System.String" DbType="VarChar(100)" />
+		<Parameter Name="lastName" Type="System.String" DbType="VarChar(64)" />
+		<Parameter Name="street" Type="System.String" DbType="VarChar(64)" />
+		<Parameter Name="email" Type="System.String" DbType="VarChar(128)" />
+		<Parameter Name="fax" Type="System.String" DbType="Char(16)" />
+		<Parameter Name="phone" Type="System.String" DbType="Char(16)" />
+		<Parameter Name="city" Type="System.String" DbType="VarChar(32)" />
+		<Parameter Name="state" Type="System.Int32" DbType="Int" />
+		<Parameter Name="zip" Type="System.String" DbType="VarChar(10)" />
+		<Parameter Name="legalPerson" Type="System.Boolean" DbType="Bit" />
+		<Parameter Name="addInsured" Type="System.String" DbType="VarChar(100)" />
+		<Parameter Name="rfc" Type="System.String" DbType="VarChar(13)" />
+		<Parameter Name="stateText" Type="System.String" DbType="VarChar(64)" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="dbo.spUpd_V1_quotePerson" Method="spUpd_V1_quotePerson">
+		<Parameter Name="id" Type="System.Int32" DbType="Int" />
+		<Parameter Name="userid" Type="System.Int32" DbType="Int" />
+		<Parameter Name="firstName" Type="System.String" DbType="VarChar(100)" />
+		<Parameter Name="lastName" Type="System.String" DbType="VarChar(64)" />
+		<Parameter Name="street" Type="System.String" DbType="VarChar(64)" />
+		<Parameter Name="email" Type="System.String" DbType="VarChar(128)" />
+		<Parameter Name="fax" Type="System.String" DbType="Char(16)" />
+		<Parameter Name="phone" Type="System.String" DbType="Char(16)" />
+		<Parameter Name="city" Type="System.String" DbType="VarChar(32)" />
+		<Parameter Name="state" Type="System.Int32" DbType="Int" />
+		<Parameter Name="zip" Type="System.String" DbType="VarChar(10)" />
+		<Parameter Name="legalPerson" Type="System.Boolean" DbType="Bit" />
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<Parameter Name="addInsured" Type="System.String" DbType="VarChar(100)" />
+		<Parameter Name="rfc" Type="System.String" DbType="VarChar(13)" />
+		<Parameter Name="stateText" Type="System.String" DbType="VarChar(64)" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="homeowner.fGet_QuoteTaxPercentage" Method="fGet_QuoteTaxPercentage" IsComposable="true">
+		<Parameter Name="quoteid" Type="System.Int32" DbType="Int" />
+		<Return Type="System.Decimal" />
+	</Function>
+	<Function Name="dbo.spIns_policyXML" Method="spIns_policyXML">
+		<Parameter Name="policy" Type="System.Int32" DbType="Int" />
+		<Parameter Name="xml" Type="System.String" DbType="VarChar(MAX)" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="dbo.spConvertToPolicy" Method="spConvertToPolicy">
+		<Parameter Name="quoteid" Type="System.Int32" DbType="Int" />
+		<Parameter Name="policyNo" Type="System.String" DbType="VarChar(MAX)" />
+		<Parameter Name="isTest" Type="System.Boolean" DbType="Bit" />
+		<Parameter Name="netPremium" Type="System.Decimal" DbType="Money" />
+		<Parameter Name="taxPercentage" Type="System.Decimal" DbType="Money" />
+		<Parameter Name="agentName" Type="System.String" DbType="VarChar(254)" />
+		<Parameter Name="userName" Type="System.String" DbType="VarChar(254)" />
+		<Parameter Name="agentAddress" Type="System.String" DbType="VarChar(254)" />
+		<Parameter Name="comissionPercentage" Type="System.Decimal" DbType="Money" />
+		<Parameter Name="fee" Type="System.Decimal" DbType="Money" />
+		<Parameter Name="exchangeRate" Type="System.Decimal" DbType="Money" />
+		<ElementType Name="spConvertToPolicyResult">
+			<Column Name="policyId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="policyNo" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+		</ElementType>
+	</Function>
+	<Function Name="dbo.spUpd_V1_quoteCoverages" Method="spUpd_V1_quoteCoverages">
+		<Parameter Name="quoteid" Type="System.Int32" DbType="Int" />
+		<Parameter Name="CGLLimit" Parameter="cGLLimit" Type="System.Decimal" DbType="Money" />
+		<Parameter Name="domestic" Type="System.Boolean" DbType="Bit" />
+		<Parameter Name="burglaryLimit" Type="System.Decimal" DbType="Money" />
+		<Parameter Name="burglaryJewelryLimit" Type="System.Decimal" DbType="Money" />
+		<Parameter Name="moneyLimit" Type="System.Decimal" DbType="Money" />
+		<Parameter Name="glassLimit" Type="System.Decimal" DbType="Money" />
+		<Parameter Name="electronicLimit" Type="System.Decimal" DbType="Money" />
+		<Parameter Name="personalLimit" Type="System.Decimal" DbType="Money" />
+		<Parameter Name="family" Type="System.Boolean" DbType="Bit" />
+		<Parameter Name="techSupport" Type="System.Boolean" DbType="Bit" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="dbo.spUpd_V1_policyAgent" Method="spUpd_V1_policyAgent">
+		<Parameter Name="id" Type="System.Int32" DbType="Int" />
+		<Parameter Name="userid" Type="System.Int32" DbType="Int" />
+		<Parameter Name="agentName" Type="System.String" DbType="VarChar(254)" />
+		<Parameter Name="agentAddress" Type="System.String" DbType="VarChar(254)" />
+		<Parameter Name="username" Type="System.String" DbType="VarChar(254)" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="homeowner.spGenerate_DeduciblesCoaseguros" Method="spGenerate_DeduciblesCoaseguros">
+		<Parameter Name="quote" Type="System.Int32" DbType="Int" />
+		<Parameter Name="policy" Type="System.Int32" DbType="Int" />
+		<Parameter Name="zonaTEV" Type="System.Int32" DbType="Int" />
+		<Parameter Name="zonaFHM" Type="System.Int32" DbType="Int" />
+		<ElementType Name="spGenerate_DeduciblesCoasegurosResult">
+			<Column Name="deducibleterremoto" Type="System.Decimal" DbType="Decimal(0,0)" CanBeNull="true" />
+			<Column Name="coaseguroTerremoto" Type="System.Decimal" DbType="Decimal(0,0)" CanBeNull="true" />
+			<Column Name="deducibleFHM" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+			<Column Name="coaseguroFHM" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+			<Column Name="deducibleInterperie" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+			<Column Name="coaseguroInterperie" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+		</ElementType>
+	</Function>
+	<Function Name="dbo.spList_Calcula" Method="spList_Calcula">
+		<Parameter Name="quoteid" Type="System.Int32" DbType="Int" />
+		<Parameter Name="zonaFHM" Type="System.Int32" DbType="Int" />
+		<ElementType Name="spList_CalculaResult">
+			<Column Name="tvCircuit" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+			<Column Name="tvGuard" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+			<Column Name="guards24" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+			<Column Name="centralAlarm" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+			<Column Name="localAlarm" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+			<Column Name="wallType" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+			<Column Name="roofType" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+			<Column Name="useOfProperty" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+			<Column Name="typeOfProperty" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+			<Column Name="adjoiningEstates" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+			<Column Name="typeOfClient" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+			<Column Name="distanceFromSea" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+			<Column Name="fhmDescription" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+			<Column Name="comision" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+			<Column Name="netPremium" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+			<Column Name="name" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+			<Column Name="lastName" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+		</ElementType>
+	</Function>
+	<Function Name="dbo.spUpd_V1_quotePersonHouse" Method="spUpd_V1_quotePersonHouse">
+		<Parameter Name="id" Type="System.Int32" DbType="Int" />
+		<Parameter Name="street" Type="System.String" DbType="VarChar(50)" />
+		<Parameter Name="intNumber" Type="System.String" DbType="VarChar(10)" />
+		<Parameter Name="extNumber" Type="System.String" DbType="VarChar(10)" />
+		<Parameter Name="houseEstate" Type="System.Int32" DbType="Int" />
+		<Parameter Name="taxPercentage" Type="System.Decimal" DbType="Money" />
+		<Parameter Name="bankName" Type="System.String" DbType="VarChar(128)" />
+		<Parameter Name="loanNumber" Type="System.String" DbType="VarChar(32)" />
+		<Parameter Name="bankAddress" Type="System.String" DbType="VarChar(254)" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="homeowner.spUpd_quote" Method="spUpd_quote">
+		<Parameter Name="quoteid" Type="System.Int32" DbType="Int" />
+		<Parameter Name="zonaTEV" Type="System.Int32" DbType="Int" />
+		<Parameter Name="zonaFHM" Type="System.Int32" DbType="Int" />
+		<Parameter Name="zonaRobo" Type="System.Char" DbType="Char(1)" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="dbo.spConvertToQuote" Method="spConvertToQuote">
+		<Parameter Name="id" Type="System.Int32" DbType="Int" />
+		<Parameter Name="zonaTEV" Type="System.Int32" DbType="Int" />
+		<Parameter Name="zonaFHM" Type="System.Int32" DbType="Int" />
+		<Parameter Name="zonaRobo" Type="System.Char" DbType="Char(1)" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="homeowner.spList_PremiumBreakdown" Method="spList_PremiumBreakdown">
+		<Parameter Name="quote" Type="System.Int32" DbType="Int" />
+		<Parameter Name="zonaTEV" Type="System.Int32" DbType="Int" />
+		<Parameter Name="zonaFHM" Type="System.Int32" DbType="Int" />
+		<Parameter Name="zonaRobo" Type="System.Char" DbType="Char(1)" />
+		<ElementType Name="spList_PremiumBreakdownResult">
+			<Column Name="quake" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+			<Column Name="hmp" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+			<Column Name="other" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+		</ElementType>
+	</Function>
+	<Function Name="homeowner.spUpd_DateRangeOfQuote" Method="spUpd_DateRangeOfQuote">
+		<Parameter Name="quoteid" Type="System.Int32" DbType="Int" />
+		<Parameter Name="startDate" Type="System.DateTime" DbType="DateTime" />
+		<Parameter Name="endDate" Type="System.DateTime" DbType="DateTime" />
+		<Parameter Name="zonaTEV" Type="System.Int32" DbType="Int" />
+		<Parameter Name="zonaFHM" Type="System.Int32" DbType="Int" />
+		<Parameter Name="zonaRobo" Type="System.Char" DbType="Char(1)" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="dbo.spUpd_V1_quoteDescuentoRecargo" Method="spUpd_V1_quoteDescuentoRecargo">
+		<Parameter Name="quoteid" Type="System.Int32" DbType="Int" />
+		<Parameter Name="descuento" Type="System.Decimal" DbType="Decimal" />
+		<Parameter Name="recargo" Type="System.Decimal" DbType="Decimal" />
+		<Parameter Name="zonaTEV" Type="System.Int32" DbType="Int" />
+		<Parameter Name="zonaFHM" Type="System.Int32" DbType="Int" />
+		<Parameter Name="zonaRobo" Type="System.Char" DbType="Char(1)" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="dbo.spList_SearchByAgent" Method="spList_SearchByAgent">
+		<Parameter Name="filterids" Type="System.String" DbType="VarChar(MAX)" />
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<ElementType Name="spList_SearchByAgentResult">
+			<Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="issuedBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="issueDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+			<Column Name="firstname" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+			<Column Name="lastName" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+			<Column Name="street" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+			<Column Name="InteriorNo" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+			<Column Name="exteriorNo" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+			<Column Name="houseEstate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="netPremium" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+			<Column Name="taxPercentage" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+			<Column Name="currency" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+		</ElementType>
+	</Function>
+	<Function Name="dbo.spList_SearchByClientName" Method="spList_SearchByClientName">
+		<Parameter Name="name" Type="System.String" DbType="VarChar(64)" />
+		<Parameter Name="filterids" Type="System.String" DbType="VarChar(MAX)" />
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<ElementType Name="spList_SearchByClientNameResult">
+			<Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="issuedBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="issueDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+			<Column Name="firstname" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+			<Column Name="lastName" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+			<Column Name="lastName2" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+			<Column Name="street" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+			<Column Name="InteriorNo" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+			<Column Name="exteriorNo" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+			<Column Name="houseEstate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="netPremium" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+			<Column Name="taxPercentage" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+			<Column Name="currency" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="cantidadDePagos" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="recargoPagoFraccionado" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="porcentajeRecargoPagoFraccionado" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+			<Column Name="outdoorDescription" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+		</ElementType>
+	</Function>
+	<Function Name="dbo.spList_SearchByIssueDate" Method="spList_SearchByIssueDate">
+		<Parameter Name="startDate" Type="System.DateTime" DbType="DateTime" />
+		<Parameter Name="endDate" Type="System.DateTime" DbType="DateTime" />
+		<Parameter Name="filterids" Type="System.String" DbType="VarChar(MAX)" />
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<ElementType Name="spList_SearchByIssueDateResult">
+			<Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="issuedBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="issueDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+			<Column Name="firstname" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+			<Column Name="lastName" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+			<Column Name="lastName2" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+			<Column Name="street" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+			<Column Name="InteriorNo" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+			<Column Name="exteriorNo" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+			<Column Name="houseEstate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="netPremium" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+			<Column Name="taxPercentage" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+			<Column Name="currency" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="cantidadDePagos" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="recargoPagoFraccionado" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="porcentajeRecargoPagoFraccionado" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+			<Column Name="outdoorDescription" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+		</ElementType>
+	</Function>
+	<Function Name="dbo.spList_SearchByQuoteID" Method="spList_SearchByQuoteID">
+		<Parameter Name="quoteid" Type="System.Int32" DbType="Int" />
+		<Parameter Name="filterids" Type="System.String" DbType="VarChar(MAX)" />
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<ElementType Name="spList_SearchByQuoteIDResult">
+			<Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="issuedBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="issueDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+			<Column Name="firstname" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+			<Column Name="lastName" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+			<Column Name="street" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+			<Column Name="InteriorNo" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+			<Column Name="exteriorNo" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+			<Column Name="houseEstate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="netPremium" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+			<Column Name="taxPercentage" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+			<Column Name="currency" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="cantidadDePagos" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="recargoPagoFraccionado" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="porcentajeRecargoPagoFraccionado" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+		</ElementType>
+	</Function>
+	<Function Name="dbo.spList_SearchByUser" Method="spList_SearchByUser">
+		<Parameter Name="issuedBy" Type="System.Int32" DbType="Int" />
+		<Parameter Name="filterids" Type="System.String" DbType="VarChar(MAX)" />
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<ElementType Name="spList_SearchByUserResult">
+			<Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="issuedBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="issueDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+			<Column Name="firstname" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+			<Column Name="lastName" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+			<Column Name="lastName2" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+			<Column Name="street" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+			<Column Name="InteriorNo" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+			<Column Name="exteriorNo" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+			<Column Name="houseEstate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="netPremium" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+			<Column Name="taxPercentage" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+			<Column Name="currency" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="cantidadDePagos" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="recargoPagoFraccionado" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="porcentajeRecargoPagoFraccionado" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+			<Column Name="outdoorDescription" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+		</ElementType>
+	</Function>
+	<Function Name="dbo.spList_SearchPolicyByAgent" Method="spList_SearchPolicyByAgent">
+		<Parameter Name="filterids" Type="System.String" DbType="VarChar(MAX)" />
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<ElementType Name="spList_SearchPolicyByAgentResult">
+			<Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="issuedBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="issueDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+			<Column Name="firstname" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+			<Column Name="lastName" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+			<Column Name="street" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+			<Column Name="InteriorNo" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+			<Column Name="exteriorNo" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+			<Column Name="houseEstate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="rfc" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
+			<Column Name="netPremium" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="policyNo" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+			<Column Name="taxTotal" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="fee" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+		</ElementType>
+	</Function>
+	<Function Name="dbo.spList_SearchPolicyByUser" Method="spList_SearchPolicyByUser">
+		<Parameter Name="issuedBy" Type="System.Int32" DbType="Int" />
+		<Parameter Name="filterids" Type="System.String" DbType="VarChar(MAX)" />
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<ElementType Name="spList_SearchPolicyByUserResult">
+			<Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="issuedBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="issueDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+			<Column Name="firstname" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+			<Column Name="lastName" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+			<Column Name="lastName2" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+			<Column Name="street" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+			<Column Name="InteriorNo" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+			<Column Name="exteriorNo" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+			<Column Name="houseEstate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="rfc" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
+			<Column Name="netPremium" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="policyNo" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+			<Column Name="taxTotal" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="fee" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="outdoorDescription" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+		</ElementType>
+	</Function>
+	<Function Name="dbo.spList_SearchPolicyByClientName" Method="spList_SearchPolicyByClientName">
+		<Parameter Name="name" Type="System.String" DbType="VarChar(64)" />
+		<Parameter Name="filterids" Type="System.String" DbType="VarChar(MAX)" />
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<ElementType Name="spList_SearchPolicyByClientNameResult">
+			<Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="issuedBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="issueDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+			<Column Name="firstname" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+			<Column Name="lastName" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+			<Column Name="lastName2" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+			<Column Name="street" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+			<Column Name="InteriorNo" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+			<Column Name="exteriorNo" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+			<Column Name="houseEstate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="rfc" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
+			<Column Name="netPremium" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="policyNo" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+			<Column Name="taxTotal" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="fee" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="outdoorDescription" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+		</ElementType>
+	</Function>
+	<Function Name="dbo.spList_SearchPolicyByIssueDate" Method="spList_SearchPolicyByIssueDate">
+		<Parameter Name="startDate" Type="System.DateTime" DbType="DateTime" />
+		<Parameter Name="endDate" Type="System.DateTime" DbType="DateTime" />
+		<Parameter Name="filterids" Type="System.String" DbType="VarChar(MAX)" />
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<ElementType Name="spList_SearchPolicyByIssueDateResult">
+			<Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="issuedBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="issueDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+			<Column Name="firstname" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+			<Column Name="lastName" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+			<Column Name="lastName2" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+			<Column Name="street" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+			<Column Name="InteriorNo" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+			<Column Name="exteriorNo" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+			<Column Name="houseEstate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="rfc" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
+			<Column Name="netPremium" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="policyNo" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+			<Column Name="taxTotal" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="fee" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="outdoorDescription" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+		</ElementType>
+	</Function>
+	<Function Name="dbo.spList_SearchByPolicyNo" Method="spList_SearchByPolicyNo">
+		<Parameter Name="policyno" Type="System.String" DbType="VarChar(MAX)" />
+		<Parameter Name="filterids" Type="System.String" DbType="VarChar(MAX)" />
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<ElementType Name="spList_SearchByPolicyNoResult">
+			<Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="issuedBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="issueDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+			<Column Name="firstname" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+			<Column Name="lastName" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+			<Column Name="lastName2" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+			<Column Name="street" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+			<Column Name="InteriorNo" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+			<Column Name="exteriorNo" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+			<Column Name="houseEstate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="rfc" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
+			<Column Name="netPremium" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="policyNo" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+			<Column Name="taxTotal" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="fee" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="outdoorDescription" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+		</ElementType>
+	</Function>
+	<Function Name="dbo.spList_V1_quotePersonHouse" Method="spList_V1_quotePersonHouse">
+		<Parameter Name="id" Type="System.Int32" DbType="Int" />
+		<ElementType IdRef="ID2" />
+	</Function>
+	<Function Name="dbo.spList_Cotiza" Method="spList_Cotiza">
+		<Parameter Name="quoteid" Type="System.Int32" DbType="Int" />
+		<ElementType Name="spList_CotizaResult">
+			<Column Name="quote" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="issuedBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="company" Type="System.Int32" DbType="Int" CanBeNull="true" />
+			<Column Name="startDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+			<Column Name="endDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+			<Column Name="issueDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+			<Column Name="buildingLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="outdoorLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="contentsLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="debriLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="extraLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="lossOfRentsLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="moneySecurityLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="accidentalGlassBreakageLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="electronicEquipmentLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="personalItemsLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="burglaryLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="burglaryJewelryLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="CSLLimit" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="firstname" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+			<Column Name="lastName" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+			<Column Name="sex" Type="System.Int32" DbType="Int" CanBeNull="true" />
+			<Column Name="currency" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="street" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+			<Column Name="InteriorNo" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+			<Column Name="bankName" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+			<Column Name="exteriorNo" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+			<Column Name="quake" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+			<Column Name="HMP" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+			<Column Name="limitsEnabled" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="typeOfProperty" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+			<Column Name="wallType" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+			<Column Name="roofType" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+			<Column Name="useOfProperty" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+			<Column Name="NetPremium" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+			<Column Name="loanNumber" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+			<Column Name="techSupport" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="adjoiningEstates" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+			<Column Name="distanceFromSea" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+			<Column Name="distanciaAlMar" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+			<Column Name="familyAssistance" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="legalPerson" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+			<Column Name="additionalInsured" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+			<Column Name="comision" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+		</ElementType>
+	</Function>
+	<Function Name="dbo.spList_SearchPolicyByExpiringDate" Method="spList_SearchPolicyByExpiringDate">
+		<Parameter Name="startDate" Type="System.DateTime" DbType="DateTime" />
+		<Parameter Name="endDate" Type="System.DateTime" DbType="DateTime" />
+		<Parameter Name="filterids" Type="System.String" DbType="VarChar(MAX)" />
+		<Parameter Name="company" Type="System.Int32" DbType="Int" />
+		<Parameter Name="test" Type="System.Boolean" DbType="Bit" />
+		<Parameter Name="includeRenewed" Type="System.Boolean" DbType="Bit" />
+		<ElementType Name="spList_SearchPolicyByExpiringDateResult">
+			<Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="issuedBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="issueDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+			<Column Name="endDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+			<Column Name="firstname" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+			<Column Name="lastName" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+			<Column Name="lastName2" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+			<Column Name="street" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+			<Column Name="InteriorNo" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+			<Column Name="exteriorNo" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+			<Column Name="houseEstate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+			<Column Name="rfc" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
+			<Column Name="netPremium" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="policyNo" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+			<Column Name="taxTotal" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="fee" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+			<Column Name="policyRenewal" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+			<Column Name="outdoorDescription" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+		</ElementType>
+	</Function>
+	<Function Name="dbo.spUpd_V1_quoteLimits" Method="spUpd_V1_quoteLimits">
+		<Parameter Name="quoteid" Type="System.Int32" DbType="Int" />
+		<Parameter Name="buildingLimit" Type="System.Decimal" DbType="Money" />
+		<Parameter Name="outdoorLimit" Type="System.Decimal" DbType="Money" />
+		<Parameter Name="contentsLimit" Type="System.Decimal" DbType="Money" />
+		<Parameter Name="debriLimit" Type="System.Decimal" DbType="Money" />
+		<Parameter Name="extraLimit" Type="System.Decimal" DbType="Money" />
+		<Parameter Name="lossOfRentsLimit" Type="System.Decimal" DbType="Money" />
+		<Parameter Name="otherStructuresLimit" Type="System.Decimal" DbType="Money" />
+		<Parameter Name="outdoorDescription" Type="System.String" DbType="VarChar(MAX)" />
+		<Parameter Name="otherStructuresDescription" Type="System.String" DbType="VarChar(MAX)" />
+		<Parameter Name="fireAll" Type="System.Boolean" DbType="Bit" />
+		<Parameter Name="quake" Type="System.Boolean" DbType="Bit" />
+		<Parameter Name="HMP" Parameter="hMP" Type="System.Boolean" DbType="Bit" />
+		<Parameter Name="limitsEnabled" Type="System.Boolean" DbType="Bit" />
+		<Parameter Name="currency" Type="System.Int32" DbType="Int" />
+		<Return Type="System.Int32" />
+	</Function>
+	<Function Name="dbo.spList_V1_policyPersonHouse" Method="spList_V1_policyPersonHouse">
+		<Parameter Name="id" Type="System.Int32" DbType="Int" />
+		<ElementType IdRef="ID2" />
+	</Function>
+	<Function Name="dbo.spUpd_V1_policyPersonHouse" Method="spUpd_V1_policyPersonHouse">
+		<Parameter Name="policyid" Type="System.Int32" DbType="Int" />
+		<Parameter Name="street" Type="System.String" DbType="VarChar(50)" />
+		<Parameter Name="intNumber" Type="System.String" DbType="VarChar(10)" />
+		<Parameter Name="extNumber" Type="System.String" DbType="VarChar(10)" />
+		<Parameter Name="bankName" Type="System.String" DbType="VarChar(128)" />
+		<Parameter Name="loanNumber" Type="System.String" DbType="VarChar(32)" />
+		<Parameter Name="bankAddress" Type="System.String" DbType="VarChar(254)" />
+		<Return Type="System.Int32" />
+	</Function>
+</Database>

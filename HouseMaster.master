@@ -1,0 +1,147 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="HouseMaster.master.cs" Inherits="HouseMaster" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+	<title>House Insurance Application</title>
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="expires" content="-1">
+	<link href="/greybox/gb_styles.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+		var GB_ROOT_DIR = "/greybox/";
+	</script>
+	<script type="text/javascript" src="/greybox/AJS.js"></script>
+	<script type="text/javascript" src="/greybox/AJS_fx.js"></script>
+	<script type="text/javascript" src="/greybox/gb_scripts.js"></script>
+	<script type="text/javascript" src="/jquery.js">
+	</script>
+</head>
+<script type="text/javascript">
+	// Courtesy of SimplytheBest.net (http://simplythebest.net/info/dhtml_scripts.html)
+	function tick() {
+		var hours, minutes, seconds, ap;
+		var intHours, intMinutes, intSeconds;
+		var today;
+		today = new Date();
+		intHours = today.getHours();
+		intMinutes = today.getMinutes();
+		intSeconds = today.getSeconds();
+		if (intHours == 0) {
+			hours = "00:";
+			ap = "";
+		} else if (intHours < 12) {
+			hours = intHours + ":";
+			ap = "";
+		} else if (intHours == 12) {
+			hours = "12:";
+			ap = "";
+		} else {
+			intHours = intHours
+			hours = intHours + ":";
+			ap = "";
+		}
+		if (intMinutes < 10) {
+			minutes = "0" + intMinutes + ":";
+		} else {
+			minutes = intMinutes + ":";
+		}
+		if (intSeconds < 10) {
+			seconds = "0" + intSeconds + " ";
+		} else {
+			seconds = intSeconds + " ";
+		}
+		timeString = hours + minutes + seconds + ap;
+		Clock.innerHTML = timeString;
+		window.setTimeout("tick();", 100);
+	}
+</script>
+<body class="house_program" onload="tick()">
+
+	<form id="form1" runat="server">
+	<asp:ScriptManager ID="scmManager" EnablePageMethods="true" EnableScriptGlobalization="true"
+		runat="server">
+		<Services>
+			<asp:ServiceReference Path="~/HomeServices.svc" />
+		</Services>
+	</asp:ScriptManager>
+	
+	<div id="mainwrapper">
+		 
+
+			<div id="header">
+			<div class="container">
+				<div class="pull_left">
+					<a href="/Default.aspx"><img title="Macaffee and Edwards" src="/images/logo.png"></img></a>
+					<h1>Mexican Insurance Specialists</h1>
+				</div><div class="pull_right">
+					<div class="welcome_msg">
+						Welcome <strong><asp:Label runat=server ID=lblUsername></asp:Label></strong>
+						<br /><span><asp:Label runat=server ID=lblDate></asp:Label></span>
+						<div id="Clock"></div>
+						<span><asp:Label ID="lblExchange" runat="server" /></span>
+					</div>
+					<a class="button" href="/logout.aspx" target="_top">Log out</a>
+				</div>
+			</div>
+			</div>
+			<div id="menu">
+				<div id="menuContent">
+				  <user:DropDownMenu ID="menuView" CssClass="menuContainer" HeaderCssClass="menuHeader" ContentCssClass="menuContent" 
+								   Source="~/Menu.xml" LeafTag="item" RootTag="submenu" LinkAttr="wform" runat="server" />
+				</div>
+			</div>
+		
+		
+		<div id="content_panel">
+			
+			<div id="content">
+				<div id="title"><asp:Literal ID="titlePage" runat="server" /></div>
+				<asp:ContentPlaceHolder ID="workloadContent" runat="server" />               
+				
+			</div>
+		</div>
+	</div>
+	<br style="clear: both;" />
+	<asp:UpdateProgress ID="updProgress" DynamicLayout="false" runat="server">
+		<ProgressTemplate>
+		<div id="loadBar" style="">
+		Loading...
+		</div>
+	</ProgressTemplate>
+	</asp:UpdateProgress>
+	</form>
+	
+	<div id="blackScreen" class="loadingFilter">
+	</div>
+	<div id="divScreenData" class="loadingCenter">
+	</div>
+	<script type="text/javascript">
+
+		if (Sys != undefined && jQuery != undefined) {
+			Sys.WebForms.PageRequestManager.aspAjaxBegin = function(sender, args) { $(document).trigger("ajaxStart", sender, args); };
+			Sys.WebForms.PageRequestManager.aspAjaxEnd = function(sender, args) {
+				$(document).trigger("ajaxComplete", sender, args);
+			};
+			$(document).ready(function() {
+				if (Sys != undefined) {
+					var prm = Sys.WebForms.PageRequestManager.getInstance();
+					if (!prm.get_isInAsyncPostBack()) {
+						prm.add_beginRequest(Sys.WebForms.PageRequestManager.aspAjaxBegin);
+						prm.add_endRequest(Sys.WebForms.PageRequestManager.aspAjaxEnd);
+					}
+				}
+
+
+			});
+			$(document).unload(function() {
+				if (Sys != undefined) {
+					Sys.WebForms.PageRequestManager.getInstance().remove_beginRequest(Sys.WebForms.PageRequestManager.aspAjaxBegin);
+					Sys.WebForms.PageRequestManager.getInstance().remove_endRequest(Sys.WebForms.PageRequestManager.aspAjaxEnd);
+				}
+			});
+		}
+	
+	</script>
+</body>
+</html>

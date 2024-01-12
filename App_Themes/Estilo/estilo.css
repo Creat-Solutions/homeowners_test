@@ -1,0 +1,570 @@
+﻿body 
+{
+    font-family: Trebuchet MS,Helvetica;
+    font-size: 10pt;
+	text-align: center;
+	background: #DADADA url(/images/grad.gif) repeat-x top left;
+}
+
+div#mainwrapper
+{
+    margin: 0;
+    position: absolute;
+    top: 0; left: 0;
+    text-align: left;
+    width: 100%;
+}
+
+.failureText {
+    color: Red;
+    font-size: 16px;
+}
+
+div.error {
+    color: #B9090B;
+    font-weight: bold;
+}
+
+.qsDistanceSea input
+{
+	float: left;
+	margin-right: 10px;
+}
+
+div#wrapper 
+{
+    margin: 0 auto;
+    position: absolute;
+    left: 0; text-align: left;
+    top: 143px;
+    width: 100%;
+	clear: both;
+	min-width: 1002px;
+}
+
+div#statusbar a {
+    color: #F00;
+}
+
+div#loginstatus {
+    padding: 5px;
+    float: right;
+}
+
+div#hourinfo
+{
+    padding: 5px;
+    float: left;
+}
+
+div#userinfo
+{
+    padding: 5px;
+    float: right;
+}
+
+div#exchangeinfo
+{
+    float: left;
+    padding: 5px;
+}
+
+div#content
+{
+	float: left;
+	width: 95%;
+	min-width: 785px;
+	padding-left: 5px;
+}
+
+div.companySelector
+{
+    font-weight: bold;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+.pageHeader
+{
+    width: 80%;
+    font-weight: bold;
+    font-size: medium;
+    height: 30px;
+    color: #8d0e0d;
+    margin: 0;
+    border-bottom: 1px solid #CCC;
+}
+
+div#loadBar {
+    font-family: Arial,Helvetica,Sans-Serif; 
+    color: white; 
+    background-color: black; 
+    position: fixed; 
+    width: 100%; 
+    bottom: 0px; 
+    left: 0px; 
+    text-align: center;
+}
+
+
+
+table.catalogTable
+{
+    width: 80%;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-collapse: collapse;
+    border: 1px solid #8D0E0D;
+}
+
+.catalogTable td
+{
+    color: #8D0E0D;
+    background-color: #FFF;
+    border: 1px solid #8D0E0D;
+}
+
+.catalogTable td a
+{
+    text-decoration: none;
+    color: #8D0E0D;
+}
+
+.catalogTableAlternate td
+{
+    color: #FFF;
+    background-color: #D11919;
+    border: 1px solid #939393;
+}
+
+.catalogTableAlternate td a
+{
+    text-decoration: none;
+    color: #FFF;
+}
+
+.catalogTableHeader
+{
+    background-color: #8D0E0D;
+    color: White;
+    border: 1px solid #767676;
+    
+}
+.catalogTableHeader th
+{
+    border: 1px solid #767676;
+    
+}
+.catalogTableFooter td
+{
+    background-color: #8D0E0D;
+    color: White;
+}
+
+.catalogTableFooter td a
+{
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.catalogTableEdit td
+{
+    background-color: #B3B3B3;
+    font-weight: bold;
+}
+
+.calculaTableHeader
+{
+    background-color: #B9090B;
+    color: White;
+    text-align: center;
+}
+
+.calculaSubHeader
+{
+    color: #B9090B;
+    font-weight: bold;
+}
+
+fieldset {
+    border: 1px solid #B9090B;
+    padding: 5px;
+    padding-left: 10px;
+}
+
+div#quoteId {
+    font-weight: bold;
+    float: right;
+}
+
+.baseRed
+{
+    color: #8d0e0d;
+}
+
+.row {
+    margin-bottom: 3px;
+}
+.rowes {
+    font-size: 9pt;
+    font-style: italic;
+    margin-bottom: 3px;
+}
+
+.row a
+{
+    text-decoration: none;
+    color: #470707;
+}
+
+.row a:hover
+{
+    text-decoration: underline;
+}
+
+.row1 label {
+    width: 15em;
+}
+
+.step1 label, .step4 label {
+    width: 12em;
+    text-align: right;
+    color: #8d0e0d;
+    margin-right: 5px;
+}
+.step2 label {
+    width: 10em;
+    text-align: right;
+    color: #8d0e0d;
+}
+
+.step2nofloat > label, .step2nofloat > span
+{
+    float: none;
+    color: #8d0e0d;
+}
+
+.row2 label {
+    width: 17em;
+}
+
+.row3 label {
+    width: 22em;
+}
+
+.row4 label {
+    width: 20em;
+}
+
+.row5 label {
+    width: 10em;
+}
+
+.row4distance label {
+    float: none;
+}
+
+.row4nofloat label{
+    float: none;
+}
+
+label {
+    float: left;
+}
+
+label.nofloat {
+    float: none;
+}
+
+.nofloat label {
+    float: none;
+}
+
+legend {
+    background: #B9090B;
+    
+    color: White;
+    font-weight: bold;
+    padding: 2px 6px;
+}
+
+.cblFire label {
+    float: none;
+}
+
+
+input[type=text]
+{
+	border-right: #666666 1px solid;
+	border-top: #666666 1px solid;
+	border-left: #666666 1px solid;
+	border-bottom: #666666 1px solid;
+	color: black;
+	font-size: 11px;
+}
+
+input[type=text].step4LeftTop
+{
+	border-right: #666666 1px solid;
+	border-top: #666666 1px solid;
+	border-left: #666666 1px solid;
+	border-bottom: #666666 1px solid;
+	color: black;
+	font-size: 11px;
+	width: 152px;
+}
+input[type=text].step4Fee
+{
+	width: 50px;
+}
+
+input[type=text].step4LeftBottom
+{
+	border-right: #666666 1px solid;
+	border-top: #666666 1px solid;
+	border-left: #666666 1px solid;
+	border-bottom: #666666 1px solid;
+	color: black;
+	font-size: 11px;
+	width: 184px;
+}
+input[type=text].step4Right
+{
+	border-right: #666666 1px solid;
+	border-top: #666666 1px solid;
+	border-left: #666666 1px solid;
+	border-bottom: #666666 1px solid;
+	color: black;
+	font-size: 11px;
+	width: 192px;
+}
+
+select.step2
+{
+	border-right: #666666 1px solid;
+	border-top: #666666 1px solid;
+	border-left: #666666 1px solid;
+	border-bottom: #666666 1px solid;
+	color: black;
+	font-size: 11px;
+	width: 100px;
+}
+
+input.step2
+{
+	border-right: #666666 1px solid;
+	border-top: #666666 1px solid;
+	border-left: #666666 1px solid;
+	border-bottom: #666666 1px solid;
+	color: black;
+	font-size: 11px;
+	width: 30px;
+}
+
+td.vsubname {
+    width: 300px;
+}
+
+td.step3Right {
+    width: 270px;
+    color: #8d0e0d;
+}
+
+td.step3Left {
+    width: 160px;
+    color: #8d0e0d;
+}
+
+td.step3Right label, td.step3Right span{
+    float: right;
+}
+
+td.step3Left label{
+    float: right;
+}
+/* cotiza style */
+
+h1.cSectionTitle {
+    font-size: 12pt;
+    color: White;
+    text-align: center;
+    width: 100%;
+    background: url('/images/backStep.gif') repeat-x center center scroll transparent;
+}
+
+.cData {
+    color: #B9090B;
+    font-weight: bold;
+}
+
+h3.cSectionSubtitle {
+    font-size: 12pt;
+    text-decoration: underline;
+}
+
+td.cAR {
+    text-align: right;
+}
+
+.cInfo {
+    color: #B9090B;
+}
+
+div.smallL {
+    font-size: 8pt;
+}
+
+.cTitle {
+    margin: 0;
+    font-size: 14pt;
+}
+
+.cSub {
+    font-size: 12pt;
+}
+
+.cColor {
+    color: #B9090B;
+}
+
+div#insuranceApp {
+    width: 100%;
+    margin-top: 5px; 
+}
+div#headerApp {
+    width: 100%;
+    height: 30px;
+    color: #8d0e0d;
+    font-size: 13pt;
+    font-weight: bold;
+}
+div#barSteps {
+    width:100%;
+    height: 37px;
+    color: White;
+    font-size: 9px;
+    font-weight: bold;
+    position: relative;
+    text-align: right;
+}
+
+div#barSteps a {
+    Color: White;
+}
+
+div#barSteps a:hover {
+    text-decoration: none;
+}
+
+#barSteps table {
+    position: absolute;
+    right: 0;
+}
+
+#barSteps table td {
+    min-width: 37px;
+    width: auto !important;
+    width: 37px;
+    padding: 2px;
+    padding-top: 0px;
+}
+
+div#barSteps a.stepYellow {
+    color: Yellow;
+}
+
+div.editPolicyMain {
+    position: relative;
+    width: 90%;
+}
+
+div.editPolicyLeft {
+    float: left;
+    width: 45%;
+}
+
+div.editPolicyRight {
+    float: left;
+    width: 45%;
+}
+
+div.editPolicyButtons {
+    text-align: right;
+}
+
+div.editPolicyButtons input {
+    padding: 5px;
+}
+
+div.editPolicyButtons input[type=button] {
+    padding: 2px;
+}
+
+div.editPolicyButtons input[type=submit] {
+    padding: 2px;
+}
+
+table.agentEditTable {
+    margin-left: 20px;
+}
+
+table.agentEditTable td {
+    padding: 2px 12px 2px 3px;
+}
+
+table.pagoFraccDesglose 
+{
+    border-collapse: collapse;
+}
+
+table.pagoFraccDesglose .fullBorder 
+{
+    border: 1px solid black;
+}
+
+table.pagoFraccDesglose .halfBorder
+{
+    border: 0;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+th.pagoTitle 
+{
+    font-size: 12pt;
+    color: White;
+    text-align: center;
+    font-weight: bold;
+    background-color: #B9090B;
+}
+
+.loadingFilter {
+    position:fixed; 
+    top:0px; 
+    bottom:0px; 
+    left:0px;
+    right:0px;
+    overflow:hidden; 
+    padding:0; 
+    margin:0; 
+    background-color:#000; 
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=50)"; 
+    filter: alpha(opacity=50);
+    opacity: 0.5; 
+    z-index: 9000;
+    display: none;
+}
+
+.loadingCenter {
+    position: fixed; 
+    padding: 20px; 
+    z-index:9001; 
+    background-color:#fff;
+    border:solid 1px #000;
+    text-align: center;
+    display: none;
+}

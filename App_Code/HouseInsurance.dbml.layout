@@ -1,0 +1,432 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 15.375, 37.375" name="HouseInsurance">
+  <DataContextMoniker Name="/HouseInsuranceDataContext" />
+  <nestedChildShapes>
+    <classShape Id="d87e8e32-e785-4b8e-a0b3-1e1702743027" absoluteBounds="3.625, 0.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/HouseInsuranceDataContext/distanceFromSeaSur" />
+      <nestedChildShapes>
+        <elementListCompartment Id="14851579-eef9-4d10-9efa-c12bc49f58dc" absoluteBounds="3.6399999999999997, 0.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="39031364-f338-455d-8487-44a8594d7639" absoluteBounds="0.75, 3, 2, 1.1939925130208327">
+      <DataClassMoniker Name="/HouseInsuranceDataContext/typeOfRisk" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3f2291e9-13ef-4353-ae73-ad4283309b32" absoluteBounds="0.765, 3.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2ac56a44-cb5c-4127-9049-2f482519f673" absoluteBounds="9.5, 5.875, 2, 1.3862939453124996">
+      <DataClassMoniker Name="/HouseInsuranceDataContext/typeOfPropertySur" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0c12d66e-d0f5-437f-9ba7-a15c9618f499" absoluteBounds="9.515, 6.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c09e0cc6-703a-4741-9dca-e5cf6b5f956c" absoluteBounds="10.125, 3.875, 2, 1.3862939453124996">
+      <DataClassMoniker Name="/HouseInsuranceDataContext/useOfPropertySur" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a41683ed-7a10-4474-b481-46484ee2bef5" absoluteBounds="10.14, 4.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7b46a616-bfcf-4bf2-bf4a-4f0b6d533455" absoluteBounds="3.5, 11.875, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/HouseInsuranceDataContext/roofTypeSur" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2c9fe32f-3573-4592-a9e1-0cd9c17d5377" absoluteBounds="3.515, 12.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="65cb4cd1-d9a3-4231-b6e4-be111b127199" absoluteBounds="9.5, 8.875, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/HouseInsuranceDataContext/wallTypeSur" />
+      <nestedChildShapes>
+        <elementListCompartment Id="be2b2384-43d2-4f46-a188-7af01dade60b" absoluteBounds="9.515, 9.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a24fdc5a-1679-457f-a629-b44dad305341" absoluteBounds="0.75, 7.625, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/HouseInsuranceDataContext/windowProtection" />
+      <nestedChildShapes>
+        <elementListCompartment Id="93ec2629-1c44-4d03-9c67-fb64d83eab58" absoluteBounds="0.765, 8.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c5d64742-ea8f-438b-b995-74d3da2e3819" absoluteBounds="3.5, 8.125, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/HouseInsuranceDataContext/windowProtectionSur" />
+      <nestedChildShapes>
+        <elementListCompartment Id="be7e7505-b575-4caa-9bbd-68d6be1d0b04" absoluteBounds="3.515, 8.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 8.47199625651042); (2.91666666666667 : 8.47199625651042 : JumpStart); (3.08333333333333 : 8.47199625651042 : JumpEnd); (3.32291666666667 : 8.47199625651042 : JumpStart); (3.48958333333333 : 8.47199625651042 : JumpEnd); (3.5 : 8.47199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HouseInsuranceDataContext/windowProtection/windowProtection_windowProtectionSur" />
+      <nodes>
+        <classShapeMoniker Id="a24fdc5a-1679-457f-a629-b44dad305341" />
+        <classShapeMoniker Id="c5d64742-ea8f-438b-b995-74d3da2e3819" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="9fd30507-d2de-4cf4-8312-c31b0ea67ae8" absoluteBounds="8.125, 14.875, 2, 1.5785953776041701">
+      <DataClassMoniker Name="/HouseInsuranceDataContext/seaInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a1923538-31e8-45dd-922c-6a6cf48254c3" absoluteBounds="8.14, 15.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e21ee05a-3797-4a23-8dd6-93e07bc550fe" absoluteBounds="10.125, 0.5, 2, 3.1170068359375">
+      <DataClassMoniker Name="/HouseInsuranceDataContext/quoteDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5f3ab9e7-541e-4b74-bfa0-9c9e139597c6" absoluteBounds="10.14, 0.96, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="436ccd24-b343-4bae-91dc-38fc251f0cc7" absoluteBounds="11.125, 14, 2, 2.5401025390625023">
+      <DataClassMoniker Name="/HouseInsuranceDataContext/additionalCoverage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7bf8da4e-9aa7-445f-ae64-06e7f687ba6d" absoluteBounds="11.14, 14.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="01359d9b-d7c6-4c6d-8246-b14db64a4c89" absoluteBounds="0.75, 0.625, 2, 1.3862939453125">
+      <DataClassMoniker Name="/HouseInsuranceDataContext/distanceFromSea" />
+      <nestedChildShapes>
+        <elementListCompartment Id="286d610b-b963-440e-b192-296f67fc2900" absoluteBounds="0.765, 1.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.25564697265625); (3.625 : 1.25564697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HouseInsuranceDataContext/distanceFromSea/distanceFromSea_distanceFromSeaSur" />
+      <nodes>
+        <classShapeMoniker Id="01359d9b-d7c6-4c6d-8246-b14db64a4c89" />
+        <classShapeMoniker Id="d87e8e32-e785-4b8e-a0b3-1e1702743027" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="99ca2dd4-eabd-4fea-8afb-39b403686344" absoluteBounds="6.125, 17, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/HouseInsuranceDataContext/FHM" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8dffec77-dba3-42b5-9ad2-6ede67b114f8" absoluteBounds="6.1400000000000006, 17.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7d57fbab-8bfd-4287-baf4-b2c87af5f4d2" absoluteBounds="8.75, 17, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/HouseInsuranceDataContext/other" />
+      <nestedChildShapes>
+        <elementListCompartment Id="59e14b07-67e3-4315-b192-222f44e31c90" absoluteBounds="8.765, 17.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="337c9b23-bc5c-45d1-926f-f9f1ae301beb" absoluteBounds="8.75, 18.625, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/HouseInsuranceDataContext/theftProtection" />
+      <nestedChildShapes>
+        <elementListCompartment Id="af17f071-120f-4906-bd1f-fef323611de6" absoluteBounds="8.765, 19.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9658eff3-094f-409f-9a4b-825182368575" absoluteBounds="6.25, 20.25, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/HouseInsuranceDataContext/adjoiningEstate" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4e53adb3-78f2-4d5f-855b-eeaaa7ab18a4" absoluteBounds="6.265, 20.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4036f0f6-206a-4146-820d-90f23bc38098" absoluteBounds="6.5, 0.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/HouseInsuranceDataContext/policyTest" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7b32bc64-39fe-4c31-9388-bdbae0366b53" absoluteBounds="6.515, 0.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="addac296-5e40-4235-8a92-db0a28cd7401" absoluteBounds="6.375, 21.75, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/HouseInsuranceDataContext/familyAssistance" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b9e19c5b-5c2d-4d0a-948e-8131f7467928" absoluteBounds="6.39, 22.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2047cbac-3ab2-475c-8f4d-e136325bd451" absoluteBounds="9.25, 21.75, 2, 1.5785953776041701">
+      <DataClassMoniker Name="/HouseInsuranceDataContext/familyAssistanceSur" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a05dd8da-f2e5-447f-819a-999ca09edb18" absoluteBounds="9.265, 22.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.375 : 22.3802502441406); (9.25 : 22.3802502441406)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HouseInsuranceDataContext/familyAssistance/familyAssistance_familyAssistanceSur" />
+      <nodes>
+        <classShapeMoniker Id="addac296-5e40-4235-8a92-db0a28cd7401" />
+        <classShapeMoniker Id="2047cbac-3ab2-475c-8f4d-e136325bd451" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="2d73a288-0a3b-4581-97b4-b5909bee72da" absoluteBounds="3.625, 2.875, 2, 2.3478011067708326">
+      <DataClassMoniker Name="/HouseInsuranceDataContext/typeOfRiskSur" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fa3ae0c7-1187-4383-b838-0861763f60a3" absoluteBounds="3.64, 3.335, 1.9700000000000002, 1.7878011067708333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 3.59699625651042); (3.32291666666667 : 3.59699625651042 : JumpStart); (3.48958333333333 : 3.59699625651042 : JumpEnd); (3.625 : 3.59699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HouseInsuranceDataContext/typeOfRisk/typeOfRisk_typeOfRiskSur" />
+      <nodes>
+        <classShapeMoniker Id="39031364-f338-455d-8487-44a8594d7639" />
+        <classShapeMoniker Id="2d73a288-0a3b-4581-97b4-b5909bee72da" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="fd2cc9cd-116f-4fb3-ae6a-8852af9e35ef" absoluteBounds="0.875, 13.375, 2, 4.6554182942708344">
+      <DataClassMoniker Name="/HouseInsuranceDataContext/insuredPerson" />
+      <nestedChildShapes>
+        <elementListCompartment Id="81a4bea6-c387-43b7-9a6b-aa9fced12a37" absoluteBounds="0.89000000000000012, 13.835, 1.9700000000000002, 4.095418294270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="10f7e74a-c3f6-4f39-95c5-5fac8b3def21" absoluteBounds="13.125, 0.5, 2, 3.1170068359375">
+      <DataClassMoniker Name="/HouseInsuranceDataContext/policyDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0a9fd95b-688e-4651-abbc-5e84eae2e160" absoluteBounds="13.14, 0.96, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="550c486e-a14a-49d3-9c00-fc2dcb31fa1b" absoluteBounds="6.625, 24, 2, 1.9631982421875">
+      <DataClassMoniker Name="/HouseInsuranceDataContext/rxpfSur" />
+      <nestedChildShapes>
+        <elementListCompartment Id="99e0a0bb-43f0-4da7-a146-96715479945a" absoluteBounds="6.64, 24.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="09d4cc12-1ae7-45ce-bf31-a28775b972aa" absoluteBounds="6.625, 28, 2, 5.2323225911458326">
+      <DataClassMoniker Name="/HouseInsuranceDataContext/policyFE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="60b4fad6-f8c9-499b-94ca-5af7044df6fc" absoluteBounds="6.64, 28.46, 1.9700000000000002, 4.672322591145833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f4fbbb0d-8f90-4111-86dc-225c5396fdb1" absoluteBounds="6.5, 9.25, 2, 1.3862939453125">
+      <DataClassMoniker Name="/HouseInsuranceDataContext/wallType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="53dfc1d5-e272-4aab-bc84-8e1d02fd1351" absoluteBounds="6.515, 9.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1f0733be-49ea-4abb-8cc7-ddeefb1355ca" absoluteBounds="1, 10.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/HouseInsuranceDataContext/roofType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="99a754cb-d1aa-4ab6-a631-39897980b8fa" absoluteBounds="1.0150000000000001, 11.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2 : 12.1362939453125); (2 : 12.5681469726563); (2.88541666666667 : 12.5681469726562 : JumpStart); (3.48958333333333 : 12.5681469726563 : JumpEnd); (3.5 : 12.5681469726563)]" fixedFrom="Algorithm" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HouseInsuranceDataContext/roofType/roofType_roofTypeSur" />
+      <nodes>
+        <classShapeMoniker Id="1f0733be-49ea-4abb-8cc7-ddeefb1355ca" />
+        <classShapeMoniker Id="7b46a616-bfcf-4bf2-bf4a-4f0b6d533455" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 9.75564697265625); (9.5 : 9.75564697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HouseInsuranceDataContext/wallType/wallType_wallTypeSur" />
+      <nodes>
+        <classShapeMoniker Id="f4fbbb0d-8f90-4111-86dc-225c5396fdb1" />
+        <classShapeMoniker Id="65cb4cd1-d9a3-4231-b6e4-be111b127199" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="45d1819c-aa8f-4e85-beae-1120ba585565" absoluteBounds="12.5, 8.875, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/HouseInsuranceDataContext/valueSublimit" />
+      <nestedChildShapes>
+        <elementListCompartment Id="71191634-b0c1-4921-bf67-51ab1353a591" absoluteBounds="12.515, 9.335, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c30cdc26-2452-4e88-9728-0154dfc76974" absoluteBounds="3.5, 31.875, 2, 5.2323225911458326">
+      <DataClassMoniker Name="/HouseInsuranceDataContext/policyFEPADRE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4f6efe8e-7074-4228-82d2-968aeeaafe3e" absoluteBounds="3.5149999999999997, 32.335, 1.9700000000000002, 4.672322591145833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0ca33dd0-6db2-47f7-b450-0975cb79ec17" absoluteBounds="6.75, 6.375, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/HouseInsuranceDataContext/typeOfProperty" />
+      <nestedChildShapes>
+        <elementListCompartment Id="513e7348-c914-4b21-9800-6f7f94dea0dc" absoluteBounds="6.7650000000000006, 6.8350000000000009, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="515f70f6-862e-4a33-897a-1ddcd0d9c5e3" absoluteBounds="1, 4.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/HouseInsuranceDataContext/clientTypeSur" />
+      <nestedChildShapes>
+        <elementListCompartment Id="00030fb1-1cbf-4b93-aca5-8e393adb835b" absoluteBounds="1.0150000000000001, 5.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.75 : 6.81814697265625); (9.5 : 6.81814697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HouseInsuranceDataContext/typeOfProperty/typeOfProperty_typeOfPropertySur" />
+      <nodes>
+        <classShapeMoniker Id="0ca33dd0-6db2-47f7-b450-0975cb79ec17" />
+        <classShapeMoniker Id="2ac56a44-cb5c-4127-9049-2f482519f673" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="3b9c0186-b22f-4893-ac9d-a7471a492c66" absoluteBounds="6.25, 18.625, 2, 1.3862939453125">
+      <DataClassMoniker Name="/HouseInsuranceDataContext/clientType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2f8183cb-48a3-419d-afd3-f3e948f50963" absoluteBounds="6.265, 19.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.25 : 19.3181469726563); (6.08333333333333 : 19.3181469726563 : JumpStart); (5.79166666666667 : 19.3181469726563 : JumpEnd); (5.625 : 19.3181469726563); (5.625 : 14.75); (5.01302383333333 : 14.75 : JumpStart); (4.84635716666667 : 14.75 : JumpEnd); (4.50521033333333 : 14.75 : JumpStart); (4.33854366666667 : 14.75 : JumpEnd); (4.28692307692308 : 14.75 : JumpStart); (4.12025641025641 : 14.75 : JumpEnd); (3.50520833333333 : 14.75 : JumpStart); (3.16666666666667 : 14.75 : JumpEnd); (3.125 : 14.75); (3.125 : 12.3862939453125); (3.05208333333333 : 12.3862939453125 : JumpStart); (2.88541666666667 : 12.3862939453125 : JumpEnd); (2.08333333333333 : 12.3862939453125 : JumpStart); (1.91666666666667 : 12.3862939453125 : JumpEnd); (0.75 : 12.3862939453125); (0.75 : 9.06899251302083); (3 : 9.06899251302083); (3 : 6.5112939453125); (2 : 6.5112939453125); (2 : 6.1362939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HouseInsuranceDataContext/clientType/clientType_clientTypeSur" />
+      <nodes>
+        <classShapeMoniker Id="3b9c0186-b22f-4893-ac9d-a7471a492c66" />
+        <classShapeMoniker Id="515f70f6-862e-4a33-897a-1ddcd0d9c5e3" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d9d45e32-32ac-4de0-b26b-add9f1dd0d46" absoluteBounds="6.75, 3.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/HouseInsuranceDataContext/useOfProperty" />
+      <nestedChildShapes>
+        <elementListCompartment Id="23d4402e-360f-40b8-a6c3-c1edf29bf742" absoluteBounds="6.765, 3.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="75cbe763-5068-404f-b481-d8747a5daaef" absoluteBounds="7.125, 11.875, 2, 2.5401025390625">
+      <DataClassMoniker Name="/HouseInsuranceDataContext/insuredPersonHouse" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d4011276-c292-44a9-a0ba-9ae535926d3b" absoluteBounds="7.14, 12.335, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.75 : 4.28929768880208); (10.125 : 4.28929768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HouseInsuranceDataContext/useOfProperty/useOfProperty_useOfPropertySur" />
+      <nodes>
+        <classShapeMoniker Id="d9d45e32-32ac-4de0-b26b-add9f1dd0d46" />
+        <classShapeMoniker Id="c09e0cc6-703a-4741-9dca-e5cf6b5f956c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.875 : 13.6590734863282); (2.88541666666667 : 13.6590734863281 : JumpStart); (3.50520833333333 : 13.6590734863282 : JumpEnd); (4.84635716666667 : 13.6590734863282 : JumpStart); (5.01302383333333 : 13.6590734863282 : JumpEnd); (5.91666666666667 : 13.6590734863281 : JumpStart); (6.20833333333333 : 13.6590734863282 : JumpEnd); (6.35416666666667 : 13.6590734863282 : JumpStart); (6.52083333333333 : 13.6590734863282 : JumpEnd); (7.125 : 13.6590734863282)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HouseInsuranceDataContext/insuredPerson/insuredPerson_insuredPersonHouse" />
+      <nodes>
+        <classShapeMoniker Id="fd2cc9cd-116f-4fb3-ae6a-8852af9e35ef" />
+        <classShapeMoniker Id="75cbe763-5068-404f-b481-d8747a5daaef" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="b23fa04b-f6f1-4b86-b6c4-2c0f5cb6e4bf" absoluteBounds="12.125, 18, 2, 8.1168440755208326">
+      <DataClassMoniker Name="/HouseInsuranceDataContext/packageService" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9a750eee-f698-45cd-af03-bc7308933c02" absoluteBounds="12.14, 18.46, 1.9700000000000002, 7.556844075520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="891cc66d-30c1-4da5-9051-cba29de4e0e9" absoluteBounds="3.375, 14.875, 2, 16.578107096354167">
+      <DataClassMoniker Name="/HouseInsuranceDataContext/policy" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9f01dd00-a88f-4c85-b0ac-e88ef03e8b73" absoluteBounds="3.3899999999999997, 15.335, 1.9700000000000002, 16.018107096354164" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.375 : 27.0584220377604); (5.91666666666667 : 27.0584220377604 : JumpStart); (6.08333333333333 : 27.0584220377604 : JumpEnd); (14.84375 : 27.0584220377604); (14.84375 : 3.6170068359375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HouseInsuranceDataContext/policy/policy_policyDetail" />
+      <nodes>
+        <classShapeMoniker Id="891cc66d-30c1-4da5-9051-cba29de4e0e9" />
+        <classShapeMoniker Id="10f7e74a-c3f6-4f39-95c5-5fac8b3def21" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.375 : 29.7265535481771); (5.91666666666667 : 29.7265535481771 : JumpStart); (6.08333333333333 : 29.7265535481771 : JumpEnd); (6.625 : 29.7265535481771)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HouseInsuranceDataContext/policy/policy_policyFE" />
+      <nodes>
+        <classShapeMoniker Id="891cc66d-30c1-4da5-9051-cba29de4e0e9" />
+        <classShapeMoniker Id="09d4cc12-1ae7-45ce-bf31-a28775b972aa" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.59375 : 31.4531070963542); (4.59375 : 31.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HouseInsuranceDataContext/policy/policy_policyFEPADRE" />
+      <nodes>
+        <classShapeMoniker Id="891cc66d-30c1-4da5-9051-cba29de4e0e9" />
+        <classShapeMoniker Id="c30cdc26-2452-4e88-9728-0154dfc76974" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.25 : 18.9090734863281); (6.08333333333333 : 18.9090734863281 : JumpStart); (5.79166666666667 : 18.9090734863281 : JumpEnd); (5.70833333333333 : 18.9090734863281 : JumpStart); (5.54166666666667 : 18.9090734863281 : JumpEnd); (5.375 : 18.9090734863281)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HouseInsuranceDataContext/clientType/clientType_policy" />
+      <nodes>
+        <classShapeMoniker Id="3b9c0186-b22f-4893-ac9d-a7471a492c66" />
+        <classShapeMoniker Id="891cc66d-30c1-4da5-9051-cba29de4e0e9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.9800439453125); (3.40625 : 1.9800439453125); (3.40625 : 14.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HouseInsuranceDataContext/distanceFromSea/distanceFromSea_policy" />
+      <nodes>
+        <classShapeMoniker Id="01359d9b-d7c6-4c6d-8246-b14db64a4c89" />
+        <classShapeMoniker Id="891cc66d-30c1-4da5-9051-cba29de4e0e9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.875 : 16.4527091471354); (2.88541666666667 : 16.4527091471354 : JumpStart); (3.08333333333333 : 16.4527091471354 : JumpEnd); (3.16666666666667 : 16.4527091471354 : JumpStart); (3.33333333333333 : 16.4527091471354 : JumpEnd); (3.375 : 16.4527091471354)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HouseInsuranceDataContext/insuredPerson/insuredPerson_policy" />
+      <nodes>
+        <classShapeMoniker Id="fd2cc9cd-116f-4fb3-ae6a-8852af9e35ef" />
+        <classShapeMoniker Id="891cc66d-30c1-4da5-9051-cba29de4e0e9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.125 : 12.7670347055288); (6.52083333333333 : 12.7670347055288 : JumpStart); (6.35416666666667 : 12.7670347055288 : JumpEnd); (6.20833333333333 : 12.7670347055288 : JumpStart); (5.91666666666667 : 12.7670347055288 : JumpEnd); (4.9296905 : 12.7670347055288); (4.9296905 : 14.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HouseInsuranceDataContext/insuredPersonHouse/insuredPersonHouse_policy" />
+      <nodes>
+        <classShapeMoniker Id="75cbe763-5068-404f-b481-d8747a5daaef" />
+        <classShapeMoniker Id="891cc66d-30c1-4da5-9051-cba29de4e0e9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3 : 11.4431469726562); (3.25 : 11.4431469726562); (3.25 : 14.25); (3.32291666666667 : 14.25 : JumpStart); (3.50520833333333 : 14.25 : JumpEnd); (4.421877 : 14.25); (4.421877 : 14.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HouseInsuranceDataContext/roofType/roofType_policy" />
+      <nodes>
+        <classShapeMoniker Id="1f0733be-49ea-4abb-8cc7-ddeefb1355ca" />
+        <classShapeMoniker Id="891cc66d-30c1-4da5-9051-cba29de4e0e9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.75 : 7.50187209391276); (6.20833333333333 : 7.50187209391276 : JumpStart); (5.91666666666667 : 7.50187209391276 : JumpEnd); (3.421875 : 7.50187209391276); (3.421875 : 14.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HouseInsuranceDataContext/typeOfProperty/typeOfProperty_policy" />
+      <nodes>
+        <classShapeMoniker Id="0ca33dd0-6db2-47f7-b450-0975cb79ec17" />
+        <classShapeMoniker Id="891cc66d-30c1-4da5-9051-cba29de4e0e9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.75 : 3.91429768880208); (6.125 : 3.91429768880208); (6.125 : 14.5); (6.08333333333333 : 14.5 : JumpStart); (5.91666666666667 : 14.5 : JumpEnd); (5.1348717948718 : 14.5 : JumpStart); (4.84635716666667 : 14.5 : JumpEnd); (4.421877 : 14.5); (4.421877 : 14.875)]" fixedFrom="Algorithm" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HouseInsuranceDataContext/useOfProperty/useOfProperty_policy" />
+      <nodes>
+        <classShapeMoniker Id="d9d45e32-32ac-4de0-b26b-add9f1dd0d46" />
+        <classShapeMoniker Id="891cc66d-30c1-4da5-9051-cba29de4e0e9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.5618490375601 : 10.6362939453125); (6.4375 : 10.7606429828726); (6.4375 : 14.3125); (6.20833333333333 : 14.3125 : JumpStart); (5.91666666666667 : 14.3125 : JumpEnd); (5.6875 : 14.3125); (5.00962221279773 : 14.5123581319995 : JumpStart); (4.84975878720227 : 14.5594905299298 : JumpEnd); (4.50180871279773 : 14.6620763547089 : JumpStart); (4.34194528720227 : 14.7092087526392 : JumpEnd); (3.77961538461538 : 14.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HouseInsuranceDataContext/wallType/wallType_policy" />
+      <nodes>
+        <classShapeMoniker Id="f4fbbb0d-8f90-4111-86dc-225c5396fdb1" />
+        <classShapeMoniker Id="891cc66d-30c1-4da5-9051-cba29de4e0e9" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="116b3ef0-4b59-4251-aa1e-22f5c68c3e06" absoluteBounds="0.5, 22.625, 2, 13.308982747395833">
+      <DataClassMoniker Name="/HouseInsuranceDataContext/quote" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5d0b949a-c630-4ad6-9eb3-df12112eb075" absoluteBounds="0.51500000000000012, 23.085, 1.9700000000000002, 12.748982747395832" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(0.59375 : 22.625); (0.59375 : 2.44314697265625); (3.32291666666667 : 2.44314697265625 : JumpStart); (3.48958333333333 : 2.44314697265625 : JumpEnd); (10.125 : 2.44314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HouseInsuranceDataContext/quote/quote_quoteDetail" />
+      <nodes>
+        <classShapeMoniker Id="116b3ef0-4b59-4251-aa1e-22f5c68c3e06" />
+        <classShapeMoniker Id="e21ee05a-3797-4a23-8dd6-93e07bc550fe" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.25 : 19.6959724589844); (6.08333333333333 : 19.6959724589844 : JumpStart); (5.91666666666667 : 19.6959724589844 : JumpEnd); (5.875 : 19.6959724589844); (5.875 : 14.625); (5.01302383333333 : 14.625 : JumpStart); (4.84635716666667 : 14.625 : JumpEnd); (4.71089743589744 : 14.625 : JumpStart); (4.54423076923077 : 14.625 : JumpEnd); (4.50521033333333 : 14.625 : JumpStart); (4.33854366666667 : 14.625 : JumpEnd); (3.50520833333333 : 14.625 : JumpStart); (3.32291666666667 : 14.625 : JumpEnd); (3.25 : 14.625); (3.25 : 18.2804182942708); (3.08333333333333 : 18.2804182942708 : JumpStart); (2.88541666666667 : 18.2804182942708 : JumpEnd); (2.18489683333333 : 18.2804182942708 : JumpStart); (2.01823016666667 : 18.2804182942708 : JumpEnd); (1.578127 : 18.2804182942708); (1.578127 : 22.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HouseInsuranceDataContext/clientType/clientType_quote" />
+      <nodes>
+        <classShapeMoniker Id="3b9c0186-b22f-4893-ac9d-a7471a492c66" />
+        <classShapeMoniker Id="116b3ef0-4b59-4251-aa1e-22f5c68c3e06" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(0.75 : 2.0112939453125); (0.5 : 2.2612939453125); (0.5 : 22.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HouseInsuranceDataContext/distanceFromSea/distanceFromSea_quote" />
+      <nodes>
+        <classShapeMoniker Id="01359d9b-d7c6-4c6d-8246-b14db64a4c89" />
+        <classShapeMoniker Id="116b3ef0-4b59-4251-aa1e-22f5c68c3e06" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.1015635 : 18.0304182942708); (2.1015635 : 22.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HouseInsuranceDataContext/insuredPerson/insuredPerson_quote" />
+      <nodes>
+        <classShapeMoniker Id="fd2cc9cd-116f-4fb3-ae6a-8852af9e35ef" />
+        <classShapeMoniker Id="116b3ef0-4b59-4251-aa1e-22f5c68c3e06" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.125 : 12.7357847431641); (6.52083333333333 : 12.7357847431641 : JumpStart); (6.35416666666667 : 12.7357847431641 : JumpEnd); (6.20833333333333 : 12.7357847431641 : JumpStart); (5.91666666666667 : 12.7357847431641 : JumpEnd); (5.75 : 12.7357847431641); (5.75 : 13.5112939453125); (5.01302383333333 : 13.5112939453125 : JumpStart); (4.84635716666667 : 13.5112939453125 : JumpEnd); (3.50520833333333 : 13.5112939453125 : JumpStart); (3.04166666666667 : 13.5112939453125 : JumpEnd); (3 : 13.5112939453125); (3 : 18.5304182942708); (2.18489683333333 : 18.5304182942708 : JumpStart); (2.01823016666667 : 18.5304182942708 : JumpEnd); (1.66146033333333 : 18.5304182942708 : JumpStart); (1.49479366666667 : 18.5304182942708 : JumpEnd); (1.0859385 : 18.5304182942708); (1.0859385 : 22.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HouseInsuranceDataContext/insuredPersonHouse/insuredPersonHouse_quote" />
+      <nodes>
+        <classShapeMoniker Id="75cbe763-5068-404f-b481-d8747a5daaef" />
+        <classShapeMoniker Id="116b3ef0-4b59-4251-aa1e-22f5c68c3e06" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.96875 : 12.1362939453125); (2.96875 : 29.2794913736979); (2.83333333333333 : 29.2794913736979 : JumpStart); (2.66666666666667 : 29.2794913736979 : JumpEnd); (2.5 : 29.2794913736979)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HouseInsuranceDataContext/roofType/roofType_quote" />
+      <nodes>
+        <classShapeMoniker Id="1f0733be-49ea-4abb-8cc7-ddeefb1355ca" />
+        <classShapeMoniker Id="116b3ef0-4b59-4251-aa1e-22f5c68c3e06" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.75 : 6.97533051961263); (6.20833333333333 : 6.97533051961263 : JumpStart); (5.91666666666667 : 6.97533051961263 : JumpEnd); (3.48958333333333 : 6.97533051961263 : JumpStart); (3.32291666666667 : 6.97533051961263 : JumpEnd); (3.08333333333333 : 6.97533051961263 : JumpStart); (2.91666666666667 : 6.97533051961263 : JumpEnd); (0.6250025 : 6.97533051961263); (0.6250025 : 22.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HouseInsuranceDataContext/typeOfProperty/typeOfProperty_quote" />
+      <nodes>
+        <classShapeMoniker Id="0ca33dd0-6db2-47f7-b450-0975cb79ec17" />
+        <classShapeMoniker Id="116b3ef0-4b59-4251-aa1e-22f5c68c3e06" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.75 : 4.70359537760417); (7.75 : 6.125); (6.20833333333333 : 6.125 : JumpStart); (6.04166666666667 : 6.125 : JumpEnd); (6 : 6.125); (6 : 31.7031070963542); (4.67708333333333 : 31.7031070963542 : JumpStart); (4.51041666666667 : 31.7031070963542 : JumpEnd); (2.75 : 31.7031070963542); (2.75 : 25.920993686849); (2.5 : 25.920993686849)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HouseInsuranceDataContext/useOfProperty/useOfProperty_quote" />
+      <nodes>
+        <classShapeMoniker Id="d9d45e32-32ac-4de0-b26b-add9f1dd0d46" />
+        <classShapeMoniker Id="116b3ef0-4b59-4251-aa1e-22f5c68c3e06" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.5 : 10.1050439453125); (6.20833333333333 : 10.1050439453125 : JumpStart); (5.91666666666667 : 10.1050439453125 : JumpEnd); (3.50520833333333 : 10.1050439453125 : JumpStart); (3.32291666666667 : 10.1050439453125 : JumpEnd); (0.833333333333333 : 10.1050439453125 : JumpStart); (0.666666666666667 : 10.1050439453125 : JumpEnd); (0.656255 : 10.1050439453125); (0.656255 : 22.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HouseInsuranceDataContext/wallType/wallType_quote" />
+      <nodes>
+        <classShapeMoniker Id="f4fbbb0d-8f90-4111-86dc-225c5396fdb1" />
+        <classShapeMoniker Id="116b3ef0-4b59-4251-aa1e-22f5c68c3e06" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

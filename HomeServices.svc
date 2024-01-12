@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory" Debug="true" Service="HomeServices" CodeBehind="~/App_Code/HomeServices.cs" %>

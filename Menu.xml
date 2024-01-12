@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--DOCTYPE menu SYSTEM "./Menu.dtd"-->
+<menu>
+    <submenu id="sub1" text="&lt;span class=&quot;menu_icons services house_program&quot;&gt;&lt;/span&gt;Application" roles="broker">
+        <item text="&#9679; Generate Quote" wform="~/Application/Load.aspx?option=generatequote" />
+        <item text="&#9679; Existing Quote" wform="~/Application/Load.aspx" />
+        <item text="&#9679; Buy Policy" wform="~/Application/Load.aspx?option=buyquote" />
+        <item text="&#9679; Edit Policy" wform="~/Application/Load.aspx?option=editpolicy" />
+		<item text="&#9679; Direct HO Policy" wform="~/Application/DirectCapturePolicy.aspx" />
+        <!--<item text="&#9679; Direct HO Input" wform="~/Application/DirectCapture.aspx" />-->
+		<item text="&#9679; Direct HO Endorsment" wform="~/Application/DirectCaptureEndorsment.aspx" />
+    </submenu>
+    <item id="sub7" text="&lt;span class=&quot;menu_icons services house_program&quot;&gt;&lt;/span&gt;XML Generator" roles="admin" wform="~/XmlGenerator.aspx" />
+    <submenu id="sub5" text="&lt;span class=&quot;menu_icons reports house_program&quot;&gt;&lt;/span&gt;Additional Property Info." roles="admin">
+		<item text="&#9679; Policy Fee Limits" wform="~/Application/EditPolicyFeeLimits.aspx" />
+        <item text="&#9679; Client Type" wform="~/Catalog/ClientTypes.aspx" />
+        <item text="&#9679; Client Type Surcharge" wform="~/Catalog/ClientTypesSur.aspx" />
+        <item text="&#9679; Roof Type" wform="~/Catalog/RoofTypes.aspx" />
+        <item text="&#9679; Roof Type Surcharge" wform="~/Catalog/RoofTypesSur.aspx" />
+        <item text="&#9679; Type Of Property" wform="~/Catalog/TypesOfProperty.aspx" />
+        <item text="&#9679; Type Of Property Sur." wform="~/Catalog/TypesOfPropertySur.aspx" />
+        <item text="&#9679; Use of Property" wform="~/Catalog/UsesOfProperty.aspx" />
+        <item text="&#9679; Use of Property Sur." wform="~/Catalog/UsesOfPropertySur.aspx" />
+        <item text="&#9679; Wall Type" wform="~/Catalog/WallTypes.aspx" />
+        <item text="&#9679; Wall Type Surcharge" wform="~/Catalog/WallTypesSur.aspx" />
+    </submenu>
+    <submenu id="sub2" text="&lt;span class=&quot;menu_icons reports house_program&quot;&gt;&lt;/span&gt;Distance from Sea / Shutters" roles="admin">
+        
+        <item text="&#9679; Distance From Sea" wform="~/Catalog/DistanceFromSea.aspx" />
+        <item text="&#9679; Distance From Sea Sur." wform="~/Catalog/DistanceFromSeaSur.aspx" />
+        
+        <item text="&#9679; Window Protection" wform="~/Catalog/WindowProtection.aspx" />
+        <item text="&#9679; Window Protection Sur." wform="~/Catalog/WindowProtectionSur.aspx" />
+    </submenu>
+    <submenu id="sub6" text="&lt;span class=&quot;menu_icons reports house_program&quot;&gt;&lt;/span&gt;Values and Sublimits" roles="admin">
+        <item text="&#9679; Additional Coverages" wform="~/Catalog/AdditionalCoverages.aspx" />
+        <item text="&#9679; Family Assistance" wform="~/Catalog/FamilyAssistance.aspx" />
+        <item text="&#9679; Family Assistance Sur." wform="~/Catalog/FamilyAssistanceSur.aspx" />
+        <item text="&#9679; HMP" wform="~/Catalog/FHM.aspx" />
+        <item text="&#9679; HMP Dates" wform="~/Catalog/HMPDates.aspx" />
+        <item text="&#9679; HMP Surcharge" wform="~/Catalog/FHMSur.aspx" />
+        <item text="&#9679; Other" wform="~/Catalog/Other.aspx" />
+        <item text="&#9679; Other Surcharge" wform="~/Catalog/OtherSur.aspx" />
+        <item text="&#9679; RXPF Surcharge" wform="~/Catalog/RXPFSur.aspx" />
+        <item text="&#9679; TEV Surcharge" wform="~/Catalog/TEVSur.aspx" />
+        <item text="&#9679; Theft Protection" wform="~/Catalog/TheftProtection.aspx" />
+        <item text="&#9679; Theft Protection Sur." wform="~/Catalog/TheftProtectionSur.aspx" />
+        <item text="&#9679; Theft Zone Surcharge" wform="~/Catalog/ZonaRoboSur.aspx" />
+        <item text="&#9679; Type Of Risk" wform="~/Catalog/TypesOfRisks.aspx" />
+        <item text="&#9679; Type Of Risk Surcharge" wform="~/Catalog/TypesOfRisksSur.aspx" />
+        <item text="&#9679; Values and sublimits" wform="~/Catalog/ValuesAndSublimits.aspx" />
+    </submenu>
+    <submenu id="sub3" text="&lt;span class=&quot;menu_icons reports house_program&quot;&gt;&lt;/span&gt;Address Catalog" roles="admin">
+		<item text="&#9679; State" wform="~/Catalog/State.aspx" />
+		<item text="&#9679; City" wform="~/Catalog/City.aspx" />
+		<item text="&#9679; House Estate" wform="~/Catalog/HouseEstate.aspx" />
+	</submenu>
+    <submenu id="sub4" text="&lt;span class=&quot;menu_icons statistics house_program&quot;&gt;&lt;/span&gt;Reports" roles="broker, siniestro,adminAg">
+        <item text="&#9679; Quotes" wform="~/Reports/ReportQuote.aspx" />
+        <item text="&#9679; Policies" wform="~/Reports/ReportPolicy.aspx" />
+		<item text="&#9679; Outdoor Property Policies" wform="~/Reports/ReportOutdoorProperty.aspx" />
+        <item text="&#9679; Expiring Policies" wform="~/Reports/ReportPolicyExpiring.aspx" />
+    </submenu>
+    <item id="sub9" text="&lt;span class=&quot;menu_icons statistics house_program&quot;&gt;&lt;/span&gt;Specialized Reports" roles="admin" wform="~/Reports/SpecializedReports.aspx" />
+    <submenu id="sub8" text="&lt;span class=&quot;menu_icons services house_program&quot;&gt;&lt;/span&gt;Protec">
+        <item text="&#9679; Go Back to Protec" wform="http://protec.abcdelseguro.com/" />
+        <item text="&#9679; Change my password" wform="http://protec.abcdelseguro.com/Account/Edit" newwindow="true" />
+    </submenu>
+</menu>

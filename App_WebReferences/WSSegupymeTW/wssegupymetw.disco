@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="https://negociosuat.mapfre.com.mx/wslistasvalortw_s/wssegupymetw.asmx?wsdl" docRef="https://negociosuat.mapfre.com.mx/wslistasvalortw_s/wssegupymetw.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="https://negociosuat.mapfre.com.mx/wslistasvalortw_s/wssegupymetw.asmx" xmlns:q1="http://tempuri.org/WsListasValorTW/WSSegupymeTW" binding="q1:WSSegupymeTWSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="https://negociosuat.mapfre.com.mx/wslistasvalortw_s/wssegupymetw.asmx" xmlns:q2="http://tempuri.org/WsListasValorTW/WSSegupymeTW" binding="q2:WSSegupymeTWSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

@@ -1,0 +1,7 @@
+﻿<!ELEMENT menu (item | submenu)*>
+<!ELEMENT item (#PCDATA)>
+<!ATTLIST item text CDATA #REQUIRED>
+<!ATTLIST item wform CDATA #REQUIRED>
+<!ELEMENT submenu (item)*>
+<!ATTLIST submenu text CDATA #REQUIRED>
+<!ATTLIST submenu id CDATA #REQUIRED>

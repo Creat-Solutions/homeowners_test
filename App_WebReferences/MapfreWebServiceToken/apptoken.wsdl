@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GeneraToken_ws">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="app_name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GeneraToken_wsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GeneraToken_wsResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidaToken_ws">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidaToken_wsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidaToken_wsResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenToken_ws">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="app_name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenToken_wsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenToken_wsResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GeneraToken_wsSoapIn">
+    <wsdl:part name="parameters" element="tns:GeneraToken_ws" />
+  </wsdl:message>
+  <wsdl:message name="GeneraToken_wsSoapOut">
+    <wsdl:part name="parameters" element="tns:GeneraToken_wsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidaToken_wsSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidaToken_ws" />
+  </wsdl:message>
+  <wsdl:message name="ValidaToken_wsSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidaToken_wsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenToken_wsSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenToken_ws" />
+  </wsdl:message>
+  <wsdl:message name="ObtenToken_wsSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenToken_wsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GeneraToken_wsHttpGetIn">
+    <wsdl:part name="app_name" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GeneraToken_wsHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ValidaToken_wsHttpGetIn">
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ValidaToken_wsHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ObtenToken_wsHttpGetIn">
+    <wsdl:part name="app_name" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ObtenToken_wsHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GeneraToken_wsHttpPostIn">
+    <wsdl:part name="app_name" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GeneraToken_wsHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ValidaToken_wsHttpPostIn">
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ValidaToken_wsHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ObtenToken_wsHttpPostIn">
+    <wsdl:part name="app_name" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ObtenToken_wsHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:portType name="AppTokenSoap">
+    <wsdl:operation name="GeneraToken_ws">
+      <wsdl:input message="tns:GeneraToken_wsSoapIn" />
+      <wsdl:output message="tns:GeneraToken_wsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidaToken_ws">
+      <wsdl:input message="tns:ValidaToken_wsSoapIn" />
+      <wsdl:output message="tns:ValidaToken_wsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenToken_ws">
+      <wsdl:input message="tns:ObtenToken_wsSoapIn" />
+      <wsdl:output message="tns:ObtenToken_wsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="AppTokenHttpGet">
+    <wsdl:operation name="GeneraToken_ws">
+      <wsdl:input message="tns:GeneraToken_wsHttpGetIn" />
+      <wsdl:output message="tns:GeneraToken_wsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidaToken_ws">
+      <wsdl:input message="tns:ValidaToken_wsHttpGetIn" />
+      <wsdl:output message="tns:ValidaToken_wsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenToken_ws">
+      <wsdl:input message="tns:ObtenToken_wsHttpGetIn" />
+      <wsdl:output message="tns:ObtenToken_wsHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="AppTokenHttpPost">
+    <wsdl:operation name="GeneraToken_ws">
+      <wsdl:input message="tns:GeneraToken_wsHttpPostIn" />
+      <wsdl:output message="tns:GeneraToken_wsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidaToken_ws">
+      <wsdl:input message="tns:ValidaToken_wsHttpPostIn" />
+      <wsdl:output message="tns:ValidaToken_wsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenToken_ws">
+      <wsdl:input message="tns:ObtenToken_wsHttpPostIn" />
+      <wsdl:output message="tns:ObtenToken_wsHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AppTokenSoap" type="tns:AppTokenSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GeneraToken_ws">
+      <soap:operation soapAction="http://tempuri.org/GeneraToken_ws" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidaToken_ws">
+      <soap:operation soapAction="http://tempuri.org/ValidaToken_ws" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenToken_ws">
+      <soap:operation soapAction="http://tempuri.org/ObtenToken_ws" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AppTokenSoap12" type="tns:AppTokenSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GeneraToken_ws">
+      <soap12:operation soapAction="http://tempuri.org/GeneraToken_ws" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidaToken_ws">
+      <soap12:operation soapAction="http://tempuri.org/ValidaToken_ws" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenToken_ws">
+      <soap12:operation soapAction="http://tempuri.org/ObtenToken_ws" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AppTokenHttpGet" type="tns:AppTokenHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GeneraToken_ws">
+      <http:operation location="/GeneraToken_ws" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidaToken_ws">
+      <http:operation location="/ValidaToken_ws" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenToken_ws">
+      <http:operation location="/ObtenToken_ws" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AppTokenHttpPost" type="tns:AppTokenHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GeneraToken_ws">
+      <http:operation location="/GeneraToken_ws" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidaToken_ws">
+      <http:operation location="/ValidaToken_ws" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenToken_ws">
+      <http:operation location="/ObtenToken_ws" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AppToken">
+    <wsdl:port name="AppTokenSoap" binding="tns:AppTokenSoap">
+      <soap:address location="https://segaii.mapfre.com.mx/wsexchange/apptoken.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AppTokenSoap12" binding="tns:AppTokenSoap12">
+      <soap12:address location="https://segaii.mapfre.com.mx/wsexchange/apptoken.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AppTokenHttpGet" binding="tns:AppTokenHttpGet">
+      <http:address location="https://segaii.mapfre.com.mx/wsexchange/apptoken.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AppTokenHttpPost" binding="tns:AppTokenHttpPost">
+      <http:address location="https://segaii.mapfre.com.mx/wsexchange/apptoken.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,2788 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/WsListasValorTW/WSSegupymeTW" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/WsListasValorTW/WSSegupymeTW" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/WsListasValorTW/WSSegupymeTW">
+      <s:element name="WM_XMLBuzonesGeneral">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WM_XMLBuzonesGeneralResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WM_XMLBuzonesGeneralResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WM_Impresion_CotizacionSegupymeTW">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WM_Impresion_CotizacionSegupymeTWResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WM_Impresion_CotizacionSegupymeTWResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WM_CotizacionSegupymeTW">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WM_CotizacionSegupymeTWResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WM_CotizacionSegupymeTWResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WM_EmisionSegupymeTW">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WM_EmisionSegupymeTWResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WM_EmisionSegupymeTWResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_ImpresionDaniosTW">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Poliza" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Endoso" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_ImpresionDaniosTWResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_TW_ImpresionDaniosTWResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_ImpresionCotizacionTW">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Cotizacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_ImpresionCotizacionTWResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_TW_ImpresionCotizacionTWResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_Contratos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_ContratosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_TW_ContratosResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_Estados">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_EstadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_TW_EstadosResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_Poblaciones">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_PoblacionesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_TW_PoblacionesResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_FormasPago">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_FormasPagoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_TW_FormasPagoResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_CodigosPostales">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_CodigosPostalesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_TW_CodigosPostalesResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_TiposVivienda">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_TiposViviendaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_TW_TiposViviendaResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_TiposMuro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_TiposMuroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_TW_TiposMuroResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_TiposTecho">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_TiposTechoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_TW_TiposTechoResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_Giro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_GiroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_TW_GiroResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_SubGiro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_SubGiroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_TW_SubGiroResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_TipoRiesgo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_TipoRiesgoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_TW_TipoRiesgoResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_Tipos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_TiposResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_TW_TiposResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_MedidasVSIncendio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_MedidasVSIncendioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_TW_MedidasVSIncendioResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_TiposCalle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_TiposCalleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_TW_TiposCalleResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_GestoresCobro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_GestoresCobroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_TW_GestoresCobroResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_TiposEnvio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_TiposEnvioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_TW_TiposEnvioResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_Bancos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_BancosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_TW_BancosResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_TipoMoneda">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_TipoMonedaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_TW_TipoMonedaResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_TiposTarjeta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_TiposTarjetaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_TW_TiposTarjetaResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_Coberturas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_CoberturasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_TW_CoberturasResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_SumasAseguradas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_SumasAseguradasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_TW_SumasAseguradasResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_PorcentajesSA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_PorcentajesSAResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_TW_PorcentajesSAResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_RegimenFiscal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_RegimenFiscalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_TW_RegimenFiscalResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_RegimenSocietario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_TW_RegimenSocietarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WS_TW_RegimenSocietarioResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="base64Binary" nillable="true" type="s:base64Binary" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="WM_XMLBuzonesGeneralSoapIn">
+    <wsdl:part name="parameters" element="tns:WM_XMLBuzonesGeneral" />
+  </wsdl:message>
+  <wsdl:message name="WM_XMLBuzonesGeneralSoapOut">
+    <wsdl:part name="parameters" element="tns:WM_XMLBuzonesGeneralResponse" />
+  </wsdl:message>
+  <wsdl:message name="WM_Impresion_CotizacionSegupymeTWSoapIn">
+    <wsdl:part name="parameters" element="tns:WM_Impresion_CotizacionSegupymeTW" />
+  </wsdl:message>
+  <wsdl:message name="WM_Impresion_CotizacionSegupymeTWSoapOut">
+    <wsdl:part name="parameters" element="tns:WM_Impresion_CotizacionSegupymeTWResponse" />
+  </wsdl:message>
+  <wsdl:message name="WM_CotizacionSegupymeTWSoapIn">
+    <wsdl:part name="parameters" element="tns:WM_CotizacionSegupymeTW" />
+  </wsdl:message>
+  <wsdl:message name="WM_CotizacionSegupymeTWSoapOut">
+    <wsdl:part name="parameters" element="tns:WM_CotizacionSegupymeTWResponse" />
+  </wsdl:message>
+  <wsdl:message name="WM_EmisionSegupymeTWSoapIn">
+    <wsdl:part name="parameters" element="tns:WM_EmisionSegupymeTW" />
+  </wsdl:message>
+  <wsdl:message name="WM_EmisionSegupymeTWSoapOut">
+    <wsdl:part name="parameters" element="tns:WM_EmisionSegupymeTWResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_ImpresionDaniosTWSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_TW_ImpresionDaniosTW" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_ImpresionDaniosTWSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_TW_ImpresionDaniosTWResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_ImpresionCotizacionTWSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_TW_ImpresionCotizacionTW" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_ImpresionCotizacionTWSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_TW_ImpresionCotizacionTWResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_ContratosSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_TW_Contratos" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_ContratosSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_TW_ContratosResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_EstadosSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_TW_Estados" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_EstadosSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_TW_EstadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_PoblacionesSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_TW_Poblaciones" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_PoblacionesSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_TW_PoblacionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_FormasPagoSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_TW_FormasPago" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_FormasPagoSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_TW_FormasPagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_CodigosPostalesSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_TW_CodigosPostales" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_CodigosPostalesSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_TW_CodigosPostalesResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TiposViviendaSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_TW_TiposVivienda" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TiposViviendaSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_TW_TiposViviendaResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TiposMuroSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_TW_TiposMuro" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TiposMuroSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_TW_TiposMuroResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TiposTechoSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_TW_TiposTecho" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TiposTechoSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_TW_TiposTechoResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_GiroSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_TW_Giro" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_GiroSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_TW_GiroResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_SubGiroSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_TW_SubGiro" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_SubGiroSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_TW_SubGiroResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TipoRiesgoSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_TW_TipoRiesgo" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TipoRiesgoSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_TW_TipoRiesgoResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TiposSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_TW_Tipos" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TiposSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_TW_TiposResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_MedidasVSIncendioSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_TW_MedidasVSIncendio" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_MedidasVSIncendioSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_TW_MedidasVSIncendioResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TiposCalleSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_TW_TiposCalle" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TiposCalleSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_TW_TiposCalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_GestoresCobroSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_TW_GestoresCobro" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_GestoresCobroSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_TW_GestoresCobroResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TiposEnvioSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_TW_TiposEnvio" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TiposEnvioSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_TW_TiposEnvioResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_BancosSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_TW_Bancos" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_BancosSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_TW_BancosResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TipoMonedaSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_TW_TipoMoneda" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TipoMonedaSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_TW_TipoMonedaResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TiposTarjetaSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_TW_TiposTarjeta" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TiposTarjetaSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_TW_TiposTarjetaResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_CoberturasSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_TW_Coberturas" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_CoberturasSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_TW_CoberturasResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_SumasAseguradasSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_TW_SumasAseguradas" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_SumasAseguradasSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_TW_SumasAseguradasResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_PorcentajesSASoapIn">
+    <wsdl:part name="parameters" element="tns:WS_TW_PorcentajesSA" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_PorcentajesSASoapOut">
+    <wsdl:part name="parameters" element="tns:WS_TW_PorcentajesSAResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_RegimenFiscalSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_TW_RegimenFiscal" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_RegimenFiscalSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_TW_RegimenFiscalResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_RegimenSocietarioSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_TW_RegimenSocietario" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_RegimenSocietarioSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_TW_RegimenSocietarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="WM_XMLBuzonesGeneralHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WM_XMLBuzonesGeneralHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WM_Impresion_CotizacionSegupymeTWHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WM_Impresion_CotizacionSegupymeTWHttpGetOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="WM_CotizacionSegupymeTWHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WM_CotizacionSegupymeTWHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WM_EmisionSegupymeTWHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WM_EmisionSegupymeTWHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_ImpresionDaniosTWHttpGetIn">
+    <wsdl:part name="Poliza" type="s:string" />
+    <wsdl:part name="Endoso" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_ImpresionDaniosTWHttpGetOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_ImpresionCotizacionTWHttpGetIn">
+    <wsdl:part name="Cotizacion" type="s:string" />
+    <wsdl:part name="Cliente" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_ImpresionCotizacionTWHttpGetOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_ContratosHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_ContratosHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_EstadosHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_EstadosHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_PoblacionesHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_PoblacionesHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_FormasPagoHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_FormasPagoHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_CodigosPostalesHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_CodigosPostalesHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TiposViviendaHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TiposViviendaHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TiposMuroHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TiposMuroHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TiposTechoHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TiposTechoHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_GiroHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_GiroHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_SubGiroHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_SubGiroHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TipoRiesgoHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TipoRiesgoHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TiposHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TiposHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_MedidasVSIncendioHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_MedidasVSIncendioHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TiposCalleHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TiposCalleHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_GestoresCobroHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_GestoresCobroHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TiposEnvioHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TiposEnvioHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_BancosHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_BancosHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TipoMonedaHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TipoMonedaHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TiposTarjetaHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TiposTarjetaHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_CoberturasHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_CoberturasHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_SumasAseguradasHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_SumasAseguradasHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_PorcentajesSAHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_PorcentajesSAHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_RegimenFiscalHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_RegimenFiscalHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_RegimenSocietarioHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_RegimenSocietarioHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WM_XMLBuzonesGeneralHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WM_XMLBuzonesGeneralHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WM_Impresion_CotizacionSegupymeTWHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WM_Impresion_CotizacionSegupymeTWHttpPostOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="WM_CotizacionSegupymeTWHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WM_CotizacionSegupymeTWHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WM_EmisionSegupymeTWHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WM_EmisionSegupymeTWHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_ImpresionDaniosTWHttpPostIn">
+    <wsdl:part name="Poliza" type="s:string" />
+    <wsdl:part name="Endoso" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_ImpresionDaniosTWHttpPostOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_ImpresionCotizacionTWHttpPostIn">
+    <wsdl:part name="Cotizacion" type="s:string" />
+    <wsdl:part name="Cliente" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_ImpresionCotizacionTWHttpPostOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_ContratosHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_ContratosHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_EstadosHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_EstadosHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_PoblacionesHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_PoblacionesHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_FormasPagoHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_FormasPagoHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_CodigosPostalesHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_CodigosPostalesHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TiposViviendaHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TiposViviendaHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TiposMuroHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TiposMuroHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TiposTechoHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TiposTechoHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_GiroHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_GiroHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_SubGiroHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_SubGiroHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TipoRiesgoHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TipoRiesgoHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TiposHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TiposHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_MedidasVSIncendioHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_MedidasVSIncendioHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TiposCalleHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TiposCalleHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_GestoresCobroHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_GestoresCobroHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TiposEnvioHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TiposEnvioHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_BancosHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_BancosHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TipoMonedaHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TipoMonedaHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TiposTarjetaHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_TiposTarjetaHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_CoberturasHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_CoberturasHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_SumasAseguradasHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_SumasAseguradasHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_PorcentajesSAHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_PorcentajesSAHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_RegimenFiscalHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_RegimenFiscalHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_RegimenSocietarioHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_TW_RegimenSocietarioHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:portType name="WSSegupymeTWSoap">
+    <wsdl:operation name="WM_XMLBuzonesGeneral">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD COTIZAR O EMITIR POR BUZONES&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML para buzones&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con el resultado de la Cotización o Emisión</wsdl:documentation>
+      <wsdl:input message="tns:WM_XMLBuzonesGeneralSoapIn" />
+      <wsdl:output message="tns:WM_XMLBuzonesGeneralSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WM_Impresion_CotizacionSegupymeTW">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA COTIZACION DE SEGUPYME&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con los datos mínimos para imprimir cotización&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;BYTE con los resultados de la Cotización</wsdl:documentation>
+      <wsdl:input message="tns:WM_Impresion_CotizacionSegupymeTWSoapIn" />
+      <wsdl:output message="tns:WM_Impresion_CotizacionSegupymeTWSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WM_CotizacionSegupymeTW">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA COTIZACION DE SEGUPYME&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con los datos mínimos para cotizar&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con los resultados de la Cotización</wsdl:documentation>
+      <wsdl:input message="tns:WM_CotizacionSegupymeTWSoapIn" />
+      <wsdl:output message="tns:WM_CotizacionSegupymeTWSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WM_EmisionSegupymeTW">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA EMISIÓN DE SEGUPYME&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con los datos mínimos para emitir&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con el resultado de la Emisión - Número de Póliza</wsdl:documentation>
+      <wsdl:input message="tns:WM_EmisionSegupymeTWSoapIn" />
+      <wsdl:output message="tns:WM_EmisionSegupymeTWSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_ImpresionDaniosTW">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER EL ARREGLO DE BYTES DEL .PDF DE LA POLIZA DE DAÑOS EN BASE64&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Número de Póliza y Número de Endoso de la Póliza&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;Arreglo de Bytes en BASE64 del archivo .PDF de la Póliza de Daños</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_ImpresionDaniosTWSoapIn" />
+      <wsdl:output message="tns:WS_TW_ImpresionDaniosTWSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_ImpresionCotizacionTW">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER EL ARREGLO DE BYTES DEL .PDF DE LA COTIZACIÓN DE DAÑOS EN BASE64&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Número de Cotización y Nombre del Cliente&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;Arreglo de Bytes en BASE64 del archivo .PDF de la Cotización de Daños</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_ImpresionCotizacionTWSoapIn" />
+      <wsdl:output message="tns:WS_TW_ImpresionCotizacionTWSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Contratos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS CONTRATOS DISPONIBLES PARA EL RAMO, AGENTE y POLIZ GRUPO ENVIADOS&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con los datos de Ramo, Agente y Poliza Grupo&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Contratos</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_ContratosSoapIn" />
+      <wsdl:output message="tns:WS_TW_ContratosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Estados">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS ESTADOS DE LA REPUBLICA MEXICANA&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con los datos del Ramo&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Estados de la Republica</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_EstadosSoapIn" />
+      <wsdl:output message="tns:WS_TW_EstadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Poblaciones">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LAS POBLACIONES DEPENDIENDO DEL ESTADO&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con los datos del Ramo y Estado&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de las Poblaciones</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_PoblacionesSoapIn" />
+      <wsdl:output message="tns:WS_TW_PoblacionesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_FormasPago">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LAS FORMAS DE PAGO DISPONIBLES PARA EL RAMO ENVIADO&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con los datos del Ramo&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de las Formas de Pago</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_FormasPagoSoapIn" />
+      <wsdl:output message="tns:WS_TW_FormasPagoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_CodigosPostales">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS CODIGOS POSTALES POR POBLACION&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Codigo de Poblacion&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Codigos Postales</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_CodigosPostalesSoapIn" />
+      <wsdl:output message="tns:WS_TW_CodigosPostalesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TiposVivienda">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS TIPOS DE VIVIENDA&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Codigo de Ramo y Numero de Contrato&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Tipos de Vivienda</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_TiposViviendaSoapIn" />
+      <wsdl:output message="tns:WS_TW_TiposViviendaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TiposMuro">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS TIPOS DE MURO&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Codigo de Ramo, Numero de Contrato y Tipo de Vivienda&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Tipos de Muro</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_TiposMuroSoapIn" />
+      <wsdl:output message="tns:WS_TW_TiposMuroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TiposTecho">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS TIPOS DE TECHO&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Codigo de Ramo, Numero de Contrato, Tipo de Muro y Tipo de Vivienda&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Tipos de Techo</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_TiposTechoSoapIn" />
+      <wsdl:output message="tns:WS_TW_TiposTechoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Giro">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS GIROS&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Codigo de Ramo, Numero de Contrato y Tipo de Vivienda&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Giros</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_GiroSoapIn" />
+      <wsdl:output message="tns:WS_TW_GiroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_SubGiro">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS SUB GIROS&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Codigo de Ramo, Numero de Contrato, Codigo de Giro y Tipo de Vivienda&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Sub Giros</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_SubGiroSoapIn" />
+      <wsdl:output message="tns:WS_TW_SubGiroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TipoRiesgo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS TIPOS DE RIESGO (AREAS)&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Codigo de Ramo, Numero de Contrato, Codigo de Giro, Codigo de Subgiro y Tipo de Vivienda&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Tipos de Riesgo (Areas)</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_TipoRiesgoSoapIn" />
+      <wsdl:output message="tns:WS_TW_TipoRiesgoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Tipos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS TIPOS&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Codigo de Ramo, Numero de Contrato, Codigo de Giro, Codigo de Subgiro, Codigo de Area y Tipo de Vivienda&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Tipos</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_TiposSoapIn" />
+      <wsdl:output message="tns:WS_TW_TiposSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_MedidasVSIncendio">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LAS MEDIDAS DE SEGURIDAD CONTRA INCENDIO&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Codigo de Ramo, Numero de Contrato y Tipo de Vivienda&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de las Medidas de Seguridad Contra Incendio</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_MedidasVSIncendioSoapIn" />
+      <wsdl:output message="tns:WS_TW_MedidasVSIncendioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TiposCalle">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS TIPOS DE CALLE&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Codigo de Ramo&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Tipos de Calle</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_TiposCalleSoapIn" />
+      <wsdl:output message="tns:WS_TW_TiposCalleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_GestoresCobro">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS GESTORES DE COBRO&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Codigo de Ramo&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Gestores de Cobro</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_GestoresCobroSoapIn" />
+      <wsdl:output message="tns:WS_TW_GestoresCobroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TiposEnvio">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS TIPOS DE ENVIO&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Codigo de Ramo&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Tipos de Envio</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_TiposEnvioSoapIn" />
+      <wsdl:output message="tns:WS_TW_TiposEnvioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Bancos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS BANCOS&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Ramo y Número de Versión&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Bancos</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_BancosSoapIn" />
+      <wsdl:output message="tns:WS_TW_BancosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TipoMoneda">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER TIPOS DE MONEDA&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con los datos mínimos para obtener tipos de moneda&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con el resultado de la Operación - Catálogo de Tipos de Moneda</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_TipoMonedaSoapIn" />
+      <wsdl:output message="tns:WS_TW_TipoMonedaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TiposTarjeta">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS TIPOS DE TARJETA&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Ramo&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Tipos de Tarjeta</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_TiposTarjetaSoapIn" />
+      <wsdl:output message="tns:WS_TW_TiposTarjetaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Coberturas">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LAS COBERTURAS&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Ramo, Tipo de Vivienda y Contrato&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de las Coberturas</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_CoberturasSoapIn" />
+      <wsdl:output message="tns:WS_TW_CoberturasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_SumasAseguradas">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LAS SUMAS ASEGURADAS, MAXIMOS Y MINIMOS POR COBERTURA&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Ramo&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de las Sumas Aseguradas, Masximos y Minimos por Cobertura </wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_SumasAseguradasSoapIn" />
+      <wsdl:output message="tns:WS_TW_SumasAseguradasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_PorcentajesSA">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS PORCENTAJES DE LAS SUMAS ASEGURADAS&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Ramo y Contrato&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los porcentajes de las sumas aseguradas</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_PorcentajesSASoapIn" />
+      <wsdl:output message="tns:WS_TW_PorcentajesSASoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_RegimenFiscal">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE REGIMEN FISCAL&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con mca_fisico&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de regimenes fiscales</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_RegimenFiscalSoapIn" />
+      <wsdl:output message="tns:WS_TW_RegimenFiscalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_RegimenSocietario">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE REGIMEN SOCIETARIO&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el ramo&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de regimen societario</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_RegimenSocietarioSoapIn" />
+      <wsdl:output message="tns:WS_TW_RegimenSocietarioSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WSSegupymeTWHttpGet">
+    <wsdl:operation name="WM_XMLBuzonesGeneral">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD COTIZAR O EMITIR POR BUZONES&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML para buzones&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con el resultado de la Cotización o Emisión</wsdl:documentation>
+      <wsdl:input message="tns:WM_XMLBuzonesGeneralHttpGetIn" />
+      <wsdl:output message="tns:WM_XMLBuzonesGeneralHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WM_Impresion_CotizacionSegupymeTW">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA COTIZACION DE SEGUPYME&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con los datos mínimos para imprimir cotización&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;BYTE con los resultados de la Cotización</wsdl:documentation>
+      <wsdl:input message="tns:WM_Impresion_CotizacionSegupymeTWHttpGetIn" />
+      <wsdl:output message="tns:WM_Impresion_CotizacionSegupymeTWHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WM_CotizacionSegupymeTW">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA COTIZACION DE SEGUPYME&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con los datos mínimos para cotizar&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con los resultados de la Cotización</wsdl:documentation>
+      <wsdl:input message="tns:WM_CotizacionSegupymeTWHttpGetIn" />
+      <wsdl:output message="tns:WM_CotizacionSegupymeTWHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WM_EmisionSegupymeTW">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA EMISIÓN DE SEGUPYME&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con los datos mínimos para emitir&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con el resultado de la Emisión - Número de Póliza</wsdl:documentation>
+      <wsdl:input message="tns:WM_EmisionSegupymeTWHttpGetIn" />
+      <wsdl:output message="tns:WM_EmisionSegupymeTWHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_ImpresionDaniosTW">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER EL ARREGLO DE BYTES DEL .PDF DE LA POLIZA DE DAÑOS EN BASE64&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Número de Póliza y Número de Endoso de la Póliza&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;Arreglo de Bytes en BASE64 del archivo .PDF de la Póliza de Daños</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_ImpresionDaniosTWHttpGetIn" />
+      <wsdl:output message="tns:WS_TW_ImpresionDaniosTWHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_ImpresionCotizacionTW">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER EL ARREGLO DE BYTES DEL .PDF DE LA COTIZACIÓN DE DAÑOS EN BASE64&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Número de Cotización y Nombre del Cliente&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;Arreglo de Bytes en BASE64 del archivo .PDF de la Cotización de Daños</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_ImpresionCotizacionTWHttpGetIn" />
+      <wsdl:output message="tns:WS_TW_ImpresionCotizacionTWHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Contratos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS CONTRATOS DISPONIBLES PARA EL RAMO, AGENTE y POLIZ GRUPO ENVIADOS&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con los datos de Ramo, Agente y Poliza Grupo&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Contratos</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_ContratosHttpGetIn" />
+      <wsdl:output message="tns:WS_TW_ContratosHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Estados">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS ESTADOS DE LA REPUBLICA MEXICANA&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con los datos del Ramo&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Estados de la Republica</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_EstadosHttpGetIn" />
+      <wsdl:output message="tns:WS_TW_EstadosHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Poblaciones">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LAS POBLACIONES DEPENDIENDO DEL ESTADO&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con los datos del Ramo y Estado&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de las Poblaciones</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_PoblacionesHttpGetIn" />
+      <wsdl:output message="tns:WS_TW_PoblacionesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_FormasPago">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LAS FORMAS DE PAGO DISPONIBLES PARA EL RAMO ENVIADO&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con los datos del Ramo&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de las Formas de Pago</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_FormasPagoHttpGetIn" />
+      <wsdl:output message="tns:WS_TW_FormasPagoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_CodigosPostales">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS CODIGOS POSTALES POR POBLACION&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Codigo de Poblacion&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Codigos Postales</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_CodigosPostalesHttpGetIn" />
+      <wsdl:output message="tns:WS_TW_CodigosPostalesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TiposVivienda">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS TIPOS DE VIVIENDA&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Codigo de Ramo y Numero de Contrato&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Tipos de Vivienda</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_TiposViviendaHttpGetIn" />
+      <wsdl:output message="tns:WS_TW_TiposViviendaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TiposMuro">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS TIPOS DE MURO&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Codigo de Ramo, Numero de Contrato y Tipo de Vivienda&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Tipos de Muro</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_TiposMuroHttpGetIn" />
+      <wsdl:output message="tns:WS_TW_TiposMuroHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TiposTecho">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS TIPOS DE TECHO&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Codigo de Ramo, Numero de Contrato, Tipo de Muro y Tipo de Vivienda&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Tipos de Techo</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_TiposTechoHttpGetIn" />
+      <wsdl:output message="tns:WS_TW_TiposTechoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Giro">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS GIROS&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Codigo de Ramo, Numero de Contrato y Tipo de Vivienda&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Giros</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_GiroHttpGetIn" />
+      <wsdl:output message="tns:WS_TW_GiroHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_SubGiro">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS SUB GIROS&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Codigo de Ramo, Numero de Contrato, Codigo de Giro y Tipo de Vivienda&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Sub Giros</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_SubGiroHttpGetIn" />
+      <wsdl:output message="tns:WS_TW_SubGiroHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TipoRiesgo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS TIPOS DE RIESGO (AREAS)&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Codigo de Ramo, Numero de Contrato, Codigo de Giro, Codigo de Subgiro y Tipo de Vivienda&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Tipos de Riesgo (Areas)</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_TipoRiesgoHttpGetIn" />
+      <wsdl:output message="tns:WS_TW_TipoRiesgoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Tipos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS TIPOS&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Codigo de Ramo, Numero de Contrato, Codigo de Giro, Codigo de Subgiro, Codigo de Area y Tipo de Vivienda&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Tipos</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_TiposHttpGetIn" />
+      <wsdl:output message="tns:WS_TW_TiposHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_MedidasVSIncendio">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LAS MEDIDAS DE SEGURIDAD CONTRA INCENDIO&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Codigo de Ramo, Numero de Contrato y Tipo de Vivienda&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de las Medidas de Seguridad Contra Incendio</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_MedidasVSIncendioHttpGetIn" />
+      <wsdl:output message="tns:WS_TW_MedidasVSIncendioHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TiposCalle">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS TIPOS DE CALLE&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Codigo de Ramo&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Tipos de Calle</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_TiposCalleHttpGetIn" />
+      <wsdl:output message="tns:WS_TW_TiposCalleHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_GestoresCobro">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS GESTORES DE COBRO&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Codigo de Ramo&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Gestores de Cobro</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_GestoresCobroHttpGetIn" />
+      <wsdl:output message="tns:WS_TW_GestoresCobroHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TiposEnvio">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS TIPOS DE ENVIO&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Codigo de Ramo&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Tipos de Envio</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_TiposEnvioHttpGetIn" />
+      <wsdl:output message="tns:WS_TW_TiposEnvioHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Bancos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS BANCOS&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Ramo y Número de Versión&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Bancos</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_BancosHttpGetIn" />
+      <wsdl:output message="tns:WS_TW_BancosHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TipoMoneda">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER TIPOS DE MONEDA&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con los datos mínimos para obtener tipos de moneda&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con el resultado de la Operación - Catálogo de Tipos de Moneda</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_TipoMonedaHttpGetIn" />
+      <wsdl:output message="tns:WS_TW_TipoMonedaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TiposTarjeta">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS TIPOS DE TARJETA&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Ramo&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Tipos de Tarjeta</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_TiposTarjetaHttpGetIn" />
+      <wsdl:output message="tns:WS_TW_TiposTarjetaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Coberturas">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LAS COBERTURAS&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Ramo, Tipo de Vivienda y Contrato&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de las Coberturas</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_CoberturasHttpGetIn" />
+      <wsdl:output message="tns:WS_TW_CoberturasHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_SumasAseguradas">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LAS SUMAS ASEGURADAS, MAXIMOS Y MINIMOS POR COBERTURA&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Ramo&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de las Sumas Aseguradas, Masximos y Minimos por Cobertura </wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_SumasAseguradasHttpGetIn" />
+      <wsdl:output message="tns:WS_TW_SumasAseguradasHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_PorcentajesSA">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS PORCENTAJES DE LAS SUMAS ASEGURADAS&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Ramo y Contrato&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los porcentajes de las sumas aseguradas</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_PorcentajesSAHttpGetIn" />
+      <wsdl:output message="tns:WS_TW_PorcentajesSAHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_RegimenFiscal">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE REGIMEN FISCAL&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con mca_fisico&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de regimenes fiscales</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_RegimenFiscalHttpGetIn" />
+      <wsdl:output message="tns:WS_TW_RegimenFiscalHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_RegimenSocietario">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE REGIMEN SOCIETARIO&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el ramo&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de regimen societario</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_RegimenSocietarioHttpGetIn" />
+      <wsdl:output message="tns:WS_TW_RegimenSocietarioHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WSSegupymeTWHttpPost">
+    <wsdl:operation name="WM_XMLBuzonesGeneral">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD COTIZAR O EMITIR POR BUZONES&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML para buzones&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con el resultado de la Cotización o Emisión</wsdl:documentation>
+      <wsdl:input message="tns:WM_XMLBuzonesGeneralHttpPostIn" />
+      <wsdl:output message="tns:WM_XMLBuzonesGeneralHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WM_Impresion_CotizacionSegupymeTW">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA COTIZACION DE SEGUPYME&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con los datos mínimos para imprimir cotización&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;BYTE con los resultados de la Cotización</wsdl:documentation>
+      <wsdl:input message="tns:WM_Impresion_CotizacionSegupymeTWHttpPostIn" />
+      <wsdl:output message="tns:WM_Impresion_CotizacionSegupymeTWHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WM_CotizacionSegupymeTW">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA COTIZACION DE SEGUPYME&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con los datos mínimos para cotizar&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con los resultados de la Cotización</wsdl:documentation>
+      <wsdl:input message="tns:WM_CotizacionSegupymeTWHttpPostIn" />
+      <wsdl:output message="tns:WM_CotizacionSegupymeTWHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WM_EmisionSegupymeTW">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA EMISIÓN DE SEGUPYME&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con los datos mínimos para emitir&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con el resultado de la Emisión - Número de Póliza</wsdl:documentation>
+      <wsdl:input message="tns:WM_EmisionSegupymeTWHttpPostIn" />
+      <wsdl:output message="tns:WM_EmisionSegupymeTWHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_ImpresionDaniosTW">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER EL ARREGLO DE BYTES DEL .PDF DE LA POLIZA DE DAÑOS EN BASE64&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Número de Póliza y Número de Endoso de la Póliza&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;Arreglo de Bytes en BASE64 del archivo .PDF de la Póliza de Daños</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_ImpresionDaniosTWHttpPostIn" />
+      <wsdl:output message="tns:WS_TW_ImpresionDaniosTWHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_ImpresionCotizacionTW">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER EL ARREGLO DE BYTES DEL .PDF DE LA COTIZACIÓN DE DAÑOS EN BASE64&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Número de Cotización y Nombre del Cliente&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;Arreglo de Bytes en BASE64 del archivo .PDF de la Cotización de Daños</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_ImpresionCotizacionTWHttpPostIn" />
+      <wsdl:output message="tns:WS_TW_ImpresionCotizacionTWHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Contratos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS CONTRATOS DISPONIBLES PARA EL RAMO, AGENTE y POLIZ GRUPO ENVIADOS&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con los datos de Ramo, Agente y Poliza Grupo&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Contratos</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_ContratosHttpPostIn" />
+      <wsdl:output message="tns:WS_TW_ContratosHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Estados">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS ESTADOS DE LA REPUBLICA MEXICANA&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con los datos del Ramo&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Estados de la Republica</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_EstadosHttpPostIn" />
+      <wsdl:output message="tns:WS_TW_EstadosHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Poblaciones">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LAS POBLACIONES DEPENDIENDO DEL ESTADO&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con los datos del Ramo y Estado&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de las Poblaciones</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_PoblacionesHttpPostIn" />
+      <wsdl:output message="tns:WS_TW_PoblacionesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_FormasPago">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LAS FORMAS DE PAGO DISPONIBLES PARA EL RAMO ENVIADO&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con los datos del Ramo&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de las Formas de Pago</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_FormasPagoHttpPostIn" />
+      <wsdl:output message="tns:WS_TW_FormasPagoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_CodigosPostales">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS CODIGOS POSTALES POR POBLACION&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Codigo de Poblacion&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Codigos Postales</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_CodigosPostalesHttpPostIn" />
+      <wsdl:output message="tns:WS_TW_CodigosPostalesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TiposVivienda">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS TIPOS DE VIVIENDA&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Codigo de Ramo y Numero de Contrato&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Tipos de Vivienda</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_TiposViviendaHttpPostIn" />
+      <wsdl:output message="tns:WS_TW_TiposViviendaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TiposMuro">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS TIPOS DE MURO&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Codigo de Ramo, Numero de Contrato y Tipo de Vivienda&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Tipos de Muro</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_TiposMuroHttpPostIn" />
+      <wsdl:output message="tns:WS_TW_TiposMuroHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TiposTecho">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS TIPOS DE TECHO&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Codigo de Ramo, Numero de Contrato, Tipo de Muro y Tipo de Vivienda&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Tipos de Techo</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_TiposTechoHttpPostIn" />
+      <wsdl:output message="tns:WS_TW_TiposTechoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Giro">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS GIROS&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Codigo de Ramo, Numero de Contrato y Tipo de Vivienda&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Giros</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_GiroHttpPostIn" />
+      <wsdl:output message="tns:WS_TW_GiroHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_SubGiro">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS SUB GIROS&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Codigo de Ramo, Numero de Contrato, Codigo de Giro y Tipo de Vivienda&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Sub Giros</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_SubGiroHttpPostIn" />
+      <wsdl:output message="tns:WS_TW_SubGiroHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TipoRiesgo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS TIPOS DE RIESGO (AREAS)&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Codigo de Ramo, Numero de Contrato, Codigo de Giro, Codigo de Subgiro y Tipo de Vivienda&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Tipos de Riesgo (Areas)</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_TipoRiesgoHttpPostIn" />
+      <wsdl:output message="tns:WS_TW_TipoRiesgoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Tipos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS TIPOS&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Codigo de Ramo, Numero de Contrato, Codigo de Giro, Codigo de Subgiro, Codigo de Area y Tipo de Vivienda&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Tipos</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_TiposHttpPostIn" />
+      <wsdl:output message="tns:WS_TW_TiposHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_MedidasVSIncendio">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LAS MEDIDAS DE SEGURIDAD CONTRA INCENDIO&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Codigo de Ramo, Numero de Contrato y Tipo de Vivienda&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de las Medidas de Seguridad Contra Incendio</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_MedidasVSIncendioHttpPostIn" />
+      <wsdl:output message="tns:WS_TW_MedidasVSIncendioHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TiposCalle">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS TIPOS DE CALLE&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Codigo de Ramo&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Tipos de Calle</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_TiposCalleHttpPostIn" />
+      <wsdl:output message="tns:WS_TW_TiposCalleHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_GestoresCobro">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS GESTORES DE COBRO&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Codigo de Ramo&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Gestores de Cobro</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_GestoresCobroHttpPostIn" />
+      <wsdl:output message="tns:WS_TW_GestoresCobroHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TiposEnvio">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS TIPOS DE ENVIO&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Codigo de Ramo&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Tipos de Envio</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_TiposEnvioHttpPostIn" />
+      <wsdl:output message="tns:WS_TW_TiposEnvioHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Bancos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS BANCOS&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Ramo y Número de Versión&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Bancos</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_BancosHttpPostIn" />
+      <wsdl:output message="tns:WS_TW_BancosHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TipoMoneda">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER TIPOS DE MONEDA&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con los datos mínimos para obtener tipos de moneda&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con el resultado de la Operación - Catálogo de Tipos de Moneda</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_TipoMonedaHttpPostIn" />
+      <wsdl:output message="tns:WS_TW_TipoMonedaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TiposTarjeta">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS TIPOS DE TARJETA&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Ramo&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los Tipos de Tarjeta</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_TiposTarjetaHttpPostIn" />
+      <wsdl:output message="tns:WS_TW_TiposTarjetaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Coberturas">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LAS COBERTURAS&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Ramo, Tipo de Vivienda y Contrato&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de las Coberturas</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_CoberturasHttpPostIn" />
+      <wsdl:output message="tns:WS_TW_CoberturasHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_SumasAseguradas">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LAS SUMAS ASEGURADAS, MAXIMOS Y MINIMOS POR COBERTURA&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Ramo&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de las Sumas Aseguradas, Masximos y Minimos por Cobertura </wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_SumasAseguradasHttpPostIn" />
+      <wsdl:output message="tns:WS_TW_SumasAseguradasHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_PorcentajesSA">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE LOS PORCENTAJES DE LAS SUMAS ASEGURADAS&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el Ramo y Contrato&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de los porcentajes de las sumas aseguradas</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_PorcentajesSAHttpPostIn" />
+      <wsdl:output message="tns:WS_TW_PorcentajesSAHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_RegimenFiscal">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE REGIMEN FISCAL&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con mca_fisico&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de regimenes fiscales</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_RegimenFiscalHttpPostIn" />
+      <wsdl:output message="tns:WS_TW_RegimenFiscalHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_RegimenSocietario">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;WEB METHOD PARA OBTENER LA LISTA DE VALOR DE REGIMEN SOCIETARIO&lt;/b&gt;&lt;br&gt;&lt;b&gt;PARAMETROS: &lt;/B&gt;Cadena de XML con el ramo&lt;br&gt;&lt;b&gt;RETORNO: &lt;/B&gt;XML con la lista de valor de regimen societario</wsdl:documentation>
+      <wsdl:input message="tns:WS_TW_RegimenSocietarioHttpPostIn" />
+      <wsdl:output message="tns:WS_TW_RegimenSocietarioHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSSegupymeTWSoap" type="tns:WSSegupymeTWSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="WM_XMLBuzonesGeneral">
+      <soap:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WM_XMLBuzonesGeneral" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WM_Impresion_CotizacionSegupymeTW">
+      <soap:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WM_Impresion_CotizacionSegupymeTW" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WM_CotizacionSegupymeTW">
+      <soap:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WM_CotizacionSegupymeTW" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WM_EmisionSegupymeTW">
+      <soap:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WM_EmisionSegupymeTW" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_ImpresionDaniosTW">
+      <soap:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_ImpresionDaniosTW" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_ImpresionCotizacionTW">
+      <soap:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_ImpresionCotizacionTW" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Contratos">
+      <soap:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_Contratos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Estados">
+      <soap:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_Estados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Poblaciones">
+      <soap:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_Poblaciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_FormasPago">
+      <soap:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_FormasPago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_CodigosPostales">
+      <soap:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_CodigosPostales" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TiposVivienda">
+      <soap:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_TiposVivienda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TiposMuro">
+      <soap:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_TiposMuro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TiposTecho">
+      <soap:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_TiposTecho" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Giro">
+      <soap:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_Giro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_SubGiro">
+      <soap:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_SubGiro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TipoRiesgo">
+      <soap:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_TipoRiesgo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Tipos">
+      <soap:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_Tipos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_MedidasVSIncendio">
+      <soap:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_MedidasVSIncendio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TiposCalle">
+      <soap:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_TiposCalle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_GestoresCobro">
+      <soap:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_GestoresCobro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TiposEnvio">
+      <soap:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_TiposEnvio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Bancos">
+      <soap:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_Bancos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TipoMoneda">
+      <soap:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_TipoMoneda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TiposTarjeta">
+      <soap:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_TiposTarjeta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Coberturas">
+      <soap:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_Coberturas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_SumasAseguradas">
+      <soap:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_SumasAseguradas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_PorcentajesSA">
+      <soap:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_PorcentajesSA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_RegimenFiscal">
+      <soap:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_RegimenFiscal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_RegimenSocietario">
+      <soap:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_RegimenSocietario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSSegupymeTWSoap12" type="tns:WSSegupymeTWSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="WM_XMLBuzonesGeneral">
+      <soap12:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WM_XMLBuzonesGeneral" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WM_Impresion_CotizacionSegupymeTW">
+      <soap12:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WM_Impresion_CotizacionSegupymeTW" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WM_CotizacionSegupymeTW">
+      <soap12:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WM_CotizacionSegupymeTW" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WM_EmisionSegupymeTW">
+      <soap12:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WM_EmisionSegupymeTW" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_ImpresionDaniosTW">
+      <soap12:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_ImpresionDaniosTW" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_ImpresionCotizacionTW">
+      <soap12:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_ImpresionCotizacionTW" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Contratos">
+      <soap12:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_Contratos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Estados">
+      <soap12:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_Estados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Poblaciones">
+      <soap12:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_Poblaciones" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_FormasPago">
+      <soap12:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_FormasPago" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_CodigosPostales">
+      <soap12:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_CodigosPostales" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TiposVivienda">
+      <soap12:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_TiposVivienda" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TiposMuro">
+      <soap12:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_TiposMuro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TiposTecho">
+      <soap12:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_TiposTecho" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Giro">
+      <soap12:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_Giro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_SubGiro">
+      <soap12:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_SubGiro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TipoRiesgo">
+      <soap12:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_TipoRiesgo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Tipos">
+      <soap12:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_Tipos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_MedidasVSIncendio">
+      <soap12:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_MedidasVSIncendio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TiposCalle">
+      <soap12:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_TiposCalle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_GestoresCobro">
+      <soap12:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_GestoresCobro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TiposEnvio">
+      <soap12:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_TiposEnvio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Bancos">
+      <soap12:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_Bancos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TipoMoneda">
+      <soap12:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_TipoMoneda" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TiposTarjeta">
+      <soap12:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_TiposTarjeta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Coberturas">
+      <soap12:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_Coberturas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_SumasAseguradas">
+      <soap12:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_SumasAseguradas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_PorcentajesSA">
+      <soap12:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_PorcentajesSA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_RegimenFiscal">
+      <soap12:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_RegimenFiscal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_RegimenSocietario">
+      <soap12:operation soapAction="http://tempuri.org/WsListasValorTW/WSSegupymeTW/WS_TW_RegimenSocietario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSSegupymeTWHttpGet" type="tns:WSSegupymeTWHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="WM_XMLBuzonesGeneral">
+      <http:operation location="/WM_XMLBuzonesGeneral" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WM_Impresion_CotizacionSegupymeTW">
+      <http:operation location="/WM_Impresion_CotizacionSegupymeTW" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WM_CotizacionSegupymeTW">
+      <http:operation location="/WM_CotizacionSegupymeTW" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WM_EmisionSegupymeTW">
+      <http:operation location="/WM_EmisionSegupymeTW" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_ImpresionDaniosTW">
+      <http:operation location="/WS_TW_ImpresionDaniosTW" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_ImpresionCotizacionTW">
+      <http:operation location="/WS_TW_ImpresionCotizacionTW" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Contratos">
+      <http:operation location="/WS_TW_Contratos" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Estados">
+      <http:operation location="/WS_TW_Estados" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Poblaciones">
+      <http:operation location="/WS_TW_Poblaciones" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_FormasPago">
+      <http:operation location="/WS_TW_FormasPago" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_CodigosPostales">
+      <http:operation location="/WS_TW_CodigosPostales" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TiposVivienda">
+      <http:operation location="/WS_TW_TiposVivienda" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TiposMuro">
+      <http:operation location="/WS_TW_TiposMuro" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TiposTecho">
+      <http:operation location="/WS_TW_TiposTecho" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Giro">
+      <http:operation location="/WS_TW_Giro" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_SubGiro">
+      <http:operation location="/WS_TW_SubGiro" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TipoRiesgo">
+      <http:operation location="/WS_TW_TipoRiesgo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Tipos">
+      <http:operation location="/WS_TW_Tipos" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_MedidasVSIncendio">
+      <http:operation location="/WS_TW_MedidasVSIncendio" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TiposCalle">
+      <http:operation location="/WS_TW_TiposCalle" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_GestoresCobro">
+      <http:operation location="/WS_TW_GestoresCobro" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TiposEnvio">
+      <http:operation location="/WS_TW_TiposEnvio" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Bancos">
+      <http:operation location="/WS_TW_Bancos" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TipoMoneda">
+      <http:operation location="/WS_TW_TipoMoneda" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TiposTarjeta">
+      <http:operation location="/WS_TW_TiposTarjeta" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Coberturas">
+      <http:operation location="/WS_TW_Coberturas" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_SumasAseguradas">
+      <http:operation location="/WS_TW_SumasAseguradas" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_PorcentajesSA">
+      <http:operation location="/WS_TW_PorcentajesSA" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_RegimenFiscal">
+      <http:operation location="/WS_TW_RegimenFiscal" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_RegimenSocietario">
+      <http:operation location="/WS_TW_RegimenSocietario" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSSegupymeTWHttpPost" type="tns:WSSegupymeTWHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="WM_XMLBuzonesGeneral">
+      <http:operation location="/WM_XMLBuzonesGeneral" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WM_Impresion_CotizacionSegupymeTW">
+      <http:operation location="/WM_Impresion_CotizacionSegupymeTW" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WM_CotizacionSegupymeTW">
+      <http:operation location="/WM_CotizacionSegupymeTW" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WM_EmisionSegupymeTW">
+      <http:operation location="/WM_EmisionSegupymeTW" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_ImpresionDaniosTW">
+      <http:operation location="/WS_TW_ImpresionDaniosTW" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_ImpresionCotizacionTW">
+      <http:operation location="/WS_TW_ImpresionCotizacionTW" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Contratos">
+      <http:operation location="/WS_TW_Contratos" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Estados">
+      <http:operation location="/WS_TW_Estados" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Poblaciones">
+      <http:operation location="/WS_TW_Poblaciones" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_FormasPago">
+      <http:operation location="/WS_TW_FormasPago" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_CodigosPostales">
+      <http:operation location="/WS_TW_CodigosPostales" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TiposVivienda">
+      <http:operation location="/WS_TW_TiposVivienda" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TiposMuro">
+      <http:operation location="/WS_TW_TiposMuro" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TiposTecho">
+      <http:operation location="/WS_TW_TiposTecho" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Giro">
+      <http:operation location="/WS_TW_Giro" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_SubGiro">
+      <http:operation location="/WS_TW_SubGiro" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TipoRiesgo">
+      <http:operation location="/WS_TW_TipoRiesgo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Tipos">
+      <http:operation location="/WS_TW_Tipos" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_MedidasVSIncendio">
+      <http:operation location="/WS_TW_MedidasVSIncendio" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TiposCalle">
+      <http:operation location="/WS_TW_TiposCalle" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_GestoresCobro">
+      <http:operation location="/WS_TW_GestoresCobro" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TiposEnvio">
+      <http:operation location="/WS_TW_TiposEnvio" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Bancos">
+      <http:operation location="/WS_TW_Bancos" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TipoMoneda">
+      <http:operation location="/WS_TW_TipoMoneda" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_TiposTarjeta">
+      <http:operation location="/WS_TW_TiposTarjeta" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_Coberturas">
+      <http:operation location="/WS_TW_Coberturas" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_SumasAseguradas">
+      <http:operation location="/WS_TW_SumasAseguradas" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_PorcentajesSA">
+      <http:operation location="/WS_TW_PorcentajesSA" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_RegimenFiscal">
+      <http:operation location="/WS_TW_RegimenFiscal" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_TW_RegimenSocietario">
+      <http:operation location="/WS_TW_RegimenSocietario" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSSegupymeTW">
+    <wsdl:port name="WSSegupymeTWSoap" binding="tns:WSSegupymeTWSoap">
+      <soap:address location="https://negocios.mapfre.com.mx/wslistasvalortw_s/wssegupymetw.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WSSegupymeTWSoap12" binding="tns:WSSegupymeTWSoap12">
+      <soap12:address location="https://negocios.mapfre.com.mx/wslistasvalortw_s/wssegupymetw.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WSSegupymeTWHttpGet" binding="tns:WSSegupymeTWHttpGet">
+      <http:address location="https://negocios.mapfre.com.mx/wslistasvalortw_s/wssegupymetw.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WSSegupymeTWHttpPost" binding="tns:WSSegupymeTWHttpPost">
+      <http:address location="https://negocios.mapfre.com.mx/wslistasvalortw_s/wssegupymetw.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

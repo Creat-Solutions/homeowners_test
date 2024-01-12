@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+	<appSettings>
+		<add key="MailDebug" value="eric@creatsol.com" />
+		<add key="mail_alias" value="Homeowners" />
+		<add key="bcc_group" value="aircraftMyE" />
+		<add key="electronicInvoice" value="false" />
+		<add key="app_name" value="vip" />
+		<add key="WSSegupymeTW.wssegupymetw" value="https://negociosuat.mapfre.com.mx/wslistasvalortw_s/wssegupymetw.asmx" />
+		<add key="MapfreWebServiceReference.wssegupymetw" value="https://negocios.mapfre.com.mx/wslistasvalortw_s/wssegupymetw.asmx" />
+		<add key="WSSegupymeToken.apptoken" value="https://negociosuat.mapfre.com.mx/wsexchange_s/apptoken.asmx" />
+		<add key="MapfreWebServiceToken.apptoken" value="https://segaii.mapfre.com.mx/wsexchange/apptoken.asmx" />
+		<add key="owin:AutomaticAppStartup" value="false" />
+		<add key="Protec.Authentication.LoginCheckForAdmin" value="false" />
+		<add key="Protec.Authentication.Server" value="http://protec.abcdelseguro.com" />
+	</appSettings>
+	<connectionStrings>
+		<add name="HouseInsuranceDatabase" connectionString="Data Source=abcdelseguro.com,13418;Initial Catalog=bkphomeowners;User Id=bkhomeO;Password=bkhome0;" providerName="System.Data.SqlClient" />
+		<add name="AdminConnectionString" connectionString="Data Source=abcdelseguro.com,13418;Initial Catalog=admonpoliza;User Id=bkpAdmon;Password=bkpadm0n" providerName="System.Data.SqlClient" />
+		<add name="homeownersConnectionString" connectionString="Data Source=abcdelseguro.com,13418;Initial Catalog=bkphomeowners;Persist Security Info=True;User Id=bkhomeO;Password=bkhome0" providerName="System.Data.SqlClient" />
+		<add name="homeownersConnectionString1" connectionString="Data Source=abcdelseguro.com,13418;Initial Catalog=bkphomeowners;Persist Security Info=True;User Id=bkhomeO;Password=bkhome0" providerName="System.Data.SqlClient" />
+	</connectionStrings>
+	<system.web>
+		<compilation debug="true" targetFramework="4.6.1">
+			<assemblies>
+				<add assembly="ProtecControls" />
+				<add assembly="System.Data.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+				<add assembly="System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A" />
+				<add assembly="System.Web.Extensions.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+				<add assembly="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
+				<add assembly="System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
+				<add assembly="System.Data.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
+				<add assembly="System.Data.Services.Client, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
+				<add assembly="PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+				<add assembly="System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A" />
+				<add assembly="System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A"/>
+			</assemblies>
+		</compilation>
+		<authentication mode="Forms">
+			<forms name="ASPXAUTH" loginUrl="~/Login.aspx" timeout="20" />
+		</authentication>
+		<roleManager>
+			<providers>
+				<clear />
+			</providers>
+		</roleManager>
+		<sessionState timeout="25" />
+		<membership>
+			<providers>
+				<clear />
+			</providers>
+		</membership>
+		<authorization>
+			<deny users="?" />
+		</authorization>
+		<customErrors mode="Off" />
+		<!--<customErrors defaultRedirect="GeneralError.htm" mode="On">
+			<error statusCode="404" redirect="pagenotfound.htm"/>
+		</customErrors>-->
+		
+		<pages enableViewStateMac="false" styleSheetTheme="Estilo" controlRenderingCompatibilityVersion="3.5" clientIDMode="AutoID">
+			<controls>
+				<add tagPrefix="user" namespace="Protec.Controls" assembly="ProtecControls" />
+				<add assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagPrefix="ajax" />
+				<add tagPrefix="asp" namespace="System.Web.UI" assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+				<add tagPrefix="asp" namespace="System.Web.UI.WebControls" assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+			</controls>
+		</pages>
+		<httpModules>
+			<add name="ProtecUserSessionModule" type="Protec.Authentication.Component.ProtecUserSessionModule, AuthenticateProtec" />
+		</httpModules>
+	</system.web>
+	<location path="EmailTest.aspx">
+		<system.web>
+			<authorization>
+				<allow users="*" />
+			</authorization>
+		</system.web>
+	</location>
+	<location path="CotizaPDF.ashx">
+		<system.web>
+			<authorization>
+				<allow roles="broker,siniestro,administrator" />
+			</authorization>
+		</system.web>
+	</location>
+	<location path="GetPolicy.ashx">
+		<system.web>
+			<authorization>
+				<allow roles="broker,siniestro,administrator" />
+			</authorization>
+		</system.web>
+	</location>
+	<location path="PolizaEnglish.xml">
+		<system.web>
+			<authorization>
+				<allow roles="broker,siniestro,administrator" />
+			</authorization>
+		</system.web>
+	</location>
+	<location path="PolizaEspanol.xml">
+		<system.web>
+			<authorization>
+				<allow roles="broker,siniestro,administrator" />
+			</authorization>
+		</system.web>
+	</location>
+	<system.webServer>
+		<modules>
+			<remove name="ProtecUserSessionModule" />
+			<add name="ProtecUserSessionModule" type="Protec.Authentication.Component.ProtecUserSessionModule, AuthenticateProtec" />
+		</modules>
+		<validation validateIntegratedModeConfiguration="false" />
+
+		<directoryBrowse enabled="true"/>
+		<rewrite>
+			<rules>
+				<clear />
+				<rule name="Redirect to https" stopProcessing="true">
+					<match url="(.*)" />
+					<conditions>
+						<!--<add input="{HTTP_HOST}" pattern="localhost" negate="true"/>-->
+						<add input="{HTTPS}" pattern="off" ignoreCase="true" />
+					</conditions>
+					<action type="Redirect" url="https://{HTTP_HOST}{REQUEST_URI}" redirectType="Permanent" appendQueryString="false" />
+				</rule>
+			</rules>
+		</rewrite>
+	</system.webServer>
+	<system.serviceModel>
+		<behaviors>
+			<endpointBehaviors>
+				<behavior name="AjaxEndPointBehavior">
+					<enableWebScript />
+				</behavior>
+				<behavior name="jsonBehaviour">
+					<webHttp automaticFormatSelectionEnabled="true" />
+				</behavior>
+			</endpointBehaviors>
+			<serviceBehaviors>
+				<behavior>
+					<serviceMetadata httpsGetEnabled="true" />
+					<serviceDebug includeExceptionDetailInFaults="true"/>
+				</behavior>
+			</serviceBehaviors>
+		</behaviors>
+		<bindings>
+			<basicHttpBinding>
+				<binding name="ServiceSoap">
+					<security mode="Transport" />
+				</binding>
+				<binding name="ServiceSoap1" />
+				<binding name="https">
+					<security mode="Transport">
+						<transport clientCredentialType="None"></transport>
+					</security>
+				</binding>
+						<binding name="http">
+					<security mode="None" />
+				</binding>
+			</basicHttpBinding>
+			<webHttpBinding>
+				<binding name="secureWebHttpBinding">
+					<security mode="Transport">
+						<transport clientCredentialType="None"/>
+					</security>
+				</binding>
+				<binding name="insecureWebHttpBinding">
+					<security mode="None" />
+				</binding>
+			</webHttpBinding>
+		</bindings>
+		<client>
+			<endpoint address="https://www.sicasonline.info/SOnlineWS/WS_SICASOnline.asmx" binding="basicHttpBinding" bindingConfiguration="ServiceSoap" contract="WSSicas.ServiceSoap" name="ServiceSoap" />
+		</client>
+		<!-- <behaviors>
+			<serviceBehaviors>
+				<behavior name="HomeServicesBehavior">
+					<serviceMetadata httpGetEnabled="true" />
+					<serviceDebug includeExceptionDetailInFaults="false" />
+				</behavior>
+			</serviceBehaviors>
+			<endpointBehaviors>
+				<behavior name="AjaxEndPointBehavior">
+					<enableWebScript />
+				</behavior>
+			</endpointBehaviors>
+		</behaviors> -->
+		<services>
+			<service name="HomeServices">
+				<endpoint address="" binding="webHttpBinding" behaviorConfiguration="AjaxEndPointBehavior"
+				bindingConfiguration="secureWebHttpBinding" contract="IHomeServices">
+					<identity>
+						<dns value="localhost" />
+					</identity>
+				</endpoint>
+				<endpoint address="mex" binding="mexHttpsBinding" contract="IMetadataExchange" />
+			</service>
+		</services>
+		<serviceHostingEnvironment aspNetCompatibilityEnabled="true" />
+	</system.serviceModel>
+	<runtime>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly>
+				<assemblyIdentity name="Newtonsoft.Json" publicKeyToken="30ad4fe6b2a6aeed" culture="neutral" />
+				<bindingRedirect oldVersion="0.0.0.0-9.0.0.0" newVersion="9.0.0.0" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="WebGrease" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+				<bindingRedirect oldVersion="0.0.0.0-1.5.2.14234" newVersion="1.5.2.14234" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="itextsharp" publicKeyToken="8354ae6d2174ddca" culture="neutral" />
+				<bindingRedirect oldVersion="0.0.0.0-5.0.6.0" newVersion="5.0.6.0" />
+			</dependentAssembly>
+		</assemblyBinding>
+	</runtime>
+	<system.codedom>
+		<compilers>
+			<compiler language="c#;cs;csharp" extension=".cs" type="Microsoft.CodeDom.Providers.DotNetCompilerPlatform.CSharpCodeProvider, Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" warningLevel="4" compilerOptions="/langversion:default /nowarn:1659;1699;1701" />
+			<compiler language="vb;vbs;visualbasic;vbscript" extension=".vb" type="Microsoft.CodeDom.Providers.DotNetCompilerPlatform.VBCodeProvider, Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" warningLevel="4" compilerOptions="/langversion:default /nowarn:41008 /define:_MYTYPE=\&quot;Web\&quot; /optionInfer+" />
+		</compilers>
+	</system.codedom>
+</configuration>
