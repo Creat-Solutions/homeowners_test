@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<ConexionBaseDatos>
+  <strCon>
+    <database>proSeguros</database>
+  </strCon>
+  <strCon>
+    <database>segurosRC</database>
+  </strCon>
+  <strCon>
+    <database>seguroCS</database>
+  </strCon>
+  <strCon>
+    <database>admonpoliza</database>
+  </strCon>
+  <strCon>
+    <database>admonPoliza3</database>
+  </strCon>
+  <strCon>
+    <database>homeowners</database>
+  </strCon>
+</ConexionBaseDatos>
